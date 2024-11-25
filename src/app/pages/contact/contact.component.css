@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+.contact-section {
+    position: relative;
+    background-color: #25e0d7;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden; /* Ensures the overlay is contained */
+  }
+  
+  .contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /*black overlay */
+    z-index: 1;
+  }
+  
+  .contact-title,
+  .contact-form,
+  .contact-note,
+  .social-icons {
+    position: relative;
+    z-index: 2; /* above the overlay */
+  }
+  
+  .contact-title {
+    font-size: 40px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .contact-form label {
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 2px solid #25e0d7;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: #ffffff;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 20px;
+    color: #ffffff;
+    background: #25e0d7;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background: #1bb6a8;
+  }
+  
+  .contact-note {
+    font-size: 16px;
+    margin-top: 20px;
+    color: #b3b3b3;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-icons i{
+    font-size: 48px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .social-icons a:hover {
+    cursor: pointer;
+    font-size: 42px;    
+  }
+  
+  .social-icons i:hover {
+    cursor: pointer;
+    color:#25e0d7;
+  }
+  
