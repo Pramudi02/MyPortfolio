@@ -28,7 +28,7 @@
   }
   
   .contact-title {
-    font-size: 40px;
+    font-size: 48px;
     color: #ffffff;
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
@@ -68,8 +68,9 @@
   
   .submit-btn {
     width: 100%;
-    padding: 12px;
-    font-size: 20px;
+    padding: 10px;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
     color: #ffffff;
     background: #25e0d7;
     border: none;

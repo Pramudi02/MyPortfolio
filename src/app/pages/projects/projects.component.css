@@ -22,7 +22,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);/* Background Overlay */
+    background-color: rgba(0, 0, 0, 0.6);/* Background Overlay */
     z-index: 1;
 }
 
@@ -35,13 +35,15 @@
 }
 
 .projects-section .section-title {
-    font-size: 2.5rem;
     margin-bottom: 20px;
     font-weight: 700;
 }
+.section-title{
+    font-size: 48px;
+}
 
 .projects-section .section-description {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 40px;
 }
 

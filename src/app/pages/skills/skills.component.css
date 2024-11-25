@@ -20,6 +20,7 @@
 	background-size: cover;
     z-index: 1;
 } 
+
 .section{
     background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity */
     width: 100%;
@@ -28,8 +29,19 @@
     align-items: center; /* Center vertically */
     text-align: center; 
     display: flex; /* Enable Flexbox */
+    flex-direction: column;
 
-}  
+} 
+.section-title{
+    position: relative;
+    z-index: 2; 
+    font-size: 50px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+  }
+   
 .stack {
     display: flex;
     flex-direction: row;  /* Stack items in a column */
@@ -45,9 +57,9 @@
     color:#dbdbdb;
     font-family:arial;
     /* text-shadow:0px 2px 2px #c1c1c1; */
-    font-size: 50px;
+    font-size: 46px;
     font-family: 'Poppins', sans-serif;
-    font-weight:900;
+    font-weight:700;
     width: 40%;
     padding-right: 8%;
     }
