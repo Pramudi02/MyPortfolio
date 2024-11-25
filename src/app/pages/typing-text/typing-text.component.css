@@ -1,6 +1,4 @@
 .typing-text li {
-    /* border: 2px solid red; */
-
     position: relative;
     top: 0;
     border-right: 3px solid #1de2d1;
@@ -14,19 +12,18 @@
 }
 /* typing effect */
 .typing-text {
-    /* border: 2px solid blue; */
     color: #1de2d1;
     margin-left: 10px;
     white-space: nowrap;
-    font-size: 35px;
-    font-weight: bold;
+    font-size: 33px;
+    font-weight: 500;
 
     /* making the div size small as the text and hide the overflow content  */
     height: 60px;
     line-height: 60px;
     overflow: hidden;
 
-    animation: typing 6s steps(16) infinite;
+    animation: typing 6s steps(20) infinite;
 }
 @keyframes typing {
     0% {
@@ -34,7 +31,7 @@
     }
 
     50% {
-        width: 16ch;
+        width: 22ch;
     }
 
     100% {

@@ -126,10 +126,11 @@
 }
 
 .profile-image {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 50%; 
+    margin: 10%;
+    flex: content;  
+    border-radius: 30%; 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
 
 /* Text content styling */
@@ -169,7 +170,7 @@
     font-size: 1.2rem;
     font-weight: 500;
     padding: 10px 20px;
-    background-color: #25e0d7;
+    background-color: #1aafab; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -179,7 +180,7 @@
 }
 
 .button-container .cv-button:hover {
-    background-color: #1aafab; 
+    background-color: #137672; 
 }
 
 /* Responsive Design */
