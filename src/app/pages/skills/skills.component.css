@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+.parent{
+    font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 1.6;
+	color: #fff;
+	overflow: hidden;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear;
+	perspective: 800px;
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Optional: To center text inside child */
+    height: 100vh; /* Full height of the viewport or a fixed height */
+    width: 100%;
+    background-image: url('../../../assest/skillsbg.png');
+	background-size: cover;
+    z-index: 1;
+} 
+.section{
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity */
+    width: 100%;
+    height: 100%;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; 
+    display: flex; /* Enable Flexbox */
+
+}  
+.stack {
+    display: flex;
+    flex-direction: row;  /* Stack items in a column */
+    align-items: center;     /* Align the icons to the center */
+    gap: 20px;               /* Add space between icons in each section */
+    width: 100%;
+    text-align: center;      /* Center the text */
+}
+
+    .topic{
+    text-align:left;
+    justify-content: center;
+    color:#dbdbdb;
+    font-family:arial;
+    /* text-shadow:0px 2px 2px #c1c1c1; */
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight:900;
+    width: 40%;
+    padding-right: 8%;
+    }
+    
+
+    .tech{
+        text-align:center;
+        justify-content: center;
+        color:#dbdbdb;
+        font-family:arial;
+        width: 60%;
+        }
+    
+    #socialicons
+    {
+    width:100%;
+    margin:0 auto;
+    overflow:auto;
+    z-index: 2;
+    }
+      
+    .socialicon
+    {
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    overflow:hidden;
+    background:#e4e4e4;
+    position:relative;
+    float:left;
+    margin:0px 0px 10px 10px ;
+    } 
+    
+    .socialiconcircle1
+    {
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0px;
+    top:100px;
+    -webkit-animation:fill 2s infinite;
+    -moz-animation:fill 2s infinite;
+    animation:fill 2s infinite;
+    }
+    
+    .socialiconcircle2
+    {
+    width:94%;
+    height:94%;
+    border-radius:50%;
+    background:#fff;
+    position:absolute;
+    left:3px;
+    top:3px;
+    }
+    
+    .fa-brands, .fa-solid {
+        font-size: 400%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 2;
+        -webkit-animation: iconjump 2s infinite;
+        -moz-animation: iconjump 2s infinite;
+        animation: iconjump 2s infinite;
+    }
+    
+    
+    /* Fill Colors (Background Circles) */  
+    .htmlcolor { background: #E34F26; }       /* HTML */
+    .csscolor { background: #1572B6; }       /* CSS */
+    .javascriptcolor { background: #F7DF1E; } /* JavaScript */
+    .sqlcolor { background: #CC2927; }        /* SQL */
+    .mongodbcolor { background: #47A248; }    /* MongoDB */
+    .javacolor { background: #007396; }       /* Java */
+    .angularcolor { background: #DD0031; }    /* Angular */
+    .dotnetcolor { background: #512BD4; }     /* .NET */
+    .firebasecolor { background: #FFCA28; }   /* Firebase */
+    .phpcolor { background: #777BB4; }        /* PHP */
+    .figmacolor { background: #F24E1E; }      /* Figma */
+    .blendercolor { background: #F5792A; }    /* Blender */
+    .canvacolor { background: #20C4CB; }      /* Canva */
+    .cpluscolor { background: #00599C; }      /* C++ */
+    .csharpcolor { background: #239120; }     /* C# */
+    .ccolor { background: #A8B9CC; }          /* C */
+    .pythoncolor { background: #3776AB; }     /* Python */
+
+    /* Icon Colors */  
+    .html5 { color: #E34F26 !important; }
+    .css3 { color: #1572B6 !important; }
+    .js { color: #F7DF1E !important; }
+    .sql { color: #CC2927 !important; }
+    .mongodb { color: #47A248 !important; }
+    .java { color: #007396 !important; }
+    .angular { color: #DD0031 !important; }
+    .dotnet { color: #512BD4 !important; }
+    .firebase { color: #FFCA28 !important; }
+    .php { color: #777BB4 !important; }
+    .figma { color: #F24E1E !important; }
+    .blender { color: #F5792A !important; }
+    .canva { color: #20C4CB !important; }
+    .cplusplus { color: #00599C !important; }
+    .csharp { color: #239120 !important; }
+    .c { color: #A8B9CC !important; }
+    .python { color: #3776AB !important; }
+
+    
+    /* fill background */      
+    @-webkit-keyframes fill
+    {
+    0%{top:100%;}
+    100%{top:0%;}
+    }
+    
+    @-moz-keyframes fill
+    {
+        0%{top:100%;}
+        100%{top:0%;}
+    }
+    
+    @keyframes fill
+    {
+        0%{top:100%;}
+        100%{top:0%;}
+    }
+    
+    /* jump social icons */
+    @-webkit-keyframes iconjump
+    {
+    0%{top:26px;}
+    10%{top:70px;}
+    20%{top:26px;}
+    50%{top:26px;}
+    90%{top:26px;} 
+    100%{top:26px;}
+    }
+    
+    @-moz-keyframes iconjump
+    {
+    0%{top:23%;}
+    10%{top:70%;}
+    20%{top:23%;}
+    50%{top:23%;}
+    90%{top:23%;} 
+    100%{top:23%;}
+    }
+    
+    @keyframes iconjump
+    {
+        0%{top:23%;}
+        10%{top:70%;}
+        20%{top:23%;}
+        50%{top:23%;}
+        90%{top:23%;} 
+        100%{top:23%;}
+    }
+
+
+/* For large screens */
+@media (min-width: 1024px) {
+    .topic{
+        /* font-size: 50px; */
+        padding-left: 18%;
+        width: 40%;
+        font-size: 50px;
+    }
+    .tech{
+        /* font-size: 40px; */
+        width: 60%;
+        padding-left: 1%;
+    }
+    .socialicon {
+        width: 97px;
+        height: 97px;
+    }
+
+    .socialiconcircle1 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .socialiconcircle2 {
+        width:94%;
+        height:94%;
+        border-radius:50%;
+        background:#fff;
+        position:absolute;
+        left:3.1px;
+        top:3.1px;
+    }
+
+    .fa-brands, .fa-solid {
+        font-size: 3.9em;
+    }
+}
+/* For medium screens (like 1024x768) */
+@media (max-width: 1024px) {
+    .topic{
+        font-size: 45px;
+        padding-left: 15%;
+        width: 40%;
+    }
+    .tech{
+        /* font-size: 40px; */
+        width: 60%;
+        padding-left: 3%;
+    }
+    .socialicon {
+        width: 57px;
+        height: 57px;
+    }
+
+    .socialiconcircle1 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .socialiconcircle2 {
+        width:94%;
+        height:94%;
+        border-radius:50%;
+        background:#fff;
+        position:absolute;
+        left:2.6px;
+        top:2.6px;
+    }
+
+    .fa-brands, .fa-solid {
+        font-size: 2.1em;
+    }
+}
+
+/* For smaller screens (like 768x480) */
+@media (max-width: 768px) {
+    .topic{
+        font-size: 30px;
+        width: 30%;
+        padding-left: 8%;
+        margin: 0;
+    }
+    .tech{
+        padding-left: 7%;
+        /* font-size: 40px; */
+        width: 70%;
+    }
+    .socialicon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .socialiconcircle1 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .socialiconcircle2 {
+        width:94%;
+        height:94%;
+        border-radius:50%;
+        background:#fff;
+        position:absolute;
+        left:1.1px;
+        top:1.1px;
+    }
+
+    .fa-brands, .fa-solid {
+        font-size: 1.5em;
+    }
+}
+
+/* For very small screens (like 480px and below) */
+@media (max-width: 480px) {
+    .topic{
+        font-size: 25px;
+        width: 30%;
+        padding-left: 8%;
+    }
+    .tech{
+        padding-left: 4%;
+        /* font-size: 40px; */
+        width: 70%;
+    }
+    .socialicon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .socialiconcircle1 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .socialiconcircle2 {
+        width:94%;
+        height:94%;
+        border-radius:50%;
+        background:#fff;
+        position:absolute;
+        left:1px;
+        top:1px;
+    }
+
+    .fa-brands, .fa-solid {
+        font-size: 1.6em;
+    }
+}
+
+/* For very small screens (like 480px and below) */
+@media (max-width: 423px) {
+    .topic{
+        font-size: 18px;
+        width: 30%;
+        padding-left: 7%;
+    }
+    .tech{
+        padding-left: 0%;
+        /* font-size: 40px; */
+        width: 70%;
+    }
+    .socialicon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .socialiconcircle1 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .socialiconcircle2 {
+        width:94%;
+        height:94%;
+        border-radius:50%;
+        background:#fff;
+        position:absolute;
+        left:1px;
+        top:1px;
+    }
+
+    .fa-brands, .fa-solid {
+        font-size: 1.2em;
+    }
+}

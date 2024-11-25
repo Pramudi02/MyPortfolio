@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Ensure no extra margin/padding for the body */
+  body, html {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+  }
+  
