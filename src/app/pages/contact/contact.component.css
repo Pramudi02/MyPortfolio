@@ -15,7 +15,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /*black overlay */
+    /* background:  black overlay */
+    /*linear greadient backgroud */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6),  rgba(0, 0, 0, 0.2));
+
     z-index: 1;
   }
   
@@ -59,6 +62,14 @@
     background: rgba(255, 255, 255, 0.1);
     color: #ffffff;
   }
+  ::placeholder {
+    color: rgb(198, 197, 197);
+    opacity: 1; /* Firefox */
+  }
+  
+  ::-ms-input-placeholder { /* Edge 12-18 */
+    color: rgb(198, 197, 197);
+  }
   
   .contact-form input:focus,
   .contact-form textarea:focus {
@@ -72,7 +83,7 @@
     font-size: 24px;
     font-family: 'Poppins', sans-serif;
     color: #ffffff;
-    background: #25e0d7;
+    background: rgb(60, 218, 210);
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -87,7 +98,7 @@
   .contact-note {
     font-size: 16px;
     margin-top: 20px;
-    color: #b3b3b3;
+    color: #cacaca;
   }
   
   .social-icons {
@@ -103,6 +114,7 @@
     transition: transform 0.3s ease;
     color: white;
     margin-bottom: 100px;
+    
   }
   
   .social-icons a:hover {
