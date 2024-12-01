@@ -1,13 +1,9 @@
 import { Component, AfterViewInit } from '@angular/core';
 declare var fullpage: any;
 import { RouterOutlet } from '@angular/router';
-// import { LayoutComponent } from "./pages/layout/layout.component";
-// import { LoginComponent } from "./pages/login/login.component";
 import { AboutComponent } from "./pages/about/about.component";
-// import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FooterComponent } from './pages/footer/footer.component';
-// import { NavbarComponent } from './pages/navbar/navbar.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { SkillsComponent } from './pages/skills/skills.component';
 import { ProjectsComponent } from './pages/projects/projects.component';

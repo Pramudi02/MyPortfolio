@@ -3,8 +3,9 @@
     top: 0;
     border-right: 3px solid #1de2d1;
     list-style: none;
-    animation: slide 24s steps(4) infinite;
+    animation: slide 24s steps(4) infinite;/* Vertical scrolling animation */
 }
+
 @keyframes slide {
     100% {
         top: -235px;
@@ -17,8 +18,6 @@
     white-space: nowrap;
     font-size: 33px;
     font-weight: 500;
-
-    /* making the div size small as the text and hide the overflow content  */
     height: 60px;
     line-height: 60px;
     overflow: hidden;
