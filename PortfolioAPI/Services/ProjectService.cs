@@ -1,52 +1,46 @@
-using Microsoft.Extensions.Options;
-using MongoDB.Driver;
 using PortfolioAPI.Models;
+using PortfolioAPI.Repositories;
 
 namespace PortfolioAPI.Services
 {
     public class ProjectService
     {
-        // In-memory storage for demonstration purposes
-        private static readonly List<Project> _projects = new List<Project>();
+        private readonly ProjectRepository _repository;
+
+        // Constructor to initialize the repository
+        public ProjectService()
+        {
+            _repository = new ProjectRepository();
+        }
 
         // Get all projects
         public List<Project> GetAllProjects()
         {
-            return _projects;
+            return _repository.GetAllProjects();
         }
 
         // Get a project by ID
-        public Project? GetProjectById(string id) // Make return type nullable
+        public Project? GetProjectById(string id) // Nullable return type
         {
-            return _projects.FirstOrDefault(p => p.Id == id);
+            return _repository.GetProjectById(id);
         }
 
         // Create a new project
         public void CreateProject(Project newProject)
         {
-            _projects.Add(newProject);
+            _repository.CreateProject(newProject);
         }
 
         // Update an existing project
         public void UpdateProject(string id, Project updatedProject)
         {
-            var existingProject = _projects.FirstOrDefault(p => p.Id == id);
-            if (existingProject != null)
-            {
-                existingProject.Name = updatedProject.Name;
-                existingProject.Description = updatedProject.Description;
-                // Add other properties as needed
-            }
+            _repository.UpdateProject(id, updatedProject);
         }
 
         // Delete a project
         public void DeleteProject(string id)
         {
-            var project = _projects.FirstOrDefault(p => p.Id == id);
-            if (project != null)
-            {
-                _projects.Remove(project);
-            }
+            _repository.DeleteProject(id);
         }
     }
 }

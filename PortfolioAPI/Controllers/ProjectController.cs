@@ -1,69 +1,25 @@
 using Microsoft.AspNetCore.Mvc;
-using PortfolioAPI.Services;
-using PortfolioAPI.Models;
+using PortfolioAPI.Repositories;
+using PortfolioAPI.Models;  // This line is necessary to reference the Project class
 
 namespace PortfolioAPI.Controllers
 {
-    [ApiController]
     [Route("api/[controller]")]
-    public class ProjectController : ControllerBase
+    [ApiController]
+    public class ProjectsController : ControllerBase
     {
-        private readonly ProjectService _projectService;
+        private readonly ProjectRepository _projectRepo;
 
-        public ProjectController(ProjectService projectService)
+        public ProjectsController(ProjectRepository projectRepo)
         {
-            _projectService = projectService;
+            _projectRepo = projectRepo;
         }
 
-        // Get all projects
         [HttpGet]
-        public IActionResult GetProjects()
+        public ActionResult<List<Project>> GetProjects()
         {
-            var projects = _projectService.GetAllProjects();
+            var projects = _projectRepo.GetAllProjects();
             return Ok(projects);
-        }
-
-        // Get a project by ID
-        [HttpGet("{id}")]
-        public IActionResult GetProjectById(string id)
-        {
-            var project = _projectService.GetProjectById(id);
-            if (project == null)
-                return NotFound();
-
-            return Ok(project);
-        }
-
-        // Add a new project
-        [HttpPost]
-        public IActionResult CreateProject(Project newProject)
-        {
-            _projectService.CreateProject(newProject);
-            return CreatedAtAction(nameof(GetProjectById), new { id = newProject.Id }, newProject);
-        }
-
-        // Update a project
-        [HttpPut("{id}")]
-        public IActionResult UpdateProject(string id, Project updatedProject)
-        {
-            var existingProject = _projectService.GetProjectById(id);
-            if (existingProject == null)
-                return NotFound();
-
-            _projectService.UpdateProject(id, updatedProject);
-            return NoContent();
-        }
-
-        // Delete a project
-        [HttpDelete("{id}")]
-        public IActionResult DeleteProject(string id)
-        {
-            var project = _projectService.GetProjectById(id);
-            if (project == null)
-                return NotFound();
-
-            _projectService.DeleteProject(id);
-            return NoContent();
         }
     }
 }

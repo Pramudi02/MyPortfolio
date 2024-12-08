@@ -8,7 +8,9 @@ import { ProjectsComponent } from '../projects/projects.component';
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [TypingTextComponent,AboutComponent,ContactComponent,SkillsComponent,ProjectsComponent],
+  imports: [
+    TypingTextComponent
+  ],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.css'
 })
