@@ -1,4 +1,4 @@
-<div class="hero-section  ">	
+<div class="hero-section">
     <div class="section-center">
         <div class="container-fluid">
             <div class="row justify-content-center">
@@ -9,16 +9,31 @@
                     <h2>I'm</h2> <app-typing-text></app-typing-text>
                     <!-- <div class="possition text-center"><h2>Undergraduate & IT enthusiast</h2></div> -->
                 </div>
-                <div class=" text-center">
+                <div class="text-center">
                     <p>
-                        <a routerLink="/about"><span class="aboutMe navTitles hover-target">About Me</span></a> 
-                        <a routerLink="/skills"><span class="skills navTitles hover-target" >Skills</span></a>
-                        <a routerLink="/projects"><span class="projects navTitles hover-target" >projects</span></a>
-                        <a routerLink="/contact"><span class="contacts navTitles hover-target" >Contacts</span></a>
+                        <a (click)="scrollToSection('about')"><span class="aboutMe navTitles hover-target">About Me</span></a>
+                        <a (click)="scrollToSection('skills')"><span class="skills navTitles hover-target">Skills</span></a>
+                        <a (click)="scrollToSection('projects')"><span class="projects navTitles hover-target">Projects</span></a>
+                        <a (click)="scrollToSection('contact')"><span class="contacts navTitles hover-target">Contacts</span></a>
                     </p>
                 </div>
             </div>
         </div>
     </div>
-        
 </div>
+
+<section id="about">
+    <app-about></app-about>
+</section>
+
+<section id="skills">
+    <app-skills></app-skills>
+</section>
+
+<section id="projects">
+    <app-projects></app-projects>
+</section>
+
+<section id="contact">
+    <app-contact></app-contact>
+</section>

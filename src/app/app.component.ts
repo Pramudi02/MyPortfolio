@@ -1,30 +1,30 @@
-import { Component, AfterViewInit } from '@angular/core';
-declare var fullpage: any;
-import { RouterOutlet } from '@angular/router';
-import { AboutComponent } from "./pages/about/about.component";
-import { ContactComponent } from './pages/contact/contact.component';
-import { FooterComponent } from './pages/footer/footer.component';
+import { Component } from '@angular/core';
+import { RouterOutlet, RouterModule } from '@angular/router';
 import { HomepageComponent } from './pages/homepage/homepage.component';
+import { AboutComponent } from './pages/about/about.component';
 import { SkillsComponent } from './pages/skills/skills.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { MainLayoutComponent } from './pages/main-layout/main-layout.component';
+ import { FooterComponent } from './pages/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet ,AboutComponent,ContactComponent,FooterComponent,HomepageComponent,SkillsComponent,ProjectsComponent,AboutComponent],
+  imports: [
+    RouterOutlet,
+    RouterModule,
+    HomepageComponent,
+    AboutComponent,
+    SkillsComponent,
+    ProjectsComponent,
+    ContactComponent,
+    MainLayoutComponent,
+    FooterComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements AfterViewInit {
-  ngAfterViewInit(): void {
-    new fullpage('#fullpage', {
-      scrollBar: true,
-      responsiveWidth: 400,
-      navigation: true,
-      navigationTooltips: ['home', 'about', 'portfolio', 'contact'],
-      anchors: ['home', 'about', 'portfolio', 'contact'],
-      menu: '#myMenu',
-      fitToSection: false,
-    });
-  }
+export class AppComponent {
+  title = 'my-portfolio';
 }
