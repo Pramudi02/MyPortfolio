@@ -1,210 +1,211 @@
-/* Keyframe animation for waves */
 @keyframes move_wave {
-    0% {
-        transform: translateX(0) translateZ(0) scaleY(1);
-    }
-    50% {
-        transform: translateX(-25%) translateZ(0) scaleY(0.55);
-    }
-    100% {
-        transform: translateX(-50%) translateZ(0) scaleY(1);
-    }
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.55);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
 }
 
-/* General section styling */
 .about-section {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 1.6;
-    color: #fff;
-    background-color: #25e0d7;
-    overflow: hidden;
-    height: 100vh;
-    perspective: 800px;
-    position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #25e0d7;
+  overflow: hidden;
+  height: 100vh;
+  perspective: 800px;
+  position: relative;
 }
 
 .about-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
-    z-index: 2; 
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
 }
 
-/* Wave animations */
 .waveWrapper {
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    margin: auto;
-    z-index: 1;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  z-index: 1;
 }
 
 .waveWrapperInner {
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    height: 100%;
-    bottom: -1px;
-    background-image: linear-gradient(to top, #25e0d7 20%, #25e0d7 80%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -1px;
+  background-image: linear-gradient(to top, #25e0d7 20%, #25e0d7 80%);
+  overflow: hidden;
 }
 
 .bgTop {
-    z-index: 15;
-    opacity: 0.5;
+  z-index: 15;
+  opacity: 0.5;
 }
 
 .bgMiddle {
-    z-index: 10;
-    opacity: 0.75;
+  z-index: 10;
+  opacity: 0.75;
 }
 
 .bgBottom {
-    z-index: 5;
+  z-index: 5;
 }
 
 .wave {
-    position: absolute;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background-repeat: repeat no-repeat;
-    background-position: 0 bottom;
-    transform-origin: center bottom;
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
 }
 
 .waveTop {
-    background-size: 50% 100px;
-}
-
-.waveAnimation .waveTop {
-    animation: move_wave 3s linear infinite;
+  background-size: 50% 100px;
 }
 
 .waveMiddle {
-    background-size: 50% 120px;
-}
-
-.waveAnimation .waveMiddle {
-    animation: move_wave 10s linear infinite;
+  background-size: 50% 120px;
 }
 
 .waveBottom {
-    background-size: 50% 100px;
+  background-size: 50% 100px;
+}
+
+.waveAnimation .waveTop {
+  animation: move_wave 3s linear infinite;
+}
+
+.waveAnimation .waveMiddle {
+  animation: move_wave 10s linear infinite;
 }
 
 .waveAnimation .waveBottom {
-    animation: move_wave 15s linear infinite;
+  animation: move_wave 15s linear infinite;
 }
 
 .content-wrapper {
-    position: relative;
-    z-index: 3; /* Above waves */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%; 
-    padding: 0 5%; 
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 5%;
 }
 
-
 .image-container {
-    flex: 1; /* Allocate space for image*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto; 
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
 .profile-image {
-    margin: 10%;
-    flex: content;  
-    border-radius: 30%; 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    z-index: 2;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 20%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  object-fit: cover;
 }
 
-/* Text content styling */
 .text-container {
-    flex: 2; /* Allocate more space for text */
-    text-align: left;
-    color: #fff;
-    padding-left: 2rem;
+  flex: 2;
+  text-align: left;
+  color: #fff;
+  padding-left: 2rem;
 }
 
 .text-container h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
 .text-container h2 {
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-    color: #25e0d7; 
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #25e0d7;
 }
 
 .text-container p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-weight: 300;
 }
 
-/* Button styling */
 .button-container {
-    text-align: left;
-    margin-top: 2rem;
+  text-align: left;
+  margin-top: 2rem;
 }
 
-.button-container .cv-button {
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 10px 20px;
-    background-color: #1aafab; 
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+.cv-button {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  background-color: #1aafab;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-.button-container .cv-button:hover {
-    background-color: #137672; 
+.cv-button:hover {
+  background-color: #137672;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    .content-wrapper {
-        flex-direction: column; 
-        text-align: center;
-    }
+  .content-wrapper {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
 
-    .image-container, .text-container {
-        flex: none;
-        width: 100%;
-        padding: 1rem 0;
-    }
+  .image-container,
+  .text-container {
+    width: 100%;
+    padding: 1rem 0;
+    padding-left: 0;
+  }
 
-    .text-container h1 {
-        font-size: 2.5rem;
-    }
+  .text-container h1 {
+    font-size: 2.5rem;
+  }
 
-    .text-container h2 {
-        font-size: 1.8rem;
-    }
+  .text-container h2 {
+    font-size: 1.8rem;
+  }
 
-    .text-container p {
-        font-size: 1rem;
-    }
+  .text-container p {
+    font-size: 1rem;
+  }
+
+  .profile-image {
+    max-width: 200px;
+    border-radius: 50%;
+  }
 }
