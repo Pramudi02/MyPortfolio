@@ -1,32 +1,84 @@
+<!-- contact.component.html -->
 <div class="contact-section">
-  <h1 class="contact-title">Contact Me</h1>
-  <form class="contact-form">
+  <div class="form-content">
+      <h1 class="contact-title">Contact Me</h1>
+  
+  <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
       <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Your Name" required />
-
+      <input 
+        type="text" 
+        id="name" 
+        formControlName="name" 
+        placeholder="Your Name" 
+        [ngClass]="{'invalid-input': submitted && f['name'].errors}"
+      />
+      <div *ngIf="submitted && f['name'].errors" class="error-message">
+        <span *ngIf="f['name'].errors['required']">Name is required</span>
+      </div>
+    </div>
+    
+    <div class="form-group">
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Your Email" required />
-
+      <input 
+        type="email" 
+        id="email" 
+        formControlName="email" 
+        placeholder="Your Email" 
+        [ngClass]="{'invalid-input': submitted && f['email'].errors}"
+      />
+      <div *ngIf="submitted && f['email'].errors" class="error-message">
+        <span *ngIf="f['email'].errors['required']">Email is required</span>
+        <span *ngIf="f['email'].errors['email']">Please enter a valid email</span>
+      </div>
+    </div>
+    
+    <div class="form-group">
       <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-
-      <button type="submit" class="submit-btn">Contact Me</button>
+      <textarea 
+        id="message" 
+        formControlName="message" 
+        rows="5" 
+        placeholder="Your Message" 
+        [ngClass]="{'invalid-input': submitted && f['message'].errors}"
+      ></textarea>
+      <div *ngIf="submitted && f['message'].errors" class="error-message">
+        <span *ngIf="f['message'].errors['required']">Message is required</span>
+        <span *ngIf="f['message'].errors['minlength']">Message must be at least 10 characters</span>
+      </div>
+    </div>
+    
+    <button type="submit" class="submit-btn" [disabled]="loading">
+      <span *ngIf="!loading">Contact Me</span>
+      <span *ngIf="loading">Sending...</span>
+    </button>
   </form>
+  
+  <div *ngIf="success" class="success-message">
+    Thank you for reaching out! Your message has been sent successfully.
+  </div>
+  
+  <div *ngIf="errorMessage" class="error-message">
+    {{errorMessage}}
+  </div>
+  
   <p class="contact-note">
-      Feel free to drop me a message, and I'll get back to you as soon as I can!
+    Feel free to drop me a message, and I'll get back to you as soon as I can!
   </p>
+  
   <div class="social-icons">
-      <a href="https://github.com/Pramudi02" target="_blank">
-          <i class="fa-brands fa-github"></i>
-      </a>
-      <a href="www.linkedin.com/in/pramudi-samarawickrama-4b5356283" target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-      <a href="mailto:pramupiyumika@gmail.com">
-        <i class="fa-solid fa-envelope"></i>
-      </a>
-      <a href="https://www.instagram.com/iam_pramu.____/">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
+    <a href="https://github.com/Pramudi02" target="_blank">
+      <i class="fa-brands fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/pramudi-samarawickrama-4b5356283" target="_blank">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="mailto:pramupiyumika@gmail.com">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+    <a href="https://www.instagram.com/iam_pramu.____/">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+  </div>
   </div>
 </div>
