@@ -1,16 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.contact-section {
+   font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #25e0d7;
+  overflow: hidden;
+  min-height: 100vh;
+  perspective: 800px;
+  position: relative;
+}
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
 .contact-container {
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 3;
+  background-color: #87d2ce;
+  color: #333;
+  border-radius: 8px; 
 }
 
 .contact-heading {
   text-align: center;
+  font-size: 2rem;
+  color: #1c1b1b;
   margin-bottom: 2rem;
-  color: #333;
 }
 
 .contact-form {
@@ -26,16 +55,18 @@
 }
 
 .form-group label {
-  font-weight: bold;
-  color: #555;
+  font-weight: 600;
+  color: #3b3b3b;
+  font-size: 1rem;
 }
 
 .form-control {
   padding: 12px;
   border: 1px solid #ddd;
+  background-color: #e6fffed8;
   border-radius: 4px;
-  transition: border-color 0.3s;
   font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .form-control:focus {
@@ -44,7 +75,8 @@
   box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
 }
 
-.form-control.ng-invalid.ng-touched {
+.form-control.ng-invalid.ng-touched,
+.form-control.ng-invalid.ng-dirty {
   border-color: #dc3545;
 }
 
@@ -60,23 +92,28 @@ textarea.form-control {
 }
 
 .submit-btn {
-  background-color: #007bff;
-  color: white;
+  background-color: #4affe7;
+  color: #005b5b;
   border: none;
   padding: 12px 24px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   font-weight: bold;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .submit-btn:hover {
-  background-color: #0069d9;
+  color: #002c2c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #40e4ce;
+
 }
 
 .submit-btn:disabled {
   background-color: #6c757d;
+  color: #fff;
   cursor: not-allowed;
 }
 
@@ -85,12 +122,13 @@ textarea.form-control {
   padding: 1rem;
   margin-top: 1rem;
   border-radius: 4px;
+  font-size: 15px;
 }
 
 .success-message {
   background-color: #d4edda;
   color: #155724;
-  border: 1px solid #c3e6cb;
+  border: 1px solid #b6eac2;
 }
 
 .error-message-container {
@@ -122,153 +160,14 @@ textarea.form-control {
     margin: 1rem;
   }
 }
-
-
- @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-
-/*.contact-section {
-  position: relative;
-  background-color: #25e0d7;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  overflow: hidden;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.contact-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
-  z-index: 1;
-}
-
-.form-content{
+.social-icons-container {
   max-width: 800px;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  overflow: hidden;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.contact-title,
-.contact-form,
-.contact-note,
-.social-icons {
+  margin: 2rem auto;
+  border-radius: 8px;
   position: relative;
-  z-index: 2;
-}
-
-.contact-title {
-  font-size: 48px;
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  text-align: left;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.contact-form label {
-  font-size: 18px;
-  font-weight: 500;
-  display: block;
-  margin-bottom: 8px;
-  color: #ffffff;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 16px;
-  margin-bottom: 8px;
-  border: 2px solid #25e0d7;
+  z-index: 3;
   border-radius: 8px;
-  font-size: 16px;
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
 }
-
-input::placeholder,
-textarea::placeholder {
-  color: rgb(198, 197, 197);
-  opacity: 1;
-}
-
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  color: rgb(198, 197, 197);
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #ffffff;
-}
-
-.invalid-input {
-  border-color: #dc3545;
-}
-
-.error-message {
-  color: #dc3545;
-  font-size: 0.875rem;
-  margin-top: 0.25rem;
-}
-
-.success-message {
-  background-color: #d4edda;
-  color: #155724;
-  padding: 1rem;
-  border-radius: 4px;
-  margin-top: 1rem;
-  text-align: center;
-}
-
-.submit-btn {
-  width: 100%;
-  padding: 10px;
-  font-size: 24px;
-  font-family: 'Poppins', sans-serif;
-  color: #ffffff;
-  background: rgb(60, 218, 210);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.submit-btn:hover {
-  background: #1bb6a8;
-}
-
-.submit-btn:disabled {
-  background-color: #6c757d;
-  cursor: not-allowed;
-}
-
-.contact-note {
-  font-size: 16px;
-  margin-top: 20px;
-  color: #cacaca;
-  text-align: center;
-}
-
 .social-icons {
   margin-top: 20px;
   display: flex;
@@ -291,4 +190,9 @@ textarea:-ms-input-placeholder {
 
 .social-icons i:hover {
   color: #25e0d7;
-} */
+} 
+.social-description {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #1c1b1b;
+}
