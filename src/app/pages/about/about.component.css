@@ -18,9 +18,10 @@
   color: #fff;
   background-color: #25e0d7;
   overflow: hidden;
-  height: 100vh;
+  height: auto;
   perspective: 800px;
   position: relative;
+  padding: 5%;
 }
 
 .about-section::before {
@@ -124,7 +125,7 @@
   width: 100%;
   max-width: 300px;
   height: auto;
-  border-radius: 20%;
+  border-radius: 50px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   z-index: 2;
   object-fit: cover;
@@ -163,19 +164,26 @@
 
 .cv-button {
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 600;
   padding: 10px 20px;
-  background-color: #1aafab;
-  color: white;
+  background-color: #21e0da;
+  color: rgb(0, 0, 0);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
 }
 
 .cv-button:hover {
-  background-color: #137672;
+  background-color: #7dfffb;
+  color: #000;
+  font-weight: 700;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1.5); 
+
 }
 
 @media (max-width: 768px) {

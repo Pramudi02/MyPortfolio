@@ -71,6 +71,21 @@ a:hover {
 	font-weight: 900;
 }
 
+.name-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+  }
+
+  .subName{
+	color: #bfbfbf;
+    font-size: 2vw;
+    font-weight: 500;
+	font-family: 'Poppins', sans-serif;
+
+ }
 
 @media screen and (max-width: 768px){
 	.hero-section .navTitles{
@@ -159,13 +174,6 @@ a:hover {
 	z-index: 1;
 }
 
-.name-container {
-    width: 100%;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; 
-  }
 
   @media (max-width: 768px) {
     .name-container {
@@ -184,12 +192,5 @@ a:hover {
     font-size:large;
  }
 
- .subName{
-	color: #bfbfbf;
-    font-size: 2rem;
-    font-weight: 500;
-	font-family: 'Poppins', sans-serif;
-
- }
-
+ 
  

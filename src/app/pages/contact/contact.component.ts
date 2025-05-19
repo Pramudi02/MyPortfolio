@@ -1,68 +1,59 @@
-// contact.component.ts
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { EmailService } from '../../services/email.service';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, HttpClientModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css'
+  styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
   contactForm: FormGroup;
   submitted = false;
   success = false;
+  error = false;
   loading = false;
   errorMessage = '';
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(private fb: FormBuilder, private emailService: EmailService) {
     this.contactForm = this.fb.group({
-      name: ['', [Validators.required]],
+      name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
       message: ['', [Validators.required, Validators.minLength(10)]]
     });
   }
 
-  get f() { return this.contactForm.controls; }
+  get formControls() {
+    return this.contactForm.controls;
+  }
 
   onSubmit() {
     this.submitted = true;
     
-    // Stop if form is invalid
+    // Stop here if form is invalid
     if (this.contactForm.invalid) {
       return;
     }
 
     this.loading = true;
+    this.success = false;
+    this.error = false;
     
-    // Replace with your actual backend API endpoint
-    const endpoint = 'https://your-api-endpoint/send-email';
-    
-    const emailData = {
-      name: this.contactForm.value.name,
-      email: this.contactForm.value.email,
-      message: this.contactForm.value.message,
-      to: 'pramupiyumika@gmail.com' // Your email address
-    };
-
-    this.http.post(endpoint, emailData)
-      .subscribe({
-        next: () => {
-          this.success = true;
-          this.loading = false;
-          this.contactForm.reset();
-          this.submitted = false;
-          setTimeout(() => this.success = false, 5000); // Hide success message after 5 seconds
-        },
-        error: (error) => {
-          this.errorMessage = 'Failed to send message. Please try again later.';
-          this.loading = false;
-          console.error('Error sending email:', error);
-          setTimeout(() => this.errorMessage = '', 5000); // Hide error message after 5 seconds
-        }
-      });
+    this.emailService.sendEmail(this.contactForm.value).subscribe({
+      next: (response) => {
+        this.success = true;
+        this.loading = false;
+        this.contactForm.reset();
+        this.submitted = false;
+      },
+      error: (error) => {
+        this.error = true;
+        this.loading = false;
+        this.errorMessage = error.message || 'An error occurred while sending your message.';
+      }
+    });
   }
 }

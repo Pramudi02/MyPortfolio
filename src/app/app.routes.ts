@@ -5,6 +5,7 @@ import { SkillsComponent } from './pages/skills/skills.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { MainLayoutComponent } from './pages/main-layout/main-layout.component';
+import { TestConnectionComponent } from './test-connection.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -18,5 +19,6 @@ export const routes: Routes = [
       { path: 'projects', component: ProjectsComponent },
       { path: 'contact', component: ContactComponent },
     ]
-  }
+  },
+   { path: 'test-connection', component: TestConnectionComponent}
 ];
