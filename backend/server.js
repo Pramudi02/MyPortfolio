@@ -16,8 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER || 'pramupiyumika@gmail.com',
-    pass: process.env.EMAIL_PASS || 'ttiudrpzctwnfswq'
+    user: process.env.EMAIL_USER
   }
 });
 
@@ -32,8 +31,8 @@ app.post('/api/send-email', async (req, res) => {
   try {
     // Email options for notification to site owner
     const mailOptions = {
-      from: process.env.EMAIL_FROM || 'pramupiyumika@gmail.com',
-      to: process.env.EMAIL_TO || 'pramupiyumika@gmail.com',
+      from: process.env.EMAIL_FROM ,
+      to: process.env.EMAIL_TO ,
       subject: `Portfolio Contact Form: Message from ${name}`,
       html: `
         <h3>New Contact Form Submission</h3>
@@ -46,7 +45,7 @@ app.post('/api/send-email', async (req, res) => {
     
     // Auto-reply email options
     const autoReplyOptions = {
-      from: process.env.EMAIL_FROM || 'pramupiyumika@gmail.com',
+      from: process.env.EMAIL_FROM ,
       to: email,
       subject: process.env.AUTO_REPLY_SUBJECT || 'Thank you for contacting me',
       html: `
