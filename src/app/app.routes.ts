@@ -20,5 +20,6 @@ export const routes: Routes = [
       { path: 'contact', component: ContactComponent },
     ]
   },
+  { path: '**', redirectTo: 'home' },
    { path: 'test-connection', component: TestConnectionComponent}
 ];
