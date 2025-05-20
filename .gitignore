@@ -57,3 +57,4 @@ Thumbs.db
 
 # Ignore public assets cache (if needed)
 /public/cache
+.vercel
