@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-typing-text',
-  standalone: true,
-  imports: [],
-  templateUrl: './typing-text.component.html',
-  styleUrl: './typing-text.component.css'
+    selector: 'app-typing-text',
+    imports: [],
+    templateUrl: './typing-text.component.html',
+    styleUrl: './typing-text.component.css'
 })
 
 export class TypingTextComponent implements OnInit {

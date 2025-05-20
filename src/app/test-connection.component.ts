@@ -4,10 +4,9 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-test-connection',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
+    selector: 'app-test-connection',
+    imports: [CommonModule],
+    template: `
     <div>
       <h2>Backend Connection Test</h2>
       <button (click)="testConnection()">Test Connection</button>

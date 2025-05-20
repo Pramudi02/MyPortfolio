@@ -6,17 +6,16 @@ import { ProjectsComponent } from '../projects/projects.component';
 import { ContactComponent } from '../contact/contact.component';
 
 @Component({
-  selector: 'app-homepage',
-  standalone: true,
-  imports: [
-    TypingTextComponent,
-    AboutComponent,
-    SkillsComponent,
-    ProjectsComponent,
-    ContactComponent
-  ],
-  templateUrl: './homepage.component.html',
-  styleUrl: './homepage.component.css'
+    selector: 'app-homepage',
+    imports: [
+        TypingTextComponent,
+        AboutComponent,
+        SkillsComponent,
+        ProjectsComponent,
+        ContactComponent
+    ],
+    templateUrl: './homepage.component.html',
+    styleUrl: './homepage.component.css'
 })
 export class HomepageComponent {
   

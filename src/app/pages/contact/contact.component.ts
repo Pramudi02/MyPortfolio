@@ -4,11 +4,10 @@ import { EmailService } from '../../services/email.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-contact',
-  standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+    selector: 'app-contact',
+    imports: [ReactiveFormsModule, CommonModule],
+    templateUrl: './contact.component.html',
+    styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
   contactForm: FormGroup;
