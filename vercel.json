@@ -1,14 +1,14 @@
 {
+  "version": 2,
   "builds": [
     {
-      "src": "dist/portfolio/**/*",
+      "src": "dist/portfolio/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+    { "handle": "filesystem" },
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/(.*)", "dest": "/dist/portfolio/index.html" }
   ]
 }
