@@ -21,7 +21,7 @@
   height: auto;
   perspective: 800px;
   position: relative;
-  padding: 5%;
+  padding:  0 5% 10% 5% ;
 }
 
 .about-section::before {

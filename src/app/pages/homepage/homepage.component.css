@@ -32,7 +32,7 @@ a:hover {
 	display: block;
 	overflow: hidden;
 	height: 100vh;
-	background-image: url('../../../assets/homebg2.png');
+	background-image: url('https://res.cloudinary.com/dfbvnb3vx/image/upload/v1748347671/Untitled_design_3_wlyvfj.jpg');
 	background-size: cover;
     background-color: #25e0d7; 
     z-index: 1;
