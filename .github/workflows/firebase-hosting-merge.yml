@@ -1,4 +1,16 @@
+name: Deploy to Firebase Hosting on Solution
+
+You need to ensure that the Angular CLI is installed before running `npm run build`. Modify your workflow file to include a step to install the Angular CLI. Here's the updated workflow file:
+
+```yaml
 name: Deploy to Firebase Hosting on merge
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build_and_deploy:
+ merge
 on:
   push:
     branches:
@@ -8,11 +20,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm ci
-      - run: npm install -g @angular/cli
-      - run: ng build
+      - run: npm install -g @angular/cli # Install Angular CLI
+      - run: npm install # Ensure dependencies are installed
+      - run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm install -g @angular/cli # Install Angular CLI
+      - run: npm ci # Install dependencies
+      - run: npm run build
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO990 }}
           channelId: live
