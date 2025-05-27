@@ -6,113 +6,73 @@
                 Below you can see some examples of my recent work. Have a project you would like to discuss? <br>
                 <a href="#contact">Let's make something great together!</a>
             </p>
-            <div class="projects-container">
-                <div class="nav-arrow prev" (click)="slidePrev()"></div>
+            
+            <div class="projects-wrapper">
+                <div class="nav-arrow prev" (click)="slidePrev()">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
                 
-                <!-- Project 1 -->
-                <div class="project-card" [class.active]="currentIndex === 0" data-index="0">
-                    <div class="project-image proj1"></div>
-                    <a href="https://github.com/hhadithya/rhyme-jacket">
-                        <h2 class="project-title">Interactive Rhyme Jacket</h2>
-                    </a>
-                    <p class="project-description">A wearable tech solution that combines motion sensors and health monitoring to engage kids in fun, music-driven exercise.</p>
+                <div #projectsContainer class="projects-container" 
+                    (mousedown)="startDragging($event)"
+                    (mousemove)="onDrag($event)"
+                    (mouseup)="stopDragging()"
+                    (mouseleave)="stopDragging()">
+                    
+                    <div class="project-card" *ngFor="let project of projects; let i = index"
+                        [class.active]="currentIndex === i">
+                        <div class="project-image" [class]="'proj' + (i + 1)"></div>
+                        <a [href]="project.repoUrl">
+                            <h2 class="project-title">{{project.title}}</h2>
+                        </a>
+                        <p class="project-description">{{project.description}}</p>
+                        <button class="see-more-btn" (click)="openModal(i)">See More</button>
+                    </div>
                 </div>
-
-                <!-- Project 2 -->
-                <div class="project-card" [class.active]="currentIndex === 1" data-index="1">
-                    <div class="project-image proj2"></div>
-                    <a href="https://grttravelsandtours.com/">
-                        <h2 class="project-title">GRT Travels Website</h2>
-                    </a>
-                    <p class="project-description">Designed and developed a responsive website for GRT Travels & Tours, showcasing their services and focusing on user-friendly navigation.</p>
+                
+                <div class="nav-arrow next" (click)="slideNext()">
+                    <i class="fas fa-chevron-right"></i>
                 </div>
+            </div>
 
-                <!-- Project 3 -->
-                <div class="project-card" [class.active]="currentIndex === 2" data-index="2">
-                    <div class="project-image proj3"></div>
-                    <a href="https://merchmora-website.onrender.com/">
-                        <h2 class="project-title">MerchMora</h2>
-                    </a>
-                    <p class="project-description">A comprehensive e-commerce platform built with modern web technologies, featuring seamless shopping experiences.</p>
+            <div class="progress-dots">
+                <div class="dot" *ngFor="let project of projects; let i = index" 
+                    [class.active]="currentIndex === i"
+                    (click)="goToSlide(i)">
                 </div>
+            </div>
+        </div>
+    </div>
 
-                <!-- Project 4 -->
-                <div class="project-card" [class.active]="currentIndex === 3" data-index="3">
-                    <div class="project-image proj4"></div>
-                    <a href="#">
-                        <h2 class="project-title">Website for TechTriathlon</h2>
-                    </a>
-                    <p class="project-description">Created an innovative travel and visa passport service website promoting Sri Lankan tourism for Tech-Triathlon 2024.</p>
+    <!-- Modal -->
+    <div class="modal" [class.show-modal]="selectedProject !== null" *ngIf="selectedProject !== null">
+        <div class="modal-content">
+            <span class="close-btn" (click)="closeModal()">&times;</span>
+            <div class="modal-image" [class]="'proj' + (selectedProject + 1)"></div>
+            <h2 class="modal-title">{{projects[selectedProject].title}}</h2>
+            <p class="modal-description">{{projects[selectedProject].fullDescription}}</p>
+            
+            <div class="technologies">
+                <h3>Technologies Used</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag" *ngFor="let tech of projects[selectedProject].technologies">{{tech}}</span>
                 </div>
-
-                <!-- Project 5 -->
-                <div class="project-card" [class.active]="currentIndex === 4" data-index="4">
-                    <div class="project-image proj5"></div>
-                    <a href="#">
-                        <h2 class="project-title">Personal Portfolio Website</h2>
-                    </a>
-                    <p class="project-description">Modern portfolio website built with Angular, featuring smooth animations, responsive design, and interactive project showcases.</p>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-card" [class.active]="currentIndex === 5" data-index="5">
-                    <div class="project-image proj6"></div>
-                    <a href="#">
-                        <h2 class="project-title">Weather Dashboard App</h2>
-                    </a>
-                    <p class="project-description">Real-time weather application with dynamic updates, location-based forecasts, and interactive weather maps using OpenWeatherMap API.</p>
-                </div>
-
-                <!-- Project 7 -->
-                <div class="project-card" [class.active]="currentIndex === 6" data-index="6">
-                    <div class="project-image proj7"></div>
-                    <a href="#">
-                        <h2 class="project-title">Task Management System</h2>
-                    </a>
-                    <p class="project-description">Full-stack task management application with user authentication, real-time updates, and collaborative features using MEAN stack.</p>
-                </div>
-
-                <!-- Project 8 -->
-                <div class="project-card" [class.active]="currentIndex === 7" data-index="7">
-                    <div class="project-image proj8"></div>
-                    <a href="#">
-                        <h2 class="project-title">Social Media Dashboard</h2>
-                    </a>
-                    <p class="project-description">Comprehensive social media analytics dashboard with real-time data visualization, sentiment analysis, and engagement metrics.</p>
-                </div>
-
-                <!-- Project 9 -->
-                <div class="project-card" [class.active]="currentIndex === 8" data-index="8">
-                    <div class="project-image proj9"></div>
-                    <a href="#">
-                        <h2 class="project-title">E-Learning Platform</h2>
-                    </a>
-                    <p class="project-description">Interactive learning management system with video courses, progress tracking, and assessment tools using Angular and Node.js.</p>
-                </div>
-
-                <!-- Project 10 -->
-                <div class="project-card" [class.active]="currentIndex === 9" data-index="9">
-                    <div class="project-image proj10"></div>
-                    <a href="#">
-                        <h2 class="project-title">Healthcare Management System</h2>
-                    </a>
-                    <p class="project-description">Secure healthcare platform for patient records management, appointment scheduling, and medical data visualization.</p>
-                </div>
-
-                <div class="nav-arrow next" (click)="slideNext()"></div>
             </div>
             
-            <div class="progress-dots">
-                <div class="dot" [class.active]="currentIndex === 0" (click)="goToSlide(0)"></div>
-                <div class="dot" [class.active]="currentIndex === 1" (click)="goToSlide(1)"></div>
-                <div class="dot" [class.active]="currentIndex === 2" (click)="goToSlide(2)"></div>
-                <div class="dot" [class.active]="currentIndex === 3" (click)="goToSlide(3)"></div>
-                <div class="dot" [class.active]="currentIndex === 4" (click)="goToSlide(4)"></div>
-                <div class="dot" [class.active]="currentIndex === 5" (click)="goToSlide(5)"></div>
-                <div class="dot" [class.active]="currentIndex === 6" (click)="goToSlide(6)"></div>
-                <div class="dot" [class.active]="currentIndex === 7" (click)="goToSlide(7)"></div>
-                <div class="dot" [class.active]="currentIndex === 8" (click)="goToSlide(8)"></div>
-                <div class="dot" [class.active]="currentIndex === 9" (click)="goToSlide(9)"></div>
+            <div class="project-links">
+                <a *ngIf="projects[selectedProject].repoUrl" 
+                   [href]="projects[selectedProject].repoUrl" 
+                   target="_blank" 
+                   class="repo-btn">
+                    <i class="fab fa-github"></i>
+                    View Repository
+                </a>
+                <a *ngIf="projects[selectedProject].liveUrl" 
+                   [href]="projects[selectedProject].liveUrl" 
+                   target="_blank" 
+                   class="live-btn">
+                    <i class="fas fa-external-link-alt"></i>
+                    View Live Site
+                </a>
             </div>
         </div>
     </div>
