@@ -4,58 +4,115 @@
             <h1 class="section-title">Recent Projects</h1>
             <p class="section-description">
                 Below you can see some examples of my recent work. Have a project you would like to discuss? <br>
-                <a href="#contact">Let’s make something great together!</a>
+                <a href="#contact">Let's make something great together!</a>
             </p>
             <div class="projects-container">
-
+                <div class="nav-arrow prev" (click)="slidePrev()"></div>
+                
                 <!-- Project 1 -->
-                <div class="project-card">
-                    <!-- <div class="project-image" style="background-image:url('../../../assets/proj1.png');"></div> -->
+                <div class="project-card" [class.active]="currentIndex === 0" data-index="0">
                     <div class="project-image proj1"></div>
-                    <a href="https://github.com/hhadithya/rhyme-jacket"><h2 class="project-title">Interactive Rhyme Jacket</h2></a>
-                    <p class="project-description">A wearable tech solution that combines motion sensors and health monitoring to engage kids in fun, music-driven exercise. Features gyroscopes, flex sensors, and heart rate monitoring for interactive, real-time feedback during physical activity</p>
+                    <a href="https://github.com/hhadithya/rhyme-jacket">
+                        <h2 class="project-title">Interactive Rhyme Jacket</h2>
+                    </a>
+                    <p class="project-description">A wearable tech solution that combines motion sensors and health monitoring to engage kids in fun, music-driven exercise.</p>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card">
+                <div class="project-card" [class.active]="currentIndex === 1" data-index="1">
                     <div class="project-image proj2"></div>
-                    <a href="https://grttravelsandtours.com/"><h2 class="project-title">GRT Travels Website</h2></a>
-                    <p class="project-description">Designed and developed a responsive website for GRT Travels & Tours (client), showcasing their services, including airline ticketing, visa arrangements, and hotel bookings, with a focus on user-friendly navigation. Technologies: HTML, CSS, JavaScript, WordPress.</p>
+                    <a href="https://grttravelsandtours.com/">
+                        <h2 class="project-title">GRT Travels Website</h2>
+                    </a>
+                    <p class="project-description">Designed and developed a responsive website for GRT Travels & Tours, showcasing their services and focusing on user-friendly navigation.</p>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card">
+                <div class="project-card" [class.active]="currentIndex === 2" data-index="2">
                     <div class="project-image proj3"></div>
-                    <a href="https://merchmora-website.onrender.com/"><h2 class="project-title">MerchMora</h2></a>
-                    <p class="project-description">Designed and developed a comprehensive e-commerce website as part of an academic project. 
-                        Collaborated with a team to create a user-friendly platform for seamless online shopping.
-                        Enhanced skills in web development, teamwork, and user interface design through this project.
-                    </p>
+                    <a href="https://merchmora-website.onrender.com/">
+                        <h2 class="project-title">MerchMora</h2>
+                    </a>
+                    <p class="project-description">A comprehensive e-commerce platform built with modern web technologies, featuring seamless shopping experiences.</p>
                 </div>
 
                 <!-- Project 4 -->
-                <div class="project-card">
+                <div class="project-card" [class.active]="currentIndex === 3" data-index="3">
                     <div class="project-image proj4"></div>
-                    <a href="#"><h2 class="project-title">Website for TechTriathlon</h2></a>
-                    <p class="project-description">Created a travel and visa passport service website promoting Sri Lankan tourism for Tech-Triathlon 2024 by Rootcode. 
-                        Participated in hackathon and datathon events, contributing to web development and service design.
-                        Enhanced collaboration and project execution skills through teamwork and innovation.
-                    </p>
+                    <a href="#">
+                        <h2 class="project-title">Website for TechTriathlon</h2>
+                    </a>
+                    <p class="project-description">Created an innovative travel and visa passport service website promoting Sri Lankan tourism for Tech-Triathlon 2024.</p>
                 </div>
 
                 <!-- Project 5 -->
-                <!-- <div class="project-card">
+                <div class="project-card" [class.active]="currentIndex === 4" data-index="4">
                     <div class="project-image proj5"></div>
-                    <a href=""><h2 class="project-title"></h2></a>
-                    <p class="project-description"></p>
-                </div> -->
-                
+                    <a href="#">
+                        <h2 class="project-title">Personal Portfolio Website</h2>
+                    </a>
+                    <p class="project-description">Modern portfolio website built with Angular, featuring smooth animations, responsive design, and interactive project showcases.</p>
+                </div>
+
                 <!-- Project 6 -->
-                <!-- <div class="project-card">
+                <div class="project-card" [class.active]="currentIndex === 5" data-index="5">
                     <div class="project-image proj6"></div>
-                    <a href=""><h2 class="project-title"></h2></a>
-                    <p class="project-description"></p>
-                </div> -->
+                    <a href="#">
+                        <h2 class="project-title">Weather Dashboard App</h2>
+                    </a>
+                    <p class="project-description">Real-time weather application with dynamic updates, location-based forecasts, and interactive weather maps using OpenWeatherMap API.</p>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card" [class.active]="currentIndex === 6" data-index="6">
+                    <div class="project-image proj7"></div>
+                    <a href="#">
+                        <h2 class="project-title">Task Management System</h2>
+                    </a>
+                    <p class="project-description">Full-stack task management application with user authentication, real-time updates, and collaborative features using MEAN stack.</p>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-card" [class.active]="currentIndex === 7" data-index="7">
+                    <div class="project-image proj8"></div>
+                    <a href="#">
+                        <h2 class="project-title">Social Media Dashboard</h2>
+                    </a>
+                    <p class="project-description">Comprehensive social media analytics dashboard with real-time data visualization, sentiment analysis, and engagement metrics.</p>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="project-card" [class.active]="currentIndex === 8" data-index="8">
+                    <div class="project-image proj9"></div>
+                    <a href="#">
+                        <h2 class="project-title">E-Learning Platform</h2>
+                    </a>
+                    <p class="project-description">Interactive learning management system with video courses, progress tracking, and assessment tools using Angular and Node.js.</p>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="project-card" [class.active]="currentIndex === 9" data-index="9">
+                    <div class="project-image proj10"></div>
+                    <a href="#">
+                        <h2 class="project-title">Healthcare Management System</h2>
+                    </a>
+                    <p class="project-description">Secure healthcare platform for patient records management, appointment scheduling, and medical data visualization.</p>
+                </div>
+
+                <div class="nav-arrow next" (click)="slideNext()"></div>
+            </div>
+            
+            <div class="progress-dots">
+                <div class="dot" [class.active]="currentIndex === 0" (click)="goToSlide(0)"></div>
+                <div class="dot" [class.active]="currentIndex === 1" (click)="goToSlide(1)"></div>
+                <div class="dot" [class.active]="currentIndex === 2" (click)="goToSlide(2)"></div>
+                <div class="dot" [class.active]="currentIndex === 3" (click)="goToSlide(3)"></div>
+                <div class="dot" [class.active]="currentIndex === 4" (click)="goToSlide(4)"></div>
+                <div class="dot" [class.active]="currentIndex === 5" (click)="goToSlide(5)"></div>
+                <div class="dot" [class.active]="currentIndex === 6" (click)="goToSlide(6)"></div>
+                <div class="dot" [class.active]="currentIndex === 7" (click)="goToSlide(7)"></div>
+                <div class="dot" [class.active]="currentIndex === 8" (click)="goToSlide(8)"></div>
+                <div class="dot" [class.active]="currentIndex === 9" (click)="goToSlide(9)"></div>
             </div>
         </div>
     </div>
