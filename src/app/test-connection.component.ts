@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-test-connection',
+    standalone: true,
     imports: [CommonModule],
     template: `
     <div>

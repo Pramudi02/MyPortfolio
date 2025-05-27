@@ -1,18 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HomepageComponent } from './pages/homepage/homepage.component';
- import { FooterComponent } from './pages/footer/footer.component';
+import { FooterComponent } from './pages/footer/footer.component';
 
 @Component({
     selector: 'app-root',
-    imports: [
-        RouterModule,
-        HomepageComponent,
-        FooterComponent
-    ],
+    standalone: true,
+    imports: [RouterModule, HomepageComponent, FooterComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'my-portfolio';
+    title = 'my-portfolio';
 }

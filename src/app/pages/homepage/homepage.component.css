@@ -32,7 +32,7 @@ a:hover {
 	display: block;
 	overflow: hidden;
 	height: 100vh;
-	background-image: url('../../../assest/homebg2.png');
+	background-image: url('../../../assets/homebg2.png');
 	background-size: cover;
     background-color: #25e0d7; 
     z-index: 1;

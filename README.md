@@ -48,19 +48,19 @@ The portfolio includes an integrated contact system with:
 ## 🖼️ Screenshots
 
 ### 🔹 Home Page  
-<img src="src/assest/ss_home.png" alt="Home Page" width="700"/>
+<img src="src/assets/ss_home.png" alt="Home Page" width="700"/>
 
 ### 🔹 About Me Section  
-<img src="src/assest/ss_aboutme.png" alt="About Me" width="700"/>
+<img src="src/assets/ss_aboutme.png" alt="About Me" width="700"/>
 
 ### 🔹 Skills Section  
-<img src="src/assest/ss_skills.png" alt="Skills" width="700"/>
+<img src="src/assets/ss_skills.png" alt="Skills" width="700"/>
 
 ### 🔹 Projects Section  
-<img src="src/assest/ss_projects.png" alt="Projects" width="700"/>
+<img src="src/assets/ss_projects.png" alt="Projects" width="700"/>
 
 ### 🔹 Contact Section  
-<img src="src/assest/ss_contact.png" alt="Contact" width="700"/>
+<img src="src/assets/ss_contact.png" alt="Contact" width="700"/>
 
 ## 🔒 Security Considerations
 
