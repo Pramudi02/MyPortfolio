@@ -56,7 +56,7 @@
 @media screen and (max-width: 768px) {
   .typing-text span{
     font-size: 4vw;
-    line-height: 1.2;
+    line-height: 1;
   }
   .cursor {
     font-size: 6vw;
