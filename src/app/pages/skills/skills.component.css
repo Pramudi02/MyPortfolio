@@ -1,4 +1,3 @@
-
 .parent {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
@@ -17,9 +16,9 @@
     width: 100%;
     
     background-image: url('https://res.cloudinary.com/dfbvnb3vx/image/upload/v1748347146/Untitled_design_2_edqcdf.jpg');
-    background-size: auto 100%; /* Fit horizontally, auto height */
-    background-repeat: no-repeat; /* Prevent repeating */
-    background-position:  center; /* Position it well */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 35% center;
 
     z-index: 1;
 }
@@ -229,6 +228,16 @@
 
 /* For large screens */
 @media (min-width: 1024px) {
+     
+.section-title{
+    position: relative;
+    z-index: 2; 
+    font-size: 55px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+  }
     .topic{
         /* font-size: 50px; */
         padding-left: 18%;
@@ -266,6 +275,16 @@
 }
 /* For medium screens (like 1024x768) */
 @media (max-width: 1024px) {
+     
+.section-title{
+    position: relative;
+    z-index: 2; 
+    font-size: 50px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+  }
     .topic{
         font-size: 45px;
         padding-left: 15%;
@@ -277,8 +296,8 @@
         padding-left: 3%;
     }
     .socialicon {
-        width: 57px;
-        height: 57px;
+        width: 77px;
+        height: 77px;
     }
 
     .socialiconcircle1 {
@@ -297,26 +316,36 @@
     }
 
     .fa-brands, .fa-solid {
-        font-size: 2.1em;
+        font-size: 3em;
     }
 }
 
 /* For smaller screens (like 768x480) */
 @media (max-width: 768px) {
+     
+.section-title{
+    position: relative;
+    z-index: 2; 
+    font-size: 45px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+  }
     .topic{
-        font-size: 30px;
+        font-size: 40px;
         width: 30%;
         padding-left: 8%;
         margin: 0;
     }
     .tech{
-        padding-left: 7%;
+        padding-left: 2%;
         /* font-size: 40px; */
         width: 70%;
     }
     .socialicon {
-        width: 40px;
-        height: 40px;
+        width: 80px;
+        height: 80px;
     }
 
     .socialiconcircle1 {
@@ -325,8 +354,8 @@
     }
 
     .socialiconcircle2 {
-        width:94%;
-        height:94%;
+        width:96%;
+        height:96%;
         border-radius:50%;
         background:#fff;
         position:absolute;
@@ -335,12 +364,67 @@
     }
 
     .fa-brands, .fa-solid {
-        font-size: 1.5em;
+        font-size: 3.4em;
+    }
+}
+@media (max-width: 688px) {
+    .section-title{
+        position: relative;
+        z-index: 2; 
+        font-size: 35px;
+        color: #ffffff;
+        margin-bottom: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 800;
+      }
+    .topic{
+        font-size: 30px;
+        width: 30%;
+        padding-left: 8%;
+        margin: 0;
+    }
+    .tech{
+        padding-left: 1%;
+        /* font-size: 40px; */
+        width: 70%;
+    }
+    .socialicon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .socialiconcircle1 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .socialiconcircle2 {
+        width:96%;
+        height:96%;
+        border-radius:50%;
+        background:#fff;
+        position:absolute;
+        left:1.1px;
+        top:1.1px;
+    }
+
+    .fa-brands, .fa-solid {
+        font-size: 2.6em;
     }
 }
 
 /* For very small screens (like 480px and below) */
 @media (max-width: 480px) {
+     
+.section-title{
+    position: relative;
+    z-index: 2; 
+    font-size: 35px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+  }
     .topic{
         font-size: 25px;
         width: 30%;
@@ -378,19 +462,30 @@
 
 /* For very small screens (like 480px and below) */
 @media (max-width: 423px) {
+     
+.section-title{
+    position: relative;
+    z-index: 2; 
+    font-size: 30px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+  }
     .topic{
-        font-size: 18px;
+        font-size: 22px;
         width: 30%;
         padding-left: 7%;
     }
     .tech{
         padding-left: 0%;
+        justify-content: center;
         /* font-size: 40px; */
         width: 70%;
     }
     .socialicon {
-        width: 30px;
-        height: 30px;
+        width: 38px;
+        height: 38px;
     }
 
     .socialiconcircle1 {
@@ -399,8 +494,8 @@
     }
 
     .socialiconcircle2 {
-        width:94%;
-        height:94%;
+        width:95%;
+        height:95%;
         border-radius:50%;
         background:#fff;
         position:absolute;
@@ -409,6 +504,56 @@
     }
 
     .fa-brands, .fa-solid {
-        font-size: 1.2em;
+        font-size: 1.7em;
+    }
+}
+
+/* Responsive height adjustments */
+@media screen and (max-width: 1200px) {
+    .parent {
+        height: 100vh;
+        background-position: 35% center;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .parent {
+        height: 90vh;
+        background-position: 35% center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .parent {
+        height: 80vh;
+        background-position: 35% center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .parent {
+        height: 65vh;
+        background-position: 35% center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .parent {
+        height: 60vh;
+        background-position: 28% center;
+    }
+}
+
+/* Height-based media queries */
+@media screen and (max-height: 600px) {
+    .parent {
+        min-height: 450px;
+    }
+}
+
+@media screen and (max-height: 450px) and (orientation: landscape) {
+    .parent {
+        height: auto;
+        min-height: 100vh;
     }
 }
