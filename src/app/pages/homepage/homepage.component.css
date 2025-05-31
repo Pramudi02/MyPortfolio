@@ -78,7 +78,7 @@ a:hover {
 }
 
 .name-container {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center; 
     align-items: center; 
@@ -94,6 +94,10 @@ a:hover {
  }
 
 @media screen and (max-width: 1200px) {
+	.hero-section {
+        height: 100vh;
+        background-position: 35% center;
+    }
     .hero-section h1 {
         font-size: 5.5vw;
     }
@@ -110,11 +114,11 @@ a:hover {
 @media screen and (max-width: 992px) {
     .hero-section {
         height: 90vh;
-        background-position: 70% center;
+        background-position: 35% center;
     }
     .hero-section h1 {
         font-size: 5vw;
-		margin-bottom: 0px;
+		margin-bottom: 15px;
     }
 	.hero-section h2 {
         font-size: 4vw;
@@ -130,10 +134,11 @@ a:hover {
 @media screen and (max-width: 768px) {
     .hero-section {
         height: 80vh;
-        background-position: 65% center;
+        background-position: 35% center;
     }
     .hero-section h1 {
         font-size: 6vw;
+		margin-bottom: 12px;
         line-height: 1.2;
     }
     .subName {
@@ -146,7 +151,7 @@ a:hover {
     .navTitles {
         padding: 15px;
         font-size: 14px;
-        margin: 5px;
+        margin: 3px;
     }
     .section-center {
         width: 90%;
@@ -156,10 +161,11 @@ a:hover {
 
 @media screen and (max-width: 576px) {
     .hero-section {
-        height: 70vh;
-        background-position: 60% center;
+        height: 65vh;
+        background-position: 35% center;
     }
     .hero-section h1 {
+		margin-bottom: 10px;
         font-size: 8vw;
         line-height: 1.1;
     }
@@ -168,12 +174,18 @@ a:hover {
 		margin-bottom: 0px;
     }
     .subName {
+		margin: 0;
         font-size: 4vw;
     }
-    .navTitles {
-        padding: 10px;
+	.hero-section .nav-container {
+		width: 100%;
+		align-items: center;
+	}
+    .hero-section .nav-container .navTitles {
+        padding: 5px 10px ;
         font-size: 13px;
-        margin: 3px;
+        margin: 0px;
+		width: 85px;
     }
     .section-center {
         width: 95%;
@@ -183,18 +195,25 @@ a:hover {
 @media screen and (max-width: 400px) {
     .hero-section {
         height: 60vh;
-        background-position: 55% center;
+        background-position: 28% center;
     }
     .hero-section h1 {
         font-size: 8vw;
+		margin: 10px;
     }
     .subName {
         font-size: 5vw;
+		margin: 0;
     }
-    .navTitles {
-        padding: 8px;
-        font-size: 12px;
-        margin: 2px;
+    .hero-section .nav-container {
+		width: 100%;
+		align-items: center;
+	}
+    .hero-section .nav-container .navTitles {
+        padding: 3px ;
+        font-size: 13px;
+        margin: 0px;
+		width: 75px;
     }
 }
 
@@ -459,19 +478,26 @@ a:hover {
 
 @media screen and (max-width: 400px) {
     .nav-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .navTitles {
-        width: 200px;
-        text-align: center;
-        font-size: 14px;
-        padding: 8px 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        padding: 10px;
+        max-width: 300px;
+        margin: 0 auto;
     }
 
     .nav-item {
+        width: calc(50% - 10px);
         gap: 5px;
+    }
+
+    .navTitles {
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+        padding: 8px 0;
+        min-width: 120px;
     }
 }
 
