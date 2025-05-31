@@ -33,6 +33,9 @@
   .typing-text span {
     font-size: 4vw;
   }
+  .typing-text  {
+    font-size: 4vw;
+  }
   .cursor {
     font-size: 4vw;
   }
@@ -40,7 +43,9 @@
 
 @media screen and (max-width: 992px) {
   .typing-text  span{
-    margin-left: 5px;
+    font-size: 4vw;
+  }
+  .typing-text  {
     font-size: 4vw;
   }
   .cursor {
@@ -49,8 +54,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  .typing-text {
-    font-size: 6vw;
+  .typing-text span{
+    font-size: 4vw;
     line-height: 1.2;
   }
   .cursor {
@@ -69,7 +74,7 @@
 }
 
 @media screen and (max-width: 400px) {
-  .typing-text {
+  .typing-text  span{
     font-size: 5vw;
     line-break: 1.1;
   }

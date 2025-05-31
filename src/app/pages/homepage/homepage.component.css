@@ -73,6 +73,8 @@ a:hover {
 	font-size: 3vw;
 	line-height: 1;
 	font-weight: 700;
+	margin-right: 10px;
+
 }
 
 .name-container {
@@ -98,6 +100,7 @@ a:hover {
 	.hero-section h2 {
         font-size: 4vw;
 		margin-bottom: 0px;
+		margin-right: 10px;
     }
     .subName {
         font-size: 1.8vw;
