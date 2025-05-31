@@ -10,12 +10,20 @@
                     <!-- <div class="possition text-center"><h2>Undergraduate & IT enthusiast</h2></div> -->
                 </div>
                 <div class="text-center">
-                    <p>
-                        <a (click)="scrollToSection('about')"><span class="aboutMe navTitles hover-target">About Me</span></a>
-                        <a (click)="scrollToSection('skills')"><span class="skills navTitles hover-target">Skills</span></a>
-                        <a (click)="scrollToSection('projects')"><span class="projects navTitles hover-target">Projects</span></a>
-                        <a (click)="scrollToSection('contact')"><span class="contacts navTitles hover-target">Contacts</span></a>
-                    </p>
+                    <nav class="nav-container">
+                        <a (click)="scrollToSection('about')" class="nav-item">
+                            <span class="aboutMe navTitles hover-target">About Me</span>
+                        </a>
+                        <a (click)="scrollToSection('skills')" class="nav-item">
+                            <span class="skills navTitles hover-target">Skills</span>
+                        </a>
+                        <a (click)="scrollToSection('projects')" class="nav-item">
+                            <span class="projects navTitles hover-target">Projects</span>
+                        </a>
+                        <a (click)="scrollToSection('contact')" class="nav-item">
+                            <span class="contacts navTitles hover-target">Contacts</span>
+                        </a>
+                    </nav>
                 </div>
             </div>
         </div>

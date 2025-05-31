@@ -1,22 +1,93 @@
 .typing-text {
-  font-size: 3vw; /* h2 size */
-  font-weight: 500;
   color: #1de2d1;
+  font-size: 3vw;
+  line-height: 1;
+  font-weight: 700;
   white-space: nowrap;
   overflow: hidden;
-  height: 60px;
-  line-height: 60px;
-  margin-left: 10px;
+  height: auto;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
 }
 
 .cursor {
   display: inline-block;
   animation: blink 0.7s steps(1) infinite;
   color: #1de2d1;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 3vw;
+  line-height: 1;
+  margin-left: 2px;
+  position: relative;
+  top: -2px;
 }
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
+}
+
+/* Responsive font sizes to match parent h2 */
+@media screen and (max-width: 1200px) {
+  .typing-text span {
+    font-size: 4vw;
+  }
+  .cursor {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .typing-text  span{
+    margin-left: 5px;
+    font-size: 4vw;
+  }
+  .cursor {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .typing-text {
+    font-size: 6vw;
+    line-height: 1.2;
+  }
+  .cursor {
+    font-size: 6vw;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .typing-text  span{
+    font-size: 5vw;
+    line-height: 1.1;
+  }
+  .cursor {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .typing-text {
+    font-size: 5vw;
+    line-break: 1.1;
+  }
+  .cursor {
+    font-size: 5vw;
+  }
+}
+
+/* Height-based media queries */
+@media screen and (max-height: 600px) {
+  .typing-text {
+    font-size: 5vw;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-height: 450px) and (orientation: landscape) {
+  .typing-text {
+    font-size: 5vw;
+  }
 }
