@@ -3,24 +3,26 @@
 Welcome to the repository for my personal portfolio website!  
 This project showcases my skills, experience, and creative work as an **IT undergraduate, Web UI Designer, and Artist**.
 
-> 🚧 **Status:** Fully developed, awaiting deployment.
-
-## ✨ Features
-
-- My academic and professional journey  
-- Projects and technical skills  
-- **Contact form with email notification system**
-- **Auto-reply confirmation emails for form submissions**
-- Resume access
-- Responsive design optimized for all devices
-- Interactive UI elements with Angular
+> 🚧 **Status:** Fully developed and ready for deployment
 
 ## ⚙️ Technologies Used
 
-- **Frontend:** Angular  
-- **Backend:** Node.js/Express (for email services)
-- **Email Service:** Nodemailer with Gmail
-- **Form Handling:** Angular Reactive Forms
+- **Frontend:** 
+  - Angular (Standalone Components)
+  - TypeScript
+  - AOS (Animate On Scroll)
+  - Reactive Forms
+  - Router Module for navigation
+- **Backend:** 
+  - Node.js/Express (for email services)
+  - RESTful API endpoints
+- **Email Service:** 
+  - Nodemailer with Gmail
+  - Custom email templates
+- **Styling:**
+  - CSS with responsive design
+  - Font Awesome icons
+  - Custom animations
 
 ## 📧 Email System Features
 
@@ -31,23 +33,29 @@ The portfolio includes an integrated contact system with:
 - **Auto-Reply System:** Automatic confirmation emails to users who submit the form
 - **Environment Variable Configuration:** Secure credential management
 - **Responsive Status Updates:** Clear feedback on submission status
+- **Error Handling:** Comprehensive error management and user feedback
 
 ## 🛠️ Technical Implementation
 
 - **Frontend Components:**
-  - Reactive form with validation
+  - Standalone Angular components for modularity
+  - Reactive forms with comprehensive validation
+  - Interactive project carousel with touch support
+  - Dynamic typing animation component
   - Status indicators (loading, success, error)
   - Responsive design for all device sizes
+  - Smooth scroll navigation
 
 - **Backend Services:**
   - RESTful API endpoint for form processing
   - Nodemailer integration with Gmail
   - Error handling and logging
   - Environment variable configuration for security
+  - CORS configuration for secure client-server communication
 
 ## 🖼️ Screenshots
 
-### 🔹 Home Page  
+<!-- ### 🔹 Home Page  
 <img src="src/assets/ss_home.png" alt="Home Page" width="700"/>
 
 ### 🔹 About Me Section  
@@ -60,7 +68,7 @@ The portfolio includes an integrated contact system with:
 <img src="src/assets/ss_projects.png" alt="Projects" width="700"/>
 
 ### 🔹 Contact Section  
-<img src="src/assets/ss_contact.png" alt="Contact" width="700"/>
+<img src="src/assets/ss_contact.png" alt="Contact" width="700"/> -->
 
 ## 🔒 Security Considerations
 
@@ -68,6 +76,8 @@ The portfolio includes an integrated contact system with:
 - No exposure of email passwords in client-side code
 - Secure handling of form data
 - Input validation to prevent injection attacks
+- CORS configuration for API security
+- Form validation on both client and server side
 
 ## 🚀 Future Enhancements
 
@@ -75,104 +85,90 @@ The portfolio includes an integrated contact system with:
 - Rate limiting for the contact form
 - Analytics tracking for form submissions
 - Additional customization options for email templates
+- Dark mode theme toggle
+- Blog section integration
+- Project filtering and search functionality
 
-------
- Here is the **setup Instructions** for you
+## 📥 Setup Instructions
 
+### Step 1: Clone the Repository
 
-## Step 1: Clone the Repository
-
-Open your terminal or command prompt and run:  
 ```bash
 git clone https://github.com/Pramudi02/MyPortfolio
 cd MyPortfolio
-````
+```
 
----
+### Step 2: Setup and Run the Frontend
 
-## Step 2: Setup and Run the Frontend
-
-1. you already in the frontend folder:
-2. Install dependencies:
-
+1. Install dependencies:
 ```bash
 npm install
 ```
 
-3. Start the Angular development server:
-
+2. Start the Angular development server:
 ```bash
-npm start
 ng serve
 ```
 
-4. Open your browser and go to:
-
+3. Open your browser and navigate to:
 ```
 http://localhost:4200
 ```
 
----
+### Step 3: Setup and Run the Backend
 
-## Step 3: Setup and Run the Backend
-
-1. Open a new terminal window/tab.
-
-2. Navigate to the backend folder:
-
+1. Navigate to the backend folder:
 ```bash
 cd backend
 ```
 
-3. Install dependencies:
-
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-4. Create a `.env` file in the backend directory with the following variables:
-
+3. Create a `.env` file in the backend directory:
 ```
 EMAIL_USER=your-email@gmail.com
 EMAIL_PASS=your-email-password-or-app-password
 PORT=3000
 ```
 
-5. Start the backend server:
-
+4. Start the backend server:
 ```bash
 npm start
 ```
 
-6. Your backend API will be running on:
+The backend API will be available at `http://localhost:3000`
 
-```
-http://localhost:3000
-```
+## 📝 Notes
+
+- For Gmail integration, you'll need to:
+  1. Enable 2-Factor Authentication
+  2. Generate an App Password
+  3. Use the App Password in your `.env` file
+- Ensure Node.js and npm are installed on your system
+- The frontend will communicate with the backend for form submissions
+- Keep your `.env` file secure and never commit it to version control
+
+## 🔧 Troubleshooting
+
+- If `ng serve` fails, try:
+  1. Clearing npm cache: `npm cache clean --force`
+  2. Deleting node_modules: `rm -rf node_modules`
+  3. Reinstalling dependencies: `npm install`
+- For email service issues:
+  1. Verify Gmail App Password
+  2. Check CORS configuration
+  3. Ensure backend server is running
+- For port conflicts:
+  1. Change frontend port: `ng serve --port 4201`
+  2. Change backend port in `.env` file
 
 ---
 
-## Notes
+For any questions or issues, feel free to reach out or open an issue on GitHub!
 
-* Replace `your-email@gmail.com` and `your-email-password-or-app-password` with your actual Gmail address and app password for Nodemailer email sending.
-* Ensure you have Node.js and npm installed on your system before starting.
-* The frontend will communicate with the backend for form submissions and email notifications.
-* Keep your `.env` file secure and do **not** commit it to any public repositories.
-
----
-
-## Troubleshooting
-
-* If `npm start` fails, try updating your Node.js and npm versions.
-* Make sure ports `4200` (frontend) and `3000` (backend) are not blocked or used by other apps.
-* Check your email credentials and enable "App Passwords" if using Gmail with 2FA.
-
----
-
-If you face any issues or have questions, feel free to reach out!
-
----
-
-*Happy coding!*
+*Happy coding! 🚀*
 
 ```
