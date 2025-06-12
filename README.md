@@ -53,9 +53,9 @@ The portfolio includes an integrated contact system with:
   - Environment variable configuration for security
   - CORS configuration for secure client-server communication
 
-## 🖼️ Screenshots
+<!--## 🖼️ Screenshots
 
-<!-- ### 🔹 Home Page  
+ ### 🔹 Home Page  
 <img src="src/assets/ss_home.png" alt="Home Page" width="700"/>
 
 ### 🔹 About Me Section  
