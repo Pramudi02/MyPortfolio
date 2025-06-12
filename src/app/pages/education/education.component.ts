@@ -22,20 +22,20 @@ export class EducationComponent {
       title: 'B.Sc. (Hons) in Information Technology',
       institution: 'University of Moratuwa',
       period: '2022 - Present',
-      image: 'assets/images/university.jpg',
+      image: 'assets/university.jpg',
       description: 'Faculty of Information Technology'
     },
     {
       title: 'GCE Advanced Level Examination',
       institution: 'Yasodara Devi Balika Vidyalaya - Gampaha',
       period: '2021',
-      image: 'assets/images/school.jpg'
+      image: 'assets/school.jpg'
     },
     {
       title: 'GCE Ordinary Level Examination',
       institution: 'Yasodara Devi Balika Vidyalaya - Gampaha',
       period: '2018',
-      image: 'assets/images/school.jpg'
+      image: 'assets/school.jpg'
     }
   ];
 }
