@@ -103,7 +103,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
           'Node.js', 'Express', 'FastAPI', 'Python',
           'MongoDB', 'Mongoose', 'Socket.IO', 'Chart.js'
         ],
-        repoUrl: 'https://github.com/username/maternitycare-plus',   
+        repoUrl: 'https://github.com/Pramudi02/MommyCare.git',   
         // liveUrl: 'https://maternitycareplus.onrender.com/',          
         image: 'assets/maternitycareplus.png'                        
       },
