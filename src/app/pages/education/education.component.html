@@ -1,0 +1,20 @@
+<section class="education-section">
+  <h2 class="section-title">Education</h2>
+  <div class="timeline">
+    <div class="timeline-item" *ngFor="let edu of educationList">
+      <div class="timeline-content">
+        <div class="education-card">
+          <div class="card-image">
+            <img [src]="edu.image" [alt]="edu.institution">
+          </div>
+          <div class="card-content">
+            <h3 class="education-title">{{edu.title}}</h3>
+            <p class="institution">{{edu.institution}}</p>
+            <p class="period">{{edu.period}}</p>
+            <p class="description" *ngIf="edu.description">{{edu.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
