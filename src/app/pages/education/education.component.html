@@ -1,20 +1,25 @@
-<section class="education-section">
-  <h2 class="section-title">Education</h2>
-  <div class="timeline">
-    <div class="timeline-item" *ngFor="let edu of educationList">
-      <div class="timeline-content">
-        <div class="education-card">
-          <div class="card-image">
-            <img [src]="edu.image" [alt]="edu.institution">
-          </div>
-          <div class="card-content">
-            <h3 class="education-title">{{edu.title}}</h3>
-            <p class="institution">{{edu.institution}}</p>
-            <p class="period">{{edu.period}}</p>
-            <p class="description" *ngIf="edu.description">{{edu.description}}</p>
-          </div>
+<div class="education-section parent">
+    <div class="overlay"></div>
+    <div class="content">
+        <h1 class="section-title">Education</h1>
+        <p class="section-description">
+            My academic journey and qualifications that have shaped my expertise in Information Technology.
+        </p>
+        
+        <div class="education-wrapper">
+            <div class="education-container">
+                <div class="education-card" *ngFor="let edu of educationList; let i = index"
+                    [class.university-card]="edu.type === 'university'"
+                    [class.school-card]="edu.type === 'school'">
+                    <div class="education-image" [style.background-image]="'url(' + edu.image + ')'"></div>
+                    <div class="education-content">
+                        <h2 class="education-title">{{edu.title}}</h2>
+                        <p class="institution">{{edu.institution}}</p>
+                        <p class="period">{{edu.period}}</p>
+                        <p class="description" *ngIf="edu.description">{{edu.description}}</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-</section> 
+</div> 

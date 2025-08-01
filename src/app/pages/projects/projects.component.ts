@@ -108,14 +108,6 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
         image: 'assets/maternitycareplus.png'                        
       },
       {
-        title: 'Travel & Visa Passport Service Website',
-        description: 'Tech-Triathlon 2024 - A React Native travel site created for a tourism promotion hackathon in Sri Lanka.',
-        fullDescription: 'Developed during the Tech-Triathlon 2024 by Rootcode, this website promotes Sri Lankan tourism. It includes features for visa information and travel services. This project was a part of designathon, hackathon, and datathon events.',
-        technologies: ['React Native'],
-        repoUrl: '',
-        image: 'assets/techtriathlon2024.png'
-      },
-      {
         title: 'Book Store App (Ongoing)',
         description: 'A feature-rich bookstore web app with inventory and order management.',
         fullDescription: 'This MERN stack application is a fully functional online bookstore, including an admin panel, inventory system, secure authentication, cart, and checkout features. It supports cash-on-delivery and real-time book updates.',
