@@ -35,19 +35,21 @@ export class EducationComponent implements OnInit {
       type: 'university'
     },
     {
-      title: 'Yasodara Devi Balika Vidyalaya - Gampaha',
-      institution: '2018 - 2021',
-      period: 'Ordinary Level: 9 A\'s',
+      title: 'Yasodara Devi Balika Vidyalaya',
+      institution: 'Gampaha',
+      period: '2018 - 2021',
       image: 'assets/school.jpg',
-      description: 'Advanced Level: Z-Score 1.8999',
+      description: 'Successfully completed both GCE Advanced Level (2021) and Ordinary Level (2018) examinations',
       fullDescription: 'Successfully completed both GCE Advanced Level (2021) and Ordinary Level (2018) examinations with outstanding results. Advanced Level examination achieved a Z-Score of 1.8999 with excellent grades: Combined Mathematics (B), Information Communication Technology (A), and Physics (A). Ordinary Level examination achieved distinction with 9 A\'s across all subjects, demonstrating comprehensive academic excellence and strong analytical and problem-solving skills essential for pursuing higher education in Information Technology.',
-      type: 'school',
-      grades: [
-        'Combined Mathematics: B',
-        'Information Communication Technology: A',
-        'Physics: A'
-      ],
-      zScore: '1.8999'
+      type: 'school'
+    },
+    {
+      title: 'Technical Careerist Association - Sri Lanka',
+      institution: '',
+      period: '2021 - 2022',
+      image: 'https://sltca20.wordpress.com/wp-content/uploads/2020/12/44.jpg',
+      description: 'Certificate Course in Computer Science, HR Management (FL), Graphic Design',
+      type: 'school'
     }
   ];
 

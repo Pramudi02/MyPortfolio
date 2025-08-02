@@ -10,16 +10,42 @@
             <div class="education-container">
                 <div class="education-card" *ngFor="let edu of educationList; let i = index"
                     [class.university-card]="edu.type === 'university'"
-                    [class.school-card]="edu.type === 'school'">
+                    [class.school-card]="edu.type === 'school'"
+                    [class.tca-card]="edu.title === 'Technical Careerist Association - Sri Lanka'">
                     <div class="education-image" [style.background-image]="'url(' + edu.image + ')'"></div>
                     <div class="education-content">
                         <h2 class="education-title">{{edu.title}}</h2>
                         <p class="institution">{{edu.institution}}</p>
                         <p class="period">{{edu.period}}</p>
                         <p class="description" *ngIf="edu.description">{{edu.description}}</p>
+                        
+                        <!-- Grades Section -->
+                        <div class="grades-section" *ngIf="edu.grades && edu.grades.length > 0">
+                            <h4 class="grades-title">Grades:</h4>
+                            <ul class="grades-list">
+                                <li *ngFor="let grade of edu.grades">{{grade}}</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Z-Score Section -->
+                        <div class="zscore-section" *ngIf="edu.zScore">
+                            <p class="zscore">Z-Score: {{edu.zScore}}</p>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    
+    <div class="waveWrapper waveAnimation">
+        <div class="waveWrapperInner bgTop">
+            <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgMiddle">
+            <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgBottom">
+            <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
         </div>
     </div>
 </div> 
