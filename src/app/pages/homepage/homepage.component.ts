@@ -5,6 +5,7 @@ import { SkillsComponent } from '../skills/skills.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { ContactComponent } from '../contact/contact.component';
 import { EducationComponent } from '../education/education.component';
+import { ArtSectionComponent } from '../art-section/art-section.component';
 
 @Component({
     selector: 'app-homepage',
@@ -15,7 +16,8 @@ import { EducationComponent } from '../education/education.component';
         SkillsComponent,
         ProjectsComponent,
         ContactComponent,
-        EducationComponent
+        EducationComponent,
+        ArtSectionComponent
     ],
     templateUrl: './homepage.component.html',
     styleUrl: './homepage.component.css'
