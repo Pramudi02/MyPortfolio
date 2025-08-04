@@ -597,6 +597,24 @@
     }
 }
 
+@media (max-width: 480px) {
+    .education-wrapper {
+        padding: 0 15px;
+    }
+
+    .education-card {
+        min-width: 250px;
+        width: 250px;
+        min-height: 350px;
+        max-height: 350px;
+        padding: 15px;
+    }
+
+    .education-image {
+        padding: 10px;
+    }
+}
+
 @media (min-width: 1024px) {
     .section-title {
         font-size: 55px;

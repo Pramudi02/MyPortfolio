@@ -301,6 +301,45 @@
         font-size: 0.9rem;
         -webkit-line-clamp: 3;
     }
+
+    .project-card {
+        min-width: 280px;
+        width: 280px;
+        min-height: 400px;
+        max-height: 400px;
+        padding: 20px;
+    }
+
+    .project-image {
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-wrapper {
+        padding: 0 30px;
+    }
+
+    .project-card {
+        min-width: 250px;
+        width: 250px;
+        min-height: 380px;
+        max-height: 380px;
+        padding: 15px;
+    }
+
+    .project-image {
+        height: 140px;
+    }
+
+    .nav-arrow {
+        width: 35px;
+        height: 35px;
+    }
+
+    .nav-arrow i {
+        font-size: 14px;
+    }
 }
 
 /* Project Images */

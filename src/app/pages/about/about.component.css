@@ -218,3 +218,31 @@
     border-radius: 50px;
   }
 }
+
+@media (max-width: 480px) {
+  .content-wrapper {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .text-container h1 {
+    font-size: 2rem;
+  }
+
+  .text-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .text-container p {
+    font-size: 0.9rem;
+  }
+
+  .profile-image {
+    max-width: 180px;
+    border-radius: 40px;
+  }
+
+  .cv-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}

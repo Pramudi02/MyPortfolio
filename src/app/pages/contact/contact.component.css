@@ -161,6 +161,37 @@ textarea.form-control {
     padding: 1.5rem;
     margin: 1rem;
   }
+  
+  .contact-heading {
+    font-size: 1.8rem;
+  }
+  
+  .social-icons i {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+  
+  .contact-heading {
+    font-size: 1.5rem;
+  }
+  
+  .social-icons {
+    gap: 10px;
+  }
+  
+  .social-icons i {
+    font-size: 35px;
+  }
+  
+  .social-description {
+    font-size: 1rem;
+  }
 }
 .social-icons-container {
   max-width: 800px;
