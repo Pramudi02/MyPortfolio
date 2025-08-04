@@ -1,8 +1,8 @@
 <div class="education-section parent">
-    <div class="overlay"></div>
-    <div class="content">
+    <div class="overlay" ></div>
+    <div class="content" style="margin-bottom: 100px;">
         <h1 class="section-title">Education</h1>
-        <p class="section-description">
+        <p class="section-edu-description">
             My academic journey and qualifications that have shaped my expertise in Information Technology.
         </p>
         
@@ -15,9 +15,9 @@
                     <div class="education-image" [style.background-image]="'url(' + edu.image + ')'"></div>
                     <div class="education-content">
                         <h2 class="education-title">{{edu.title}}</h2>
-                        <p class="institution">{{edu.institution}}</p>
+                        <p class="institution" *ngIf="edu.institution">{{edu.institution}}</p>
                         <p class="period">{{edu.period}}</p>
-                        <p class="description" *ngIf="edu.description">{{edu.description}}</p>
+                        <p class="edu-description" *ngIf="edu.eduDescription">{{edu.eduDescription}}</p>
                         
                         <!-- Grades Section -->
                         <div class="grades-section" *ngIf="edu.grades && edu.grades.length > 0">
