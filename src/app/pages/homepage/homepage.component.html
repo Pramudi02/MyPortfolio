@@ -11,11 +11,23 @@
                 </div>
                 <div class="text-center">
                     <nav class="nav-container">
+                        <a (click)="scrollToSection('about')" class="nav-item">
+                            <span class="aboutMe navTitles hover-target">About Me</span>
+                        </a>
+                        <a (click)="scrollToSection('skills')" class="nav-item">
+                            <span class="skills navTitles hover-target">Skills</span>
+                        </a>
                         <a (click)="scrollToSection('projects')" class="nav-item">
                             <span class="projects navTitles hover-target">Projects</span>
                         </a>
+                        <a (click)="scrollToSection('education')" class="nav-item">
+                            <span class="education navTitles hover-target">Education</span>
+                        </a>
+                        <a (click)="scrollToSection('art')" class="nav-item">
+                            <span class="art navTitles hover-target">Art & Creativity</span>
+                        </a>
                         <a (click)="scrollToSection('contact')" class="nav-item">
-                            <span class="contacts navTitles hover-target">Contact Me</span>
+                            <span class="contacts navTitles hover-target">Contacts</span>
                         </a>
                     </nav>
                 </div>
@@ -24,8 +36,24 @@
     </div>
 </div>
 
+<section id="about">
+    <app-about></app-about>
+</section>
+
+<section id="skills">
+    <app-skills></app-skills>
+</section>
+
 <section id="projects">
     <app-projects></app-projects>
+</section>
+
+<section id="education">
+    <app-education></app-education>
+</section>
+
+<section id="art">
+    <app-art-section></app-art-section>
 </section>
 
 <section id="contact">
