@@ -1,82 +1,4 @@
-@keyframes move_wave {
-  0% {
-    transform: translateX(0) translateZ(0) scaleY(1);
-  }
-  50% {
-    transform: translateX(-25%) translateZ(0) scaleY(0.55);
-  }
-  100% {
-    transform: translateX(-50%) translateZ(0) scaleY(1);
-  }
-}
 
-.waveWrapper {
-  overflow: hidden;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  margin: auto;
-  z-index: 1;
-}
-
-.waveWrapperInner {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: -1px;
-  background-image: linear-gradient(to top, #25e0d7 20%, #25e0d7 80%);
-  overflow: hidden;
-}
-
-.bgTop {
-  z-index: 15;
-  opacity: 0.5;
-}
-
-.bgMiddle {
-  z-index: 10;
-  opacity: 0.75;
-}
-
-.bgBottom {
-  z-index: 5;
-}
-
-.wave {
-  position: absolute;
-  left: 0;
-  width: 200%;
-  height: 100%;
-  background-repeat: repeat no-repeat;
-  background-position: 0 bottom;
-  transform-origin: center bottom;
-}
-
-.waveTop {
-  background-size: 50% 100px;
-}
-
-.waveMiddle {
-  background-size: 50% 120px;
-}
-
-.waveBottom {
-  background-size: 50% 100px;
-}
-
-.waveAnimation .waveTop {
-  animation: move_wave 3s linear infinite;
-}
-
-.waveAnimation .waveMiddle {
-  animation: move_wave 10s linear infinite;
-}
-
-.waveAnimation .waveBottom {
-  animation: move_wave 15s linear infinite;
-}
 
 .parent {
     margin: 0;
@@ -92,12 +14,15 @@
 .art-section {
     font-family: 'Poppins', sans-serif;
     color: #fff;
-    background-color: #25e0d7;
+    background-image: url('https://res.cloudinary.com/dfbvnb3vx/image/upload/v1748347146/Untitled_design_2_edqcdf.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 35% center;
     position: relative;
     padding: 50px 0;
     overflow: hidden;
     min-height: 80vh;
-    z-index: 2;
+    z-index: 10;
 }
 
 .art-section .overlay {
@@ -107,12 +32,12 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
-    z-index: 20;
+    z-index: 15;
 }
 
 .art-section .content {
     position: relative;
-    z-index: 25;
+    z-index: 20;
     text-align: center;
     width: 100%;
     margin: 0 auto;
@@ -160,6 +85,22 @@
     justify-content: flex-start;
     scrollbar-width: none;
     -ms-overflow-style: none;
+}
+
+@media (max-width: 768px) {
+    .artwork-container {
+        height: 500px;
+        padding: 20px 0;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .artwork-container {
+        height: 450px;
+        padding: 15px 0;
+        gap: 10px;
+    }
 }
 
 .artwork-container::-webkit-scrollbar {
@@ -374,8 +315,43 @@
         font-size: 2rem;
     }
 
-    .artwork-category {
-        font-size: 1.3rem;
+    .artwork-card {
+        min-width: 250px;
+        width: auto;
+        min-height: 350px;
+        max-height: 400px;
+        padding: 15px;
+    }
+
+    .artwork-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .artwork-wrapper {
+        padding: 0 30px;
+    }
+
+    .artwork-card {
+        min-width: 220px;
+        width: auto;
+        min-height: 320px;
+        max-height: 380px;
+        padding: 12px;
+    }
+
+    .artwork-image {
+        height: 280px;
+    }
+
+    .nav-arrow {
+        width: 35px;
+        height: 35px;
+    }
+
+    .nav-arrow i {
+        font-size: 14px;
     }
 }
 
