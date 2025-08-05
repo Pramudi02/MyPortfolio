@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3000/api/send-email'
+  apiUrl: 'https://backend-production-6de1.up.railway.app/api/send-email'
 }; 
