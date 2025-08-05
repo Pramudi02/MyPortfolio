@@ -12,8 +12,8 @@ app.use(cors({
   origin: [
     'https://portfolio990.web.app',
     'https://portfolio990.firebaseapp.com',
-    'http://localhost:4200', // For local development
-    'http://localhost:3000'  // For local development
+    'http://localhost:4200', 
+    'http://localhost:3000'  
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
