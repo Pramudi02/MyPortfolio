@@ -13,9 +13,13 @@ export interface EmailData {
   providedIn: 'root'
 })
 export class EmailService {
-  private apiUrl = environment.apiUrl || 'http://localhost:3000/api/send-email';
+  private apiUrl = environment.apiUrl || 'https://backend-production-6de1.up.railway.app/api/send-email';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    // Debug: Log the API URL being used
+    console.log('EmailService initialized with API URL:', this.apiUrl);
+    console.log('Environment:', environment);
+  }
 
   /**
    * Sends email data to the backend API
@@ -23,6 +27,7 @@ export class EmailService {
    * @returns Observable of the API response
    */
   sendEmail(emailData: EmailData): Observable<any> {
+    console.log('Sending email to:', this.apiUrl);
     return this.http.post(this.apiUrl, emailData);
   }
 }
