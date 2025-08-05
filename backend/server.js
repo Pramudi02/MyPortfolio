@@ -8,9 +8,31 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    'https://portfolio990.web.app',
+    'https://portfolio990.firebaseapp.com',
+    'http://localhost:4200', // For local development
+    'http://localhost:3000'  // For local development
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// Health check endpoint
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'Portfolio Backend API is running',
+    timestamp: new Date().toISOString(),
+    endpoints: {
+      health: 'GET /',
+      sendEmail: 'POST /api/send-email'
+    }
+  });
+});
 
 // Create email transporter
 const transporter = nodemailer.createTransport({
