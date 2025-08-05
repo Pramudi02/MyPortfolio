@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 export interface EmailData {
   name: string;
@@ -12,7 +13,7 @@ export interface EmailData {
   providedIn: 'root'
 })
 export class EmailService {
-  private apiUrl = 'http://localhost:3000/api/send-email';
+  private apiUrl = environment.apiUrl || 'http://localhost:3000/api/send-email';
 
   constructor(private http: HttpClient) { }
 
