@@ -14,7 +14,7 @@
     text-align: center;
     height: 100vh;
     width: 100%;
-    
+
     background-image: url('https://res.cloudinary.com/dfbvnb3vx/image/upload/v1748347146/Untitled_design_2_edqcdf.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,232 +23,161 @@
     z-index: 1;
 }
 
-
-.section{
-    background-color: rgba(0, 0, 0, 0.4); /* Adjust the opacity */
+.section {
+    background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
     height: 100%;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    text-align: center; 
-    display: flex; /* Enable Flexbox */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
     flex-direction: column;
+}
 
-} 
-.section-title{
+.section-title {
     position: relative;
-    z-index: 2; 
+    z-index: 2;
     font-size: 50px;
     color: #ffffff;
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
-  }
-   
-.stack {
-    display: flex;
-    flex-direction: row;  /* Stack items in a column */
-    align-items: center;     
-    gap: 20px;               
-    width: 100%;
-    text-align: center;      
 }
 
-    .topic{
-    text-align:left;
+.stack {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.topic {
+    text-align: left;
     justify-content: center;
-    color:#dbdbdb;
-    font-family:arial;
-    /* text-shadow:0px 2px 2px #c1c1c1; */
-    font-size: 46px;
+    color: #dbdbdb;
     font-family: 'Poppins', sans-serif;
-    font-weight:700;
+    font-weight: 700;
+    font-size: 46px;
     width: 40%;
     padding-right: 8%;
-    }
-    
+}
 
-    .tech{
-        text-align:center;
-        justify-content: center;
-        color:#dbdbdb;
-        font-family:arial;
-        width: 60%;
-        }
-    
-    #socialicons
-    {
-    width:100%;
-    margin:0 auto;
-    overflow:auto;
+.tech {
+    text-align: center;
+    justify-content: center;
+    color: #dbdbdb;
+    font-family: arial, sans-serif;
+    width: 60%;
+}
+
+#socialicons {
+    width: 100%;
+    margin: 0 auto;
+    overflow: auto;
     z-index: 2;
-    }
-      
-    .socialicon
-    {
-    width:100px;
-    height:100px;
-    border-radius:50%;
-    overflow:hidden;
-    background:#e4e4e4;
-    position:relative;
-    float:left;
-    margin:0px 0px 10px 10px ;
-    } 
-    
-    .socialiconcircle1
-    {
-    width:100%;
-    height:100%;
-    position:absolute;
-    left:0px;
-    top:100px;
-    -webkit-animation:fill 2s infinite;
-    -moz-animation:fill 2s infinite;
-    animation:fill 2s infinite;
-    }
-    
-    .socialiconcircle2
-    {
-    width:94%;
-    height:94%;
-    border-radius:50%;
-    background:#fff;
-    position:absolute;
-    left:3px;
-    top:3px;
-    }
-    
-    .fa-brands, .fa-solid {
-        font-size: 400%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -10%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        z-index: 2;
-        -webkit-animation: iconjump 2s infinite;
-        -moz-animation: iconjump 2s infinite;
-        animation: iconjump 2s infinite;
-    }
-    
-    
-    /* Fill Colors (Background Circles) */  
-    .htmlcolor { background: #E34F26; }       /* HTML */
-    .csscolor { background: #1572B6; }       /* CSS */
-    .javascriptcolor { background: #F7DF1E; } /* JavaScript */
-    .sqlcolor { background: #CC2927; }        /* SQL */
-    .mongodbcolor { background: #47A248; }    /* MongoDB */
-    .javacolor { background: #007396; }       /* Java */
-    .angularcolor { background: #DD0031; }    /* Angular */
-    .dotnetcolor { background: #512BD4; }     /* .NET */
-    .firebasecolor { background: #FFCA28; }   /* Firebase */
-    .phpcolor { background: #777BB4; }        /* PHP */
-    .figmacolor { background: #F24E1E; }      /* Figma */
-    .blendercolor { background: #F5792A; }    /* Blender */
-    .canvacolor { background: #20C4CB; }      /* Canva */
-    .cpluscolor { background: #00599C; }      /* C++ */
-    .csharpcolor { background: #239120; }     /* C# */
-    .ccolor { background: #A8B9CC; }          /* C */
-    .pythoncolor { background: #3776AB; }     /* Python */
+}
 
-    /* Icon Colors */  
-    .html5 { color: #E34F26 !important; }
-    .css3 { color: #1572B6 !important; }
-    .js { color: #F7DF1E !important; }
-    .sql { color: #CC2927 !important; }
-    .mongodb { color: #47A248 !important; }
-    .java { color: #007396 !important; }
-    .angular { color: #DD0031 !important; }
-    .dotnet { color: #512BD4 !important; }
-    .firebase { color: #FFCA28 !important; }
-    .php { color: #777BB4 !important; }
-    .figma { color: #F24E1E !important; }
-    .blender { color: #F5792A !important; }
-    .canva { color: #20C4CB !important; }
-    .cplusplus { color: #00599C !important; }
-    .csharp { color: #239120 !important; }
-    .c { color: #A8B9CC !important; }
-    .python { color: #3776AB !important; }
-
-    
-    /* fill background */      
-    @-webkit-keyframes fill
-    {
-    0%{top:100%;}
-    100%{top:0%;}
-    }
-    
-    @-moz-keyframes fill
-    {
-        0%{top:100%;}
-        100%{top:0%;}
-    }
-    
-    @keyframes fill
-    {
-        0%{top:100%;}
-        100%{top:0%;}
-    }
-    
-    /* jump social icons */
-    @-webkit-keyframes iconjump
-    {
-    0%{top:26px;}
-    10%{top:70px;}
-    20%{top:26px;}
-    50%{top:26px;}
-    90%{top:26px;} 
-    100%{top:26px;}
-    }
-    
-    @-moz-keyframes iconjump
-    {
-    0%{top:23%;}
-    10%{top:70%;}
-    20%{top:23%;}
-    50%{top:23%;}
-    90%{top:23%;} 
-    100%{top:23%;}
-    }
-    
-    @keyframes iconjump
-    {
-        0%{top:23%;}
-        10%{top:70%;}
-        20%{top:23%;}
-        50%{top:23%;}
-        90%{top:23%;} 
-        100%{top:23%;}
-    }
-
-
-/* For large screens */
-@media (min-width: 1024px) {
-     
-.section-title{
+.socialicon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #e4e4e4;
     position: relative;
-    z-index: 2; 
-    font-size: 55px;
-    color: #ffffff;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-  }
-    .topic{
-        /* font-size: 50px; */
+    float: left;
+    margin: 0 0 10px 10px;
+}
+
+.socialiconcircle1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    animation: fill 2s infinite;
+    border-radius: 50%;
+}
+
+/* Colored fill backgrounds for animation */
+.htmlcolor .socialiconcircle1 { background: #E34F26; }       /* HTML */
+.csscolor .socialiconcircle1 { background: #1572B6; }       /* CSS */
+.javascriptcolor .socialiconcircle1 { background: #F7DF1E; } /* JavaScript */
+.sqlcolor .socialiconcircle1 { background: #CC2927; }        /* SQL */
+.mongodbcolor .socialiconcircle1 { background: #47A248; }    /* MongoDB */
+.javacolor .socialiconcircle1 { background: #007396; }       /* Java */
+.angularcolor .socialiconcircle1 { background: #DD0031; }    /* Angular */
+.dotnetcolor .socialiconcircle1 { background: #512BD4; }     /* .NET */
+.firebasecolor .socialiconcircle1 { background: #FFCA28; }   /* Firebase */
+.phpcolor .socialiconcircle1 { background: #777BB4; }        /* PHP */
+.figmacolor .socialiconcircle1 { background: #F24E1E; }      /* Figma */
+.blendercolor .socialiconcircle1 { background: #F5792A; }    /* Blender */
+.canvacolor .socialiconcircle1 { background: #20C4CB; }      /* Canva */
+.cpluscolor .socialiconcircle1 { background: #00599C; }      /* C++ */
+.csharpcolor .socialiconcircle1 { background: #239120; }     /* C# */
+.ccolor .socialiconcircle1 { background: #A8B9CC; }          /* C */
+.pythoncolor .socialiconcircle1 { background: #3776AB; }     /* Python */
+.typescriptcolor .socialiconcircle1 { background: #3178C6; } /* TypeScript */
+.reactcolor .socialiconcircle1 { background: #61DAFB; }      /* React */
+.bootstrapcolor .socialiconcircle1 { background: #7952B3; }  /* Bootstrap */
+.tailwindcolor .socialiconcircle1 { background: #38B2AC; }   /* Tailwind CSS */
+.nodecolor .socialiconcircle1 { background: #339933; }       /* Node.js */
+.expresscolor .socialiconcircle1 { background: #000000; }    /* Express.js */
+.gitcolor .socialiconcircle1 { background: #F05032; }        /* Git */
+.githubcolor .socialiconcircle1 { background: #181717; }     /* GitHub */
+.jiracolor .socialiconcircle1 { background: #0052CC; }       /* Jira */
+.adobecolor .socialiconcircle1 { background: #FF0000; }      /* Adobe */
+.gimpcolor .socialiconcircle1 { background: #5C5544; }       /* GIMP */
+.postmancolor .socialiconcircle1 { background: #FF6C37; }    /* Postman */
+
+.socialiconcircle2 {
+    width: 94%;
+    height: 94%;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    overflow: hidden;
+}
+
+/* Logo image inside circle */
+.tech-logo {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Animation keyframes */
+@keyframes fill {
+    0% { top: 100%; }
+    100% { top: 0%; }
+}
+
+/* Responsive media queries (same as before) */
+@media (min-width: 1024px) {
+    .section-title {
+        font-size: 55px;
+    }
+
+    .topic {
         padding-left: 18%;
         width: 40%;
         font-size: 50px;
     }
-    .tech{
-        /* font-size: 40px; */
+
+    .tech {
         width: 60%;
         padding-left: 1%;
     }
+
     .socialicon {
         width: 97px;
         height: 97px;
@@ -260,251 +189,156 @@
     }
 
     .socialiconcircle2 {
-        width:94%;
-        height:94%;
-        border-radius:50%;
-        background:#fff;
-        position:absolute;
-        left:3.1px;
-        top:3.1px;
-    }
-
-    .fa-brands, .fa-solid {
-        font-size: 3.9em;
+        width: 94%;
+        height: 94%;
+        left: 3.1px;
+        top: 3.1px;
     }
 }
-/* For medium screens (like 1024x768) */
+
 @media (max-width: 1024px) {
-     
-.section-title{
-    position: relative;
-    z-index: 2; 
-    font-size: 50px;
-    color: #ffffff;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-  }
-    .topic{
+    .section-title {
+        font-size: 50px;
+    }
+
+    .topic {
         font-size: 45px;
         padding-left: 15%;
         width: 40%;
     }
-    .tech{
-        /* font-size: 40px; */
+
+    .tech {
         width: 60%;
         padding-left: 3%;
     }
+
     .socialicon {
         width: 77px;
         height: 77px;
     }
 
-    .socialiconcircle1 {
-        width: 100%;
-        height: 100%;
-    }
-
     .socialiconcircle2 {
-        width:94%;
-        height:94%;
-        border-radius:50%;
-        background:#fff;
-        position:absolute;
-        left:2.6px;
-        top:2.6px;
-    }
-
-    .fa-brands, .fa-solid {
-        font-size: 3em;
+        left: 2.6px;
+        top: 2.6px;
     }
 }
 
-/* For smaller screens (like 768x480) */
 @media (max-width: 768px) {
-     
-.section-title{
-    position: relative;
-    z-index: 2; 
-    font-size: 45px;
-    color: #ffffff;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-  }
-    .topic{
+    .section-title {
+        font-size: 45px;
+    }
+
+    .topic {
         font-size: 40px;
         width: 30%;
         padding-left: 8%;
         margin: 0;
     }
-    .tech{
+
+    .tech {
         padding-left: 2%;
-        /* font-size: 40px; */
         width: 70%;
     }
+
     .socialicon {
         width: 80px;
         height: 80px;
     }
 
-    .socialiconcircle1 {
-        width: 100%;
-        height: 100%;
-    }
-
     .socialiconcircle2 {
-        width:96%;
-        height:96%;
-        border-radius:50%;
-        background:#fff;
-        position:absolute;
-        left:1.1px;
-        top:1.1px;
-    }
-
-    .fa-brands, .fa-solid {
-        font-size: 3.4em;
+        width: 96%;
+        height: 96%;
+        left: 1.1px;
+        top: 1.1px;
     }
 }
+
 @media (max-width: 688px) {
-    .section-title{
-        position: relative;
-        z-index: 2; 
+    .section-title {
         font-size: 35px;
-        color: #ffffff;
-        margin-bottom: 20px;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 800;
-      }
-    .topic{
+    }
+
+    .topic {
         font-size: 30px;
         width: 30%;
         padding-left: 8%;
         margin: 0;
     }
-    .tech{
+
+    .tech {
         padding-left: 1%;
-        /* font-size: 40px; */
         width: 70%;
     }
+
     .socialicon {
         width: 60px;
         height: 60px;
     }
 
-    .socialiconcircle1 {
-        width: 100%;
-        height: 100%;
-    }
-
     .socialiconcircle2 {
-        width:96%;
-        height:96%;
-        border-radius:50%;
-        background:#fff;
-        position:absolute;
-        left:1.1px;
-        top:1.1px;
-    }
-
-    .fa-brands, .fa-solid {
-        font-size: 2.6em;
+        width: 96%;
+        height: 96%;
+        left: 1.1px;
+        top: 1.1px;
     }
 }
 
-/* For very small screens (like 480px and below) */
 @media (max-width: 480px) {
-     
-.section-title{
-    position: relative;
-    z-index: 2; 
-    font-size: 35px;
-    color: #ffffff;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-  }
-    .topic{
+    .section-title {
+        font-size: 35px;
+    }
+
+    .topic {
         font-size: 25px;
         width: 30%;
         padding-left: 8%;
     }
-    .tech{
+
+    .tech {
         padding-left: 4%;
-        /* font-size: 40px; */
         width: 70%;
     }
+
     .socialicon {
         width: 40px;
         height: 40px;
     }
 
-    .socialiconcircle1 {
-        width: 100%;
-        height: 100%;
-    }
-
     .socialiconcircle2 {
-        width:94%;
-        height:94%;
-        border-radius:50%;
-        background:#fff;
-        position:absolute;
-        left:1px;
-        top:1px;
-    }
-
-    .fa-brands, .fa-solid {
-        font-size: 1.6em;
+        width: 94%;
+        height: 94%;
+        left: 1px;
+        top: 1px;
     }
 }
 
-/* For very small screens (like 480px and below) */
 @media (max-width: 423px) {
-     
-.section-title{
-    position: relative;
-    z-index: 2; 
-    font-size: 30px;
-    color: #ffffff;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-  }
-    .topic{
+    .section-title {
+        font-size: 30px;
+    }
+
+    .topic {
         font-size: 22px;
         width: 30%;
         padding-left: 7%;
     }
-    .tech{
+
+    .tech {
         padding-left: 0%;
         justify-content: center;
-        /* font-size: 40px; */
         width: 70%;
     }
+
     .socialicon {
         width: 38px;
         height: 38px;
     }
 
-    .socialiconcircle1 {
-        width: 100%;
-        height: 100%;
-    }
-
     .socialiconcircle2 {
-        width:95%;
-        height:95%;
-        border-radius:50%;
-        background:#fff;
-        position:absolute;
-        left:1px;
-        top:1px;
-    }
-
-    .fa-brands, .fa-solid {
-        font-size: 1.7em;
+        width: 95%;
+        height: 95%;
+        left: 1px;
+        top: 1px;
     }
 }
 
