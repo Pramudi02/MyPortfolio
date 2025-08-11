@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 
     background-image: url('https://res.cloudinary.com/dfbvnb3vx/image/upload/v1748347146/Untitled_design_2_edqcdf.jpg');
@@ -103,21 +103,21 @@
 /* Colored fill backgrounds for animation */
 .htmlcolor .socialiconcircle1 { background: #E34F26; }       /* HTML */
 .csscolor .socialiconcircle1 { background: #1572B6; }       /* CSS */
-.javascriptcolor .socialiconcircle1 { background: #F7DF1E; } /* JavaScript */
-.sqlcolor .socialiconcircle1 { background: #CC2927; }        /* SQL */
+.javascriptcolor .socialiconcircle1 { background: #f3b50a; } /* JavaScript */
+.sqlcolor .socialiconcircle1 { background: #000000; }        /* SQL */
 .mongodbcolor .socialiconcircle1 { background: #47A248; }    /* MongoDB */
-.javacolor .socialiconcircle1 { background: #007396; }       /* Java */
+.javacolor .socialiconcircle1 { background: #72c0ff; }       /* Java */
 .angularcolor .socialiconcircle1 { background: #DD0031; }    /* Angular */
 .dotnetcolor .socialiconcircle1 { background: #512BD4; }     /* .NET */
-.firebasecolor .socialiconcircle1 { background: #FFCA28; }   /* Firebase */
+.firebasecolor .socialiconcircle1 { background: #000000; }   /* Firebase */
 .phpcolor .socialiconcircle1 { background: #777BB4; }        /* PHP */
 .figmacolor .socialiconcircle1 { background: #F24E1E; }      /* Figma */
 .blendercolor .socialiconcircle1 { background: #F5792A; }    /* Blender */
 .canvacolor .socialiconcircle1 { background: #20C4CB; }      /* Canva */
-.cpluscolor .socialiconcircle1 { background: #00599C; }      /* C++ */
+.cpluscolor .socialiconcircle1 { background: #0181bd; }      /* C++ */
 .csharpcolor .socialiconcircle1 { background: #239120; }     /* C# */
-.ccolor .socialiconcircle1 { background: #A8B9CC; }          /* C */
-.pythoncolor .socialiconcircle1 { background: #3776AB; }     /* Python */
+.ccolor .socialiconcircle1 { background: #0181bd; }          /* C */
+.pythoncolor .socialiconcircle1 { background: #ffd95e; }     /* Python */
 .typescriptcolor .socialiconcircle1 { background: #3178C6; } /* TypeScript */
 .reactcolor .socialiconcircle1 { background: #61DAFB; }      /* React */
 .bootstrapcolor .socialiconcircle1 { background: #7952B3; }  /* Bootstrap */
@@ -127,7 +127,8 @@
 .gitcolor .socialiconcircle1 { background: #F05032; }        /* Git */
 .githubcolor .socialiconcircle1 { background: #181717; }     /* GitHub */
 .jiracolor .socialiconcircle1 { background: #0052CC; }       /* Jira */
-.adobecolor .socialiconcircle1 { background: #FF0000; }      /* Adobe */
+.adobeicolor .socialiconcircle1 { background: #e2ad00; }      /* Adobe */
+.adobepcolor .socialiconcircle1 { background: #00ade2; }      /* Adobe */
 .gimpcolor .socialiconcircle1 { background: #5C5544; }       /* GIMP */
 .postmancolor .socialiconcircle1 { background: #FF6C37; }    /* Postman */
 
