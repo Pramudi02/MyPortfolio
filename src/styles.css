@@ -13,4 +13,20 @@
     padding: 0;
     background-color:#25e0d7;
   }
-  
+
+  .global-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4); /* semi-transparent black */
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Make sure all app content is above the overlay */
+app-root, .app-root, .section-center, .container-fluid, .row, section {
+  position: relative;
+  z-index: 2;
+}

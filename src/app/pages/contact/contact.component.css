@@ -14,16 +14,6 @@
 	transition-delay: 400ms;
 	transform-origin: center top;
 }
-.contact-section::before {
-  content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /*dark overlay */
-    z-index: 1;
-}
 .contact-container {
   max-width: 800px;
   margin: 2rem auto;
