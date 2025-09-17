@@ -13,7 +13,7 @@ export interface EmailData {
   providedIn: 'root'
 })
 export class EmailService {
-  private apiUrl = environment.apiUrl || 'https://backend-production-6de1.up.railway.app/api/send-email';
+  private apiUrl = environment.apiUrl || 'https://my-portfolio-eosin-psi-gixqoi71g3.vercel.app/api/send-email';
 
   constructor(private http: HttpClient) { 
     // Debug: Log the API URL being used
