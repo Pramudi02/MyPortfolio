@@ -57,5 +57,12 @@
 ,
   "engines": {
     "node": "22.x"
+  },
+  "vercel": {
+    "functions": {
+      "backend/api/*.js": {
+        "runtime": "nodejs22.x"
+      }
+    }
   }
 }
