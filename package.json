@@ -54,4 +54,8 @@
     "url": "https://github.com/Pramudi02/MyPortfolio/issues"
   },
   "homepage": "https://github.com/Pramudi02/MyPortfolio#readme"
+,
+  "engines": {
+    "node": "22.x"
+  }
 }
