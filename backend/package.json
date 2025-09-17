@@ -6,7 +6,7 @@
   "description": "Backend for handling email sending from portfolio contact form",
   "main": "server.js",
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   },
   "scripts": {
     "start": "node server.js",
