@@ -2,12 +2,10 @@
   "version": 2,
   "functions": {
     "api/send-email.js": {
-      "runtime": "nodejs18.x",
       "memory": 256,
       "maxDuration": 60
     },
     "api/health.js": {
-      "runtime": "nodejs18.x",
       "memory": 128,
       "maxDuration": 15
     }
