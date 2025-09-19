@@ -1,4 +1,5 @@
 export const environment = {
   production: false,
-  apiUrl: 'https://my-portfolio-d3t15xt6d-pramudi02s-projects.vercel.app/api/send-email'
-}; 
+  // Base API URL for backend (used by email service)
+  apiUrl: 'https://backend-new-portfolio.vercel.app/api/send-email'
+};
