@@ -52,6 +52,8 @@ The portfolio includes an integrated contact system with:
   - Error handling and logging
   - Environment variable configuration for security
   - CORS configuration for secure client-server communication
+  
+  - Backend repository: https://github.com/Pramudi02/Backend
 
 <!--## 🖼️ Screenshots
 
