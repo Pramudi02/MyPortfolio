@@ -13,12 +13,15 @@ export interface EmailData {
   providedIn: 'root'
 })
 export class EmailService {
-  private apiUrl = environment.apiUrl || 'https://my-portfolio-d3t15xt6d-pramudi02s-projects.vercel.app/api/send-email';
+  // Use the URL provided by the environment files. Ensure it's defined.
+  private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) { 
-    // Debug: Log the API URL being used
-    console.log('EmailService initialized with API URL:', this.apiUrl);
-    console.log('Environment:', environment);
+    if (!this.apiUrl) {
+      console.warn('EmailService: environment.apiUrl is not set. Email requests will fail until it is configured.');
+    } else {
+      console.debug('EmailService initialized with API URL:', this.apiUrl);
+    }
   }
 
   /**
@@ -27,7 +30,6 @@ export class EmailService {
    * @returns Observable of the API response
    */
   sendEmail(emailData: EmailData): Observable<any> {
-    console.log('Sending email to:', this.apiUrl);
-    return this.http.post(this.apiUrl, emailData);
+  return this.http.post(this.apiUrl, emailData);
   }
 }
