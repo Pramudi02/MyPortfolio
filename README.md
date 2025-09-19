@@ -70,24 +70,6 @@ The portfolio includes an integrated contact system with:
 ### 🔹 Contact Section  
 <img src="src/assets/ss_contact.png" alt="Contact" width="700"/> -->
 
-## 🔒 Security Considerations
-
-- Environment variables for sensitive credentials
-- No exposure of email passwords in client-side code
-- Secure handling of form data
-- Input validation to prevent injection attacks
-- CORS configuration for API security
-- Form validation on both client and server side
-
-## 🚀 Future Enhancements
-
-- CAPTCHA integration to prevent spam submissions
-- Rate limiting for the contact form
-- Analytics tracking for form submissions
-- Additional customization options for email templates
-- Dark mode theme toggle
-- Blog section integration
-- Project filtering and search functionality
 
 ## 📥 Setup Instructions
 
