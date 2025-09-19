@@ -2,7 +2,8 @@ module.exports = async (req, res) => {
   const allowedOrigins = [
     'https://portfolio990.web.app',
     'https://portfolio990.firebaseapp.com',
-    'http://localhost:4200'
+    'http://localhost:4200',
+    'https://portfolio990.web.app/home',
   ];
   const requestOrigin = req.headers.origin || '';
   const originToUse = allowedOrigins.includes(requestOrigin)
