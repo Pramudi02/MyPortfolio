@@ -5,7 +5,7 @@ This project showcases my skills, experience, and creative work as an **IT under
 
 Live site: https://portfolio990.web.app
 
-> 🚧 **Status:** Fully developed and ready for deployment
+> 🚧 **Status:** Fully developed and deployed
 
 ## ⚙️ Technologies Used
 
