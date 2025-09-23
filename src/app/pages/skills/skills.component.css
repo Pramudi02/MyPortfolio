@@ -69,7 +69,7 @@
 
 .tech {
     text-align: center;
-    justify-content: center;
+    justify-content: flex-start;
     color: #dbdbdb;
     font-family: arial, sans-serif;
     width: 60%;
@@ -85,7 +85,7 @@
     z-index: 2;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .socialicon {
@@ -187,7 +187,8 @@
         padding-left: 1%;
         display: flex;
         flex-wrap: wrap;
-        
+        justify-content: flex-start;
+        align-items: center;
     }
 
     .socialicon {
@@ -206,6 +207,50 @@
         height: 94%;
         left: 3.1px;
         top: 3.1px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .section-title {
+        font-size: 60px;
+    }
+
+    .topic {
+        padding-left: 2%;
+        width: 35%;
+        font-size: 52px;
+    }
+
+    .tech {
+        width: 65%;
+        padding-left: 1%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .socialicon {
+        width: 110px;
+        height: 110px;
+        margin: 6px;
+    }
+
+    .socialiconcircle1 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .socialiconcircle2 {
+        width: 94%;
+        height: 94%;
+        left: 3.3px;
+        top: 3.3px;
+    }
+
+    .section {
+        padding: 50px 25px;
     }
 }
 
@@ -240,6 +285,60 @@
     }
 }
 
+@media (max-width: 860px) {
+    .section-title {
+        font-size: 45px;
+        margin-bottom: 30px;
+    }
+
+    .stack {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .topic {
+        font-size: 40px;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        padding-left: 2%;
+        margin: 0;
+    }
+
+    .tech {
+        width: 100%;
+        justify-content: center;
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #socialicons {
+        justify-content: center;
+    }
+
+    .socialicon {
+        width: 70px;
+        height: 70px;
+        margin: 5px;
+    }
+
+    .socialiconcircle2 {
+        width: 94%;
+        height: 94%;
+        left: 3px;
+        top: 3px;
+    }
+
+    .section {
+        padding: 30px 15px;
+    }
+}
+
 @media (max-width: 768px) {
     .section-title {
         font-size: 45px;
@@ -270,6 +369,10 @@
         flex-wrap: wrap;
         align-items: center;
         gap: 10px;
+    }
+
+    #socialicons {
+        justify-content: center;
     }
 
     .socialicon {
