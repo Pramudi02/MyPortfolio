@@ -14,6 +14,7 @@
 	transition-delay: 400ms;
   font-family: 'Poppins', sans-serif;
 	transform-origin: center top;
+  margin-bottom:auto ;
 }
 .contact-container {
   max-width: 800px;
