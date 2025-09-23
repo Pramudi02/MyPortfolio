@@ -201,8 +201,8 @@
     .vertical-nav a:nth-child(4)::after { content: 'Projects'; }
     .vertical-nav a:nth-child(5)::after { content: 'Education'; }
     .vertical-nav a:nth-child(6)::after { content: 'Art Gallery'; }
-    .vertical-nav a:nth-child(7)::after { content: 'Contact Us'; }
-    .vertical-nav button::after { content: 'Menu'; }
+    .vertical-nav a:nth-child(7)::after { content: 'Contact'; }
+    .vertical-nav button::after { content: 'Contact'; }
 
     .vertical-nav a:hover::after, .vertical-nav button:hover::after {
         opacity: 1;
