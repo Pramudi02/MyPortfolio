@@ -1,17 +1,19 @@
-import { Component, HostListener } from '@angular/core';
-import { TypingTextComponent } from '../typing-text/typing-text.component';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+// TypingTextComponent removed from imports as it's not used in the template
 import { AboutComponent } from '../about/about.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { ContactComponent } from '../contact/contact.component';
 import { EducationComponent } from '../education/education.component';
 import { ArtSectionComponent } from '../art-section/art-section.component';
+import { ProjectService, Project } from '../../services/project.service';
 
 @Component({
     selector: 'app-homepage',
     standalone: true,
     imports: [
-        TypingTextComponent,
+        CommonModule,
         AboutComponent,
         SkillsComponent,
         ProjectsComponent,
@@ -22,16 +24,25 @@ import { ArtSectionComponent } from '../art-section/art-section.component';
     templateUrl: './homepage.component.html',
     styleUrl: './homepage.component.css'
 })
-export class HomepageComponent {
+export class HomepageComponent implements OnInit {
   isMenuOpen = false;
   activeSection: string = 'home';
   isVerticalNavOpen = true;
+  selectedProject: number | null = null;
+  projects: Project[] = [];
+
+  constructor(private projectService: ProjectService) {}
 
   scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  }
+
+  ngOnInit() {
+    this.projects = this.projectService.getProjects();
+    this.onScroll();
   }
 
   toggleMenu(): void {
@@ -61,11 +72,26 @@ export class HomepageComponent {
     }
   }
 
-  ngOnInit() {
-    this.onScroll();
-  }
+  // ngOnInit already implemented above to load projects and initialize scroll
 
   closeMenu(): void {
     this.isMenuOpen = false;
+  }
+
+  openModal(index: number): void {
+    this.selectedProject = index;
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  }
+
+  closeModal(): void {
+    this.selectedProject = null;
+    document.body.style.overflow = 'auto'; // Restore scrolling
+  }
+
+  // Close modal when clicking outside
+  onModalClick(event: MouseEvent): void {
+    if ((event.target as HTMLElement).classList.contains('modal')) {
+      this.closeModal();
+    }
   }
 }

@@ -57,7 +57,7 @@
 </section>
 
 <section id="projects">
-    <app-projects></app-projects>
+    <app-projects (openProject)="openModal($event)"></app-projects>
 </section>
 
 <section id="education">
@@ -71,3 +71,39 @@
 <section id="contact">
     <app-contact></app-contact>
 </section>
+
+<!-- Project Modal -->
+<div class="modal" (click)="onModalClick($event)" [class.show-modal]="selectedProject !== null" *ngIf="selectedProject !== null">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-label="Project details">
+        <span class="close-btn" (click)="closeModal()">&times;</span>
+        <div class="modal-body">
+            <div class="modal-image" [ngClass]="'proj' + (selectedProject + 1)"></div>
+            <h2 class="modal-title">{{projects[selectedProject].title}}</h2>
+            <p class="modal-description">{{projects[selectedProject].fullDescription}}</p>
+
+            <div class="technologies">
+                <h3>Technologies Used</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag" *ngFor="let tech of projects[selectedProject].technologies">{{tech}}</span>
+                </div>
+            </div>
+
+            <div class="project-links">
+                <a *ngIf="projects[selectedProject].repoUrl" 
+                   [href]="projects[selectedProject].repoUrl" 
+                   target="_blank" 
+                   class="repo-btn">
+                    <i class="fab fa-github"></i>
+                    View Repository
+                </a>
+                <a *ngIf="projects[selectedProject].liveUrl" 
+                   [href]="projects[selectedProject].liveUrl" 
+                   target="_blank" 
+                   class="live-btn">
+                    <i class="fas fa-external-link-alt"></i>
+                    View Live Site
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

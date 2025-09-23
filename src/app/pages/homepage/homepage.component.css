@@ -6,16 +6,10 @@
 	background-color: #25e0d7; 
     z-index: 1;
 	transform: scale(1) rotateX(0);
-	-webkit-transition: all 300ms linear;
-	transiti    .vertical-nav a:nth-child(1)::after { content: 'Home'; }
-    .vertical-nav a:nth-child(2)::after { content: 'About'; }
-    .vertical-nav a:nth-child(3)::after { content: 'Skills'; }
-    .vertical-nav a:nth-child(4)::after { content: 'Projects'; }
-    .vertical-nav a:nth-child(5)::after { content: 'Education'; }
-    .vertical-nav a:nth-child(6)::after { content: 'Art Gallery'; }
-    .vertical-nav button::after { content: 'Contact Us'; }
-	-webkit-transition-delay: 400ms;
-	transition-delay: 400ms;
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+    -webkit-transition-delay: 400ms;
+    transition-delay: 400ms;
 	transform-origin: center top;
 	font-weight: 300;
 	font-size: 15px;
@@ -32,8 +26,8 @@
     height: auto;
     object-fit: contain;
     z-index: 0;
-    top: 0;
 }
+  
 
 .navbar {
     position: fixed;
@@ -789,3 +783,319 @@
 
  
 }
+
+/* Modal Styles (moved from projects.component.css) */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+
+}
+
+.modal.show-modal {
+    display: flex;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95));
+    width: 90%;
+    max-width: 1000px;
+    margin: 10px 20px;
+    border-radius: 0;
+    border-radius: 25px;
+    position: relative;
+    padding: 40px;
+    overflow-y: auto;
+    box-shadow: none;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transform: scale(1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    z-index: 1000000;
+    /* scrollable area: keep modal centered with a body that scrolls */
+    max-width: 1000px;
+    margin: 80px 20px;
+}
+
+/* Modal body: the inner scrollable region */
+.modal-body {
+    max-height: calc(100vh - 160px); /* accounts for margins and close button */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-right: 8px; /* space for custom scrollbar */
+}
+
+/* Custom scrollbar (WebKit) */
+.modal-body::-webkit-scrollbar {
+    width: 10px;
+}
+.modal-body::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.04);
+    border-radius: 999px;
+}
+.modal-body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(37, 224, 215, 0.318), rgba(29,189,181,0.2));
+    border-radius: 999px;
+    border: 2px solid rgba(255,255,255,0.6);
+}
+
+/* Ensure modal content looks good on small screens */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 94%;
+        margin: 40px 12px;
+        padding: 20px;
+    }
+
+    .modal-body {
+        max-height: calc(100vh - 100px);
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 98%;
+        margin: 20px 8px;
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .modal-image {
+        height: 180px;
+        border-radius: 12px;
+    }
+}
+
+
+.show-modal .modal-content {
+    transform: scale(1);
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(37, 224, 215, 0.8), rgba(29, 189, 181, 0.9));
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000001;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    font-family: 'Poppins', sans-serif;
+}
+
+.close-btn:hover {
+    background: linear-gradient(135deg, rgba(37, 224, 215, 1), rgba(29, 189, 181, 1));
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 8px 25px rgba(37, 224, 215, 0.4);
+}
+
+.modal-image {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.modal-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+    border-radius: 0 0 20px 20px;
+}
+
+.modal-title {
+    font-size: 32px;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.modal-description {
+    color: #444;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-bottom: 30px;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.technologies {
+    margin: 35px 0;
+}
+
+.technologies h3 {
+    font-size: 22px;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tech-tag {
+    background: linear-gradient(135deg, rgba(37, 224, 215, 0.15), rgba(37, 224, 215, 0.08));
+    color: #1a1a1a;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(37, 224, 215, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-family: 'Poppins', sans-serif;
+}
+
+.tech-tag:hover {
+    background: linear-gradient(135deg, rgba(37, 224, 215, 0.3), rgba(37, 224, 215, 0.2));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 224, 215, 0.2);
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.repo-btn, .live-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.repo-btn {
+    background: linear-gradient(135deg, #24292e, #2f363d);
+    color: #fff;
+}
+
+.live-btn {
+    background: linear-gradient(135deg, #25e0d7, #1ca39c);
+    color: #fff;
+}
+
+.repo-btn:hover, .live-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.repo-btn:hover {
+    background: linear-gradient(135deg, #2f363d, #24292e);
+}
+
+.live-btn:hover {
+    background: linear-gradient(135deg, #1ca39c, #25e0d7);
+}
+
+@media (max-width: 768px) {
+    .modal-image {
+        height: 200px;
+    }
+    
+    .modal-content {
+        padding: 25px;
+    }
+
+    .modal-title {
+        font-size: 24px;
+    }
+
+    .modal-description {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .tech-tags {
+        gap: 8px;
+    }
+
+    .tech-tag {
+        font-size: 13px;
+        padding: 6px 15px;
+    }
+
+    .project-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .repo-btn, .live-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-title{
+        font-size: 20px;
+    }
+}
+
+/* Project Images copied so modal in homepage can use same classes */
+.proj1 { background-image: url('/assets/instadash.jpg'); }
+.proj2 { background-image: url('/assets/mommy.jpg'); }
+.proj3 { background-image: url('/assets/cyber.jpg'); }
+.proj4 { background-image: url('/assets/hardware.png'); }
+.proj5 { background-image: url('/assets/pojmang.jpg'); }
+.proj6 { background-image: url('/assets/ayuman.jpg'); }
+.proj7 { background-image: url('/assets/grt.png'); }
+.proj8 { background-image: url('/assets/merchmora.png'); }
+.proj9 { background-image: url('/assets/client.jpg'); }
+.proj10 { background-image: url('/assets/portfolio.jpg'); }
+.proj11 { background-image: url('/assets/bookstore.jpg'); }
