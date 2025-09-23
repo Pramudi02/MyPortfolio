@@ -85,7 +85,6 @@
     color: #fff;
     background-color: #25e0d7;
     box-sizing: border-box;
-    min-height: 60vh;
     overflow: hidden;
 }
 
@@ -96,7 +95,6 @@
     position: relative;
     padding: 50px 0;
     overflow: hidden;
-    min-height: 80vh;
     z-index: 2;
 }
 
@@ -147,7 +145,6 @@
 .education-container {
     display: flex;
     position: relative;
-    min-height: calc(100vh - 200px);
     height: auto;
     padding: 10px 0;
     gap: 40px;
@@ -388,7 +385,6 @@ border: 2px solid rgba(255, 255, 255, 0.3);
 @media (max-width: 768px) {
     .education-section {
         padding: 40px 0;
-        min-height: 70vh;
     }
     
     .education-wrapper {
@@ -466,7 +462,6 @@ border: 2px solid rgba(255, 255, 255, 0.3);
 @media (max-width: 480px) {
     .education-section {
         padding: 30px 0;
-        min-height: 65vh;
     }
     
     .education-wrapper {
@@ -542,7 +537,6 @@ border: 2px solid rgba(255, 255, 255, 0.3);
     }
     
     .education-container {
-        min-height: calc(100vh - 250px);
         gap: 50px;
         padding: 20px 0;
     }
@@ -556,7 +550,6 @@ border: 2px solid rgba(255, 255, 255, 0.3);
 
 @media (min-width: 769px) and (max-width: 1023px) {
     .education-container {
-        min-height: calc(100vh - 220px);
         gap: 30px;
         padding: 15px 0;
         flex-direction: row;
@@ -623,7 +616,6 @@ border: 2px solid rgba(255, 255, 255, 0.3);
 @media (max-width: 420px) {
     .education-section {
         padding: 25px 0;
-        min-height: 60vh;
     }
     
     .education-wrapper {
@@ -692,7 +684,6 @@ border: 2px solid rgba(255, 255, 255, 0.3);
 @media (max-width: 360px) {
     .education-section {
         padding: 20px 0;
-        min-height: 55vh;
     }
     
     .education-wrapper {
@@ -761,7 +752,6 @@ border: 2px solid rgba(255, 255, 255, 0.3);
 /* Landscape orientation adjustments */
 @media (max-height: 500px) and (orientation: landscape) {
     .education-section {
-        min-height: 100vh;
         padding: 15px 0;
     }
     
