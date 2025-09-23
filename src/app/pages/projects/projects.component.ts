@@ -27,7 +27,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   private scrollLeft: number = 0;
   private isDragging: boolean = false;
   private cardWidth: number = 340; // card width + margin
-  private totalCards: number = 10; // Updated to 10 total projects
+  private totalCards: number = 11; // Updated to 11 total projects
   selectedProject: number | null = null;
   projects: Project[] = [
       {
@@ -37,6 +37,43 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
         technologies: ['Angular', '.NET', 'MongoDB'],
         repoUrl: 'https://github.com/ally-bees/ab.uom.project',
         image: 'assets/1.jpg'
+      },
+      {
+        title: 'MommyCare+ (Ongoing)',
+        description: 'An AI-integrated pregnancy and baby care platform for mothers, midwives, and healthcare providers in Sri Lanka.',
+        fullDescription :'full-featured healthcare platform designed for Sri Lankan mothers, midwives, and doctors. It offers pregnancy tracking, AI-based predictions for baby weight and gestational diabetes, appointment scheduling, and real-time vaccination monitoring. Users can view growth charts, chat with healthcare providers, access meal plans, follow exercise tips, and manage daily medical records. The platform also includes an educational hub with articles and baby care guides—providing a complete digital companion from pregnancy to early motherhood.',
+        technologies: [
+          'React', 'Vite', 'TypeScript', 'Tailwind CSS',
+          'Node.js', 'Express', 'FastAPI', 'Python',
+          'MongoDB', 'Mongoose', 'Socket.IO', 'Chart.js'
+        ],
+        repoUrl: 'https://github.com/Pramudi02/MommyCare.git',   
+        // liveUrl: 'https://maternitycareplus.onrender.com/',          
+        image: 'assets/maternitycareplus.png'                        
+      },
+      {
+        title: 'Secura',
+        description: '🛡️ Secura - AI-Powered Cyber Incident Management System Next.js FastAPI Firebase Python TypeScript Production Ready',
+        fullDescription: 'Secura is a comprehensive, AI-powered cybersecurity incident management platform designed to streamline incident reporting, enhance threat analysis, and facilitate real-time collaboration between employees, security teams, and administrators. Key Features include AI-Powered Security Analysis with Smart Incident Categorization (85%+ accuracy with confidence scoring), Severity Assessment with multi-factor analysis, Mitigation Strategies with context-aware recommendations, Threat Intelligence with industry pattern analysis, and Predictive Analytics for future incident forecasting. Role-Based Access Control supports Employee incident reporting, Security Team advanced analysis and collaboration, and Admin user management with executive insights. Comprehensive Analytics include real-time dashboards, performance metrics, compliance reports, and system health monitoring. Real-time Communication features WebSocket integration, incident threading, file sharing, and status updates.',
+        technologies: ['Next.js', 'FastAPI', 'Firebase', 'Python', 'TypeScript'],
+        repoUrl: 'https://github.com/AdithaBuwaneka/Secura.git',
+        image: 'assets/cyber.jpg'
+      },
+      {
+        title: 'Micro-Controller Based Hardware Project',
+        description: 'A wearable jacket for the kids that tracks movement, heart rate, and temperature, syncing motion with 3D models and rhythm.',
+        fullDescription: 'The Interactive Rhyme Jacket is an innovative wearable technology project that combines motion sensors and health monitoring. It tracks movement to control 3D models in a browser and includes rhythmic synchronization, heart rate monitoring, and temperature tracking.',
+        technologies: ['Motion Sensors', 'Web Interface', '3D Modeling'],
+      repoUrl: 'https://github.com/hhadithya/rhyme-jacket',
+        image: 'assets/rhymejacket.png'
+      },
+      {
+        title: 'Project Management System',
+        description: 'A CRUD-enabled web app for showcasing and managing project portfolios while improving project organization.',
+        fullDescription: 'Developed as an individual project, this full-stack web application enables users to manage their portfolio content with full CRUD functionalities. It improves project organization and professional visibility.',
+        technologies: ['Angular', '.NET', 'MongoDB'],
+        repoUrl: 'https://github.com/Pramudi02/projects',
+        image: 'assets/portfolioManager.png'
       },
       {
         title: 'Ayman Al Madina HR Services',
@@ -54,14 +91,6 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
       liveUrl: 'https://grttravelsandtours.com/',
         image: 'assets/grttravels.png'
       }, 
-      {
-        title: 'Micro-Controller Based Hardware Project',
-        description: 'A wearable jacket for the kids that tracks movement, heart rate, and temperature, syncing motion with 3D models and rhythm.',
-        fullDescription: 'The Interactive Rhyme Jacket is an innovative wearable technology project that combines motion sensors and health monitoring. It tracks movement to control 3D models in a browser and includes rhythmic synchronization, heart rate monitoring, and temperature tracking.',
-        technologies: ['Motion Sensors', 'Web Interface', '3D Modeling'],
-      repoUrl: 'https://github.com/hhadithya/rhyme-jacket',
-        image: 'assets/rhymejacket.png'
-      },
       {
         title: 'E-commerce Website - MerchMora',
         description: ' A full-fledged e-commerce website built as part of an academic assignment.',
@@ -85,27 +114,6 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
         technologies: ['Angular', '.NET', 'MongoDB'],
         repoUrl: 'https://github.com/Pramudi02/MyPortfolio',
         image: 'assets/portfolioWebsite.png'
-      },
-      {
-        title: 'Project Management System',
-        description: 'A CRUD-enabled web app for showcasing and managing project portfolios while improving project organization.',
-        fullDescription: 'Developed as an individual project, this full-stack web application enables users to manage their portfolio content with full CRUD functionalities. It improves project organization and professional visibility.',
-        technologies: ['Angular', '.NET', 'MongoDB'],
-        repoUrl: 'https://github.com/Pramudi02/projects',
-        image: 'assets/portfolioManager.png'
-      },
-      {
-        title: 'MommyCare+ (Ongoing)',
-        description: 'An AI-integrated pregnancy and baby care platform for mothers, midwives, and healthcare providers in Sri Lanka.',
-        fullDescription :'full-featured healthcare platform designed for Sri Lankan mothers, midwives, and doctors. It offers pregnancy tracking, AI-based predictions for baby weight and gestational diabetes, appointment scheduling, and real-time vaccination monitoring. Users can view growth charts, chat with healthcare providers, access meal plans, follow exercise tips, and manage daily medical records. The platform also includes an educational hub with articles and baby care guides—providing a complete digital companion from pregnancy to early motherhood.',
-        technologies: [
-          'React', 'Vite', 'TypeScript', 'Tailwind CSS',
-          'Node.js', 'Express', 'FastAPI', 'Python',
-          'MongoDB', 'Mongoose', 'Socket.IO', 'Chart.js'
-        ],
-        repoUrl: 'https://github.com/Pramudi02/MommyCare.git',   
-        // liveUrl: 'https://maternitycareplus.onrender.com/',          
-        image: 'assets/maternitycareplus.png'                        
       },
       {
         title: 'Book Store App (Ongoing)',
