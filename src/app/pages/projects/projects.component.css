@@ -41,6 +41,7 @@
     position: relative;
     z-index: 2; 
     font-size: 55px;
+    text-shadow: #00000018 1px 1px 2px, #00000018 0 0 1em, #00000018 0 0 0.2em;
     color: #ffffff;
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
@@ -65,7 +66,7 @@
 }
 
 .projects-section .section-description a {
-    color: #00e1ff;
+    color: #227a86;
     text-decoration: none;
     font-weight: 700;
 }

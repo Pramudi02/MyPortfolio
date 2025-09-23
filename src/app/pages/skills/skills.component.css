@@ -41,6 +41,7 @@
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
+    text-shadow: #00000038 1px 1px 2px, #00000038 0 0 1em, #00000038 0 0 0.2em;
 }
 
 .stack {
@@ -55,7 +56,7 @@
 .topic {
     text-align: left;
     justify-content: center;
-    color: #dbdbdb;
+    color: #ffffff;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 46px;
