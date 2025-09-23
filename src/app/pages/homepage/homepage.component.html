@@ -11,7 +11,7 @@
   </div>
 </nav>
 
-<div class="vertical-nav" [class.collapsed]="!isVerticalNavOpen">
+<div class="vertical-nav" [class.collapsed]="!isVerticalNavOpen" [class.hide-on-section]="activeSection === 'projects' || activeSection === 'art'">
   <a (click)="scrollToSection('home'); setActiveSection('home')" [class.active]="activeSection === 'home'"></a>
   <a (click)="scrollToSection('about'); setActiveSection('about')" [class.active]="activeSection === 'about'"></a>
   <a (click)="scrollToSection('skills'); setActiveSection('skills')" [class.active]="activeSection === 'skills'"></a>

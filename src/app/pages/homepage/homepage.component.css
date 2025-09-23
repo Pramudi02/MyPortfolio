@@ -252,6 +252,20 @@
     .vertical-nav a:nth-child(5)::before { content: '\f19d'; }  /* graduation-cap */
     .vertical-nav a:nth-child(6)::before { content: '\f1fc'; }  /* paint-brush */
     .vertical-nav button::before { content: '\f2b6'; }  /* envelope-open */
+
+    /* Hide vertical nav on Projects and Art sections (mobile) */
+    .projects-on .vertical-nav,
+    .art-on .vertical-nav,
+    .projects-on .vertical-nav.collapsed,
+    .art-on .vertical-nav.collapsed {
+        display: none !important;
+    }
+
+    /* Hide vertical nav when toggled by activeSection (Angular) */
+    .vertical-nav.hide-on-section,
+    .vertical-nav.hide-on-section.collapsed {
+        display: none !important;
+    }
 }
 
 @media screen and (max-width: 576px) {
