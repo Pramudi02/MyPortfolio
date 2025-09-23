@@ -11,14 +11,15 @@
   </div>
 </nav>
 
-<div class="vertical-nav">
-  <a (click)="scrollToSection('home')"></a>
-  <a (click)="scrollToSection('about')"></a>
-  <a (click)="scrollToSection('skills')"></a>
-  <a (click)="scrollToSection('projects')"></a>
-  <a (click)="scrollToSection('education')"></a>
-  <a (click)="scrollToSection('art')"></a>
-  <button (click)="scrollToSection('contact')"></button>
+<div class="vertical-nav" [class.collapsed]="!isVerticalNavOpen">
+  <a (click)="scrollToSection('home'); setActiveSection('home')" [class.active]="activeSection === 'home'"></a>
+  <a (click)="scrollToSection('about'); setActiveSection('about')" [class.active]="activeSection === 'about'"></a>
+  <a (click)="scrollToSection('skills'); setActiveSection('skills')" [class.active]="activeSection === 'skills'"></a>
+  <a (click)="scrollToSection('projects'); setActiveSection('projects')" [class.active]="activeSection === 'projects'"></a>
+  <a (click)="scrollToSection('education'); setActiveSection('education')" [class.active]="activeSection === 'education'"></a>
+  <a (click)="scrollToSection('art'); setActiveSection('art')" [class.active]="activeSection === 'art'"></a>
+  <button (click)="scrollToSection('contact'); setActiveSection('contact')" [class.active]="activeSection === 'contact'"></button>
+  <button class="vertical-toggle" (click)="toggleVerticalNav()"></button>
 </div>
 
 <div class="hero-section" id="home">

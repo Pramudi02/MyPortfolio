@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { TypingTextComponent } from '../typing-text/typing-text.component';
 import { AboutComponent } from '../about/about.component';
 import { SkillsComponent } from '../skills/skills.component';
@@ -24,7 +24,9 @@ import { ArtSectionComponent } from '../art-section/art-section.component';
 })
 export class HomepageComponent {
   isMenuOpen = false;
-  
+  activeSection: string = 'home';
+  isVerticalNavOpen = true;
+
   scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -34,6 +36,33 @@ export class HomepageComponent {
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  toggleVerticalNav() {
+    this.isVerticalNavOpen = !this.isVerticalNavOpen;
+  }
+
+  setActiveSection(section: string) {
+    this.activeSection = section;
+  }
+
+  @HostListener('window:scroll', [])
+  onScroll() {
+    const sections = ['home', 'about', 'skills', 'projects', 'education', 'art', 'contact'];
+    for (let section of sections) {
+      const element = document.getElementById(section);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          this.activeSection = section;
+          break;
+        }
+      }
+    }
+  }
+
+  ngOnInit() {
+    this.onScroll();
   }
 
   closeMenu(): void {
