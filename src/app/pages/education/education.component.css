@@ -93,7 +93,7 @@
     color: #fff;
     background-color: #25e0d7;
     position: relative;
-    padding: 50px 0;
+    padding: 20px 0;
     overflow: hidden;
     z-index: 2;
 }
@@ -162,7 +162,7 @@
 }
 
 .education-card {
-    background: rgba(255, 242, 242, 0.9);
+    background: rgba(255, 255, 255, 0.6);
     border-radius: 20px;
     min-width: 320px;
     width: 320px;
@@ -181,8 +181,8 @@
 }
 
 /* University Card Styling */
-.university-card {
-    background: rgba(255, 255, 255, 0.9);
+.university-card {    
+    background: rgba(255, 255, 255, 0.6);
     border: 2px solid rgba(37, 224, 215, 0.3);
     box-shadow: 0 20px 40px rgba(37, 224, 215, 0.2);
 }
@@ -202,8 +202,8 @@
 }
 
 /* School Card Styling */
-.school-card {
-        background: rgba(255, 255, 255, 0.9);
+.school-card {   
+    background: rgba(255, 255, 255, 0.6);
 border: 2px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
@@ -537,13 +537,13 @@ border: 2px solid rgba(255, 255, 255, 0.3);
     }
     
     .education-container {
-        gap: 50px;
+        gap: 20px;
         padding: 20px 0;
     }
     
     .education-card {
-        min-width: 350px;
         width: 350px;
+        min-width: 280px;
         padding: 30px;
     }
 }
@@ -559,8 +559,8 @@ border: 2px solid rgba(255, 255, 255, 0.3);
     }
     
     .education-card {
-        min-width: 300px;
-        width: 300px;
+        width: 400px;
+        min-width: 400px;
         margin: 15px;
         padding: 25px;
     }
@@ -568,6 +568,13 @@ border: 2px solid rgba(255, 255, 255, 0.3);
     .education-image {
         height: 180px;
         min-height: 180px;
+    }
+}
+
+@media (min-width: 681px) and (max-width: 768px) {
+    .education-card {
+        width: 350px;
+        min-width: 350px;
     }
 }
 
