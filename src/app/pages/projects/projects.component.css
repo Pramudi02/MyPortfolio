@@ -5,7 +5,6 @@
     color: #fff;
     background-color: #25e0d7;
     box-sizing: border-box;
-    min-height: 100vh;
     overflow: hidden;
 }
 
@@ -16,7 +15,6 @@
     position: relative;
     padding: 50px 0;
     overflow: hidden;
-    min-height: 100vh;
     z-index: 2;
 }
 
