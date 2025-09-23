@@ -31,8 +31,8 @@
 
 .contact-heading {
   text-align: center;
-  font-size: 2rem;
-  color: #1c1b1b;
+  font-size: 2.2rem;
+  color: #004740;
   margin-bottom: 2rem;
 }
 
@@ -50,8 +50,8 @@
 
 .form-group label {
   font-weight: 600;
-  color: #3b3b3b;
-  font-size: 1rem;
+  color: #004740;
+  font-size: 1.1rem;
 }
 
 .form-control {
