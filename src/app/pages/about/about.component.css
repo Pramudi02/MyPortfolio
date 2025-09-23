@@ -102,6 +102,9 @@
   justify-content: space-between;
   height: 100%;
   padding: 0 5%;
+  
+    padding-top: 0px;
+    margin-top: 0px;
 }
 
 .image-container {
@@ -127,6 +130,8 @@
   text-align: left;
   color: #fff;
   padding-left: 2rem;
+    padding-top: 0px;
+    margin-top: 0px;
 }
 
 .text-container h1 {
@@ -203,17 +208,24 @@
     flex-direction: column;
     text-align: center;
     padding: 2rem 1rem;
+    padding-top: 0px;
+    margin-top: 0px;
   }
 
-  .image-container,
+  .image-container{
+    display: none;
+  
+  }
   .text-container {
     width: 100%;
-    padding: 1rem 0;
+    padding:  0;
+    padding-top: 0px;
+    margin-top: 0px;
     padding-left: 0;
   }
 
   .text-container h1 {
-    font-size: 2.5rem;
+    display: none;
   }
 
   .text-container h2 {
@@ -224,9 +236,8 @@
     font-size: 1rem;
   }
 
-  .profile-image {
-    max-width: 200px;
-    border-radius: 50px;
+  .profile-image {    
+    display: none;
   }
 }
 
@@ -248,8 +259,7 @@
   }
 
   .profile-image {
-    max-width: 180px;
-    border-radius: 40px;
+    display: none;
   }
 
   .cv-button {
