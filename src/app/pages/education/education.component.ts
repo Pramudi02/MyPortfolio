@@ -35,7 +35,7 @@ export class EducationComponent implements OnInit {
     {
       title: 'Yasodara Devi Balika Vidyalaya - Gampaha',
       period: '2018 - 2021',
-      image: 'assets/school.jpg',
+      image: 'assets/school.png',
       eduDescription: 'Successfully completed both GCE Advanced Level (2021) and Ordinary Level (2018) examinations',
       type: 'school'
     },
