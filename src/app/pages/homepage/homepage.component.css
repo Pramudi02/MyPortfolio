@@ -13,7 +13,7 @@
     .vertical-nav a:nth-child(4)::after { content: 'Projects'; }
     .vertical-nav a:nth-child(5)::after { content: 'Education'; }
     .vertical-nav a:nth-child(6)::after { content: 'Art Gallery'; }
-    .vertical-nav button::after { content: 'Contact Us'; }300ms linear;
+    .vertical-nav button::after { content: 'Contact Us'; }
 	-webkit-transition-delay: 400ms;
 	transition-delay: 400ms;
 	transform-origin: center top;
