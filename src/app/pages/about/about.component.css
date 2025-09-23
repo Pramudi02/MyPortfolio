@@ -157,8 +157,8 @@
   font-size: 1.2rem;
   font-weight: 600;
   padding: 10px 20px;
-  background-color: #21e0da;
-  color: rgb(0, 0, 0);
+  background-color: #f7ffffd9;
+  color: rgb(25, 216, 216);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -171,7 +171,7 @@
 .cv-button:hover {
   background-color: #7dfffb00;
   border: 2px solid #7dfffb;
-  color: #7dfffb;
+  color: #ffffff;
   font-weight: 700;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transform: scale(1.5); 
