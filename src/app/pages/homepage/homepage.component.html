@@ -1,4 +1,17 @@
-<div class="hero-section">
+<nav class="navbar">
+  <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+  <div class="nav-container" [class.active]="isMenuOpen">
+    <a (click)="scrollToSection('home'); closeMenu()">Home</a>
+    <a (click)="scrollToSection('about'); closeMenu()">About</a>
+    <a (click)="scrollToSection('skills'); closeMenu()">Skills</a>
+    <a (click)="scrollToSection('projects'); closeMenu()">Projects</a>
+    <a (click)="scrollToSection('education'); closeMenu()">Education</a>
+    <a (click)="scrollToSection('art'); closeMenu()">Art Gallery</a>
+    <button (click)="scrollToSection('contact'); closeMenu()">Contact Us</button>
+  </div>
+</nav>
+
+<div class="hero-section" id="home">
     <img src="https://res.cloudinary.com/dfbvnb3vx/image/upload/v1758585260/PRAMUDI_hbhbt7.png" alt="Hero Background" class="hero-image">
     <div class="section-center">
         <!-- <div class="container-fluid">

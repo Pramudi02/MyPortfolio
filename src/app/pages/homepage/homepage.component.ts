@@ -23,11 +23,20 @@ import { ArtSectionComponent } from '../art-section/art-section.component';
     styleUrl: './homepage.component.css'
 })
 export class HomepageComponent {
+  isMenuOpen = false;
   
   scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  }
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
   }
 }

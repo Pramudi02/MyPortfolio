@@ -29,11 +29,119 @@
     object-fit: contain;
     z-index: 0;
 }
-a {
-	cursor: pointer;
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(219, 255, 251, 0.314);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+    padding: 15px 0;
+    font-family: 'Poppins', sans-serif;
 }
-a:hover {
-	text-decoration: none;
+
+.navbar .nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar a, .navbar button {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 12px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 8px;
+}
+
+.navbar button {
+    background: rgba(7, 7, 7, 0.25);
+    color: #fff;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.256);
+    color: #00b0a8;
+    transform: translateY(-1px);
+}
+
+.navbar button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+    color: #000000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar .nav-container {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        display: none;
+    }
+
+    .navbar .nav-container.active {
+        display: flex;
+        background: rgba(37, 224, 215, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 10px;
+        margin: 10px 20px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .navbar a, .navbar button {
+        font-size: 16px;
+        padding: 12px 15px;
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navbar a, .navbar button {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
 }
 ::selection {
 	color: #c4c3ca;
