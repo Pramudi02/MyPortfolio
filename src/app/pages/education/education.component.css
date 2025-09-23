@@ -113,6 +113,7 @@
 .section-title {
     position: relative;
     z-index: 2; 
+    text-shadow: #00000018 1px 1px 2px, #00000018 0 0 1em, #00000018 0 0 0.2em;
     font-size: 55px;
     color: #ffffff;
     margin-bottom: 20px;
