@@ -203,7 +203,7 @@
   color: #fff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .content-wrapper {
     flex-direction: column;
     text-align: center;
