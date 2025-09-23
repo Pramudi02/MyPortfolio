@@ -178,6 +178,26 @@
 
 }
 
+.name-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.name-container h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #25e0d7;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.subName {
+  font-weight: 700;
+  color: #fff;
+}
+
 @media (max-width: 768px) {
   .content-wrapper {
     flex-direction: column;
