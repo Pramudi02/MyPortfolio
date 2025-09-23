@@ -11,6 +11,16 @@
   </div>
 </nav>
 
+<div class="vertical-nav">
+  <a (click)="scrollToSection('home')"></a>
+  <a (click)="scrollToSection('about')"></a>
+  <a (click)="scrollToSection('skills')"></a>
+  <a (click)="scrollToSection('projects')"></a>
+  <a (click)="scrollToSection('education')"></a>
+  <a (click)="scrollToSection('art')"></a>
+  <button (click)="scrollToSection('contact')"></button>
+</div>
+
 <div class="hero-section" id="home">
     <img src="https://res.cloudinary.com/dfbvnb3vx/image/upload/v1758585260/PRAMUDI_hbhbt7.png" alt="Hero Background" class="hero-image">
     <div class="section-center">
