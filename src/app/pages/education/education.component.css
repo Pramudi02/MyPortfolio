@@ -197,7 +197,7 @@
 }
 
 .university-card .education-title {
-    color: #ffffff;
+   color: #004949;
     text-shadow: 0 0 10px rgba(37, 224, 215, 0.3);
 }
 .university-card .education-image {
@@ -220,8 +220,8 @@ border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .school-card .education-title {
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    color: #004949;
+    text-shadow: 0 0 10px rgba(37, 224, 215, 0.3);
 }
 
 /* TCA Card Styling */
@@ -291,7 +291,8 @@ border: 2px solid rgba(255, 255, 255, 0.3);
     font-size: 1.3rem;
     font-weight: 600;
     margin: 0;
-    color: #fff;
+    color: #004949;
+    text-shadow: 0 0 10px rgba(37, 224, 215, 0.3);
     transition: color 0.3s ease;
     line-height: 1.3;
     min-height: 2.6em;
@@ -303,14 +304,14 @@ border: 2px solid rgba(255, 255, 255, 0.3);
 
 .institution {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: #008989;
     margin: 0;
     font-weight: 500;
 }
 
 .period {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: #008989;
     margin: 0;
     font-weight: 400;
 }
