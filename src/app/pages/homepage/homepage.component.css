@@ -136,42 +136,6 @@
         display: none;
     }
 
-    .vertical-toggle {
-        display: none;
-        width: 25px;
-        height: 25px;
-        background: rgba(255, 255, 255, 0.0);
-        color: #fff;
-        font-size: 14px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        margin: 0 auto;
-        line-height: 25px;
-        text-align: center;
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-        border: none;
-    }
-
-    .vertical-nav.collapsed .vertical-toggle {
-        display: block;
-    }
-
-    .vertical-toggle:hover {
-        background: rgba(255, 255, 255, 0.0);
-        transform: scale(1.1);
-    }
-
-    .vertical-toggle::before {
-        content: '\f104';
-        font-size: 18px;
-    }
-
-    .vertical-nav.collapsed .vertical-toggle::before {
-        content: '\f105';
-        font-size: 18px;
-    }
-
     .vertical-nav a, .vertical-nav button {
         display: block;
         width: 35px;
