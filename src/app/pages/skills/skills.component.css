@@ -73,6 +73,9 @@
     color: #dbdbdb;
     font-family: arial, sans-serif;
     width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 #socialicons {
@@ -80,6 +83,9 @@
     margin: 0 auto;
     overflow: auto;
     z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .socialicon {
@@ -89,8 +95,7 @@
     overflow: hidden;
     background: #e4e4e4;
     position: relative;
-    float: left;
-    margin: 0 0 10px 10px;
+    margin: 5px;
 }
 
 .socialiconcircle1 {
@@ -180,11 +185,15 @@
     .tech {
         width: 60%;
         padding-left: 1%;
+        display: flex;
+        flex-wrap: wrap;
+        
     }
 
     .socialicon {
         width: 97px;
         height: 97px;
+        margin: 5px;
     }
 
     .socialiconcircle1 {
@@ -214,11 +223,15 @@
     .tech {
         width: 60%;
         padding-left: 3%;
+        /* icons align to left  */
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .socialicon {
         width: 77px;
         height: 77px;
+        margin: 5px;
     }
 
     .socialiconcircle2 {
@@ -242,7 +255,9 @@
 
     .topic {
         font-size: 40px;
-        width: 30%;
+        width: 100%;
+        text-align: center;
+        align-items: center;
         padding-left: 2%;
         margin: 0;
     }
@@ -250,8 +265,10 @@
     .tech {
         width: 100%;
         justify-content: center;
-        flex-direction: column;
-
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
         gap: 10px;
     }
 
@@ -299,6 +316,7 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 8px;
+        display: flex;
     }
 
     .socialicon {
@@ -345,6 +363,7 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 6px;
+        display: flex;
     }
 
     .socialicon {
@@ -382,7 +401,7 @@
         font-size: 20px;
         width: 100%;
         padding-left: 0;
-        margin-bottom: 5px;
+        margin-bottom: 0px;
         text-align: center;
     }
 
@@ -390,12 +409,14 @@
         width: 100%;
         justify-content: center;
         flex-wrap: wrap;
+        margin-bottom: 5px;
         gap: 5px;
+        display: flex;
     }
 
     .socialicon {
-        width: 40px;
-        height: 40px;
+        width: 42px;
+        height: 42px;
         margin: 2px;
     }
 
@@ -428,7 +449,7 @@
         font-size: 18px;
         width: 100%;
         padding-left: 0;
-        margin-bottom: 4px;
+        margin-bottom: 0px;
         text-align: center;
     }
 
@@ -437,6 +458,7 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 4px;
+        display: flex;
     }
 
     .socialicon {
@@ -446,10 +468,10 @@
     }
 
     .socialiconcircle2 {
-        width: 94%;
-        height: 94%;
-        left: 1.8px;
-        top: 1.8px;
+        width: 95%;
+        height: 95%;
+        left: 1.6px;
+        top: 1.6px;
     }
 
     .section {
@@ -541,3 +563,4 @@
         height: 30px;
     }
 }
+
