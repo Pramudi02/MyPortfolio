@@ -89,9 +89,9 @@ export class ProjectService {
       image: 'assets/portfolioWebsite.png'
     },
     {
-      title: 'CEYLITE - Celebrity Connect Platform',
+      title: 'CEYELITE - Celebrity Connect Platform',
       description: 'A comprehensive platform that connects users with celebrities, offering features like chat, events, galleries, and role-based access for users, celebrities, and admins.',
-      fullDescription: 'BalletByte is a comprehensive web platform that connects users with celebrities, enabling seamless interactions through chat, events, galleries, and personalized profiles. The platform includes a powerful admin panel to manage users, celebrities, events, and generate reports.With role-based access control, users can explore, chat, and follow celebrities; celebrities can manage profiles, events, and galleries; while admins oversee the entire system with reporting and analytics.',
+      fullDescription: 'CEYELITE is a comprehensive web platform that connects users with celebrities, enabling seamless interactions through chat, events, galleries, and personalized profiles. The platform includes a powerful admin panel to manage users, celebrities, events, and generate reports.With role-based access control, users can explore, chat, and follow celebrities; celebrities can manage profiles, events, and galleries; while admins oversee the entire system with reporting and analytics.',
       technologies: ['React', 'Vite', 'Tailwind CSS', 'ESLint', 'PostCSS', 'Autoprefixer', 'Ballerina'],
       repoUrl: 'https://github.com/Pramudi02/balletByte',
       image: 'assets/portfolioWebsite.png'

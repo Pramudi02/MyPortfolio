@@ -352,18 +352,18 @@
 }
 
 /* Project Images */
-.proj1 { background-image: url('../../../assets/instadash.jpg'); }
-.proj2 { background-image: url('../../../assets/mommy.jpg'); }
-.proj3 { background-image: url('../../../assets/cyber.jpg'); }
-.proj4 { background-image: url('../../../assets/hardware.png'); }
-
-.proj5 { background-image: url('../../../assets/pojmang.jpg'); }
-.proj6 { background-image: url('../../../assets/ayuman.jpg'); }
-.proj7 { background-image: url('../../../assets/grt.png'); }
-.proj8 { background-image: url('../../../assets/merchmora.png'); }
-.proj9 { background-image: url('../../../assets/client.jpg'); }
-.proj10 { background-image: url('../../../assets/portfolio.jpg'); }
-.proj11 { background-image: url('../../../assets/bookstore.jpg'); }
+.proj1 { background-image: url('/assets/instadash.jpg'); }
+.proj2 { background-image: url('/assets/mommy.jpg'); }
+.proj3 { background-image: url('/assets/cyber.jpg'); }
+.proj4 { background-image: url('/assets/hardware.png'); }
+.proj5 { background-image: url('/assets/pojmang.jpg'); }
+.proj6 { background-image: url('/assets/ayuman.jpg'); }
+.proj7 { background-image: url('/assets/grt.png'); }
+.proj8 { background-image: url('/assets/merchmora.png'); }
+.proj9 { background-image: url('/assets/portfolio.jpg'); }
+.proj10 { background-image: url('/assets/ceyelite.jpg'); }
+.proj11 { background-image: url('/assets/client.jpg'); }
+.proj12 { background-image: url('/assets/bookstore.jpg'); }
 
 
 @media (max-width: 480px) {
