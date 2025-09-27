@@ -18,44 +18,40 @@ export class ProjectService {
     {
       title: 'Report Analysis System',
       description: 'instaDash - An AI-powered report analysis system for HoneyCom e-commerce, offering actionable business insights.',
-      fullDescription: 'instaDash is a data analytics platform currently in development for the HoneyCom e-commerce platform. It provides sales, product, courier, and customer insights for business owners managing multiple shops. The system features AI-driven future predictions and data visualizations using interactive charts.',
-      technologies: ['Angular', '.NET', 'MongoDB'],
+      fullDescription: 'instaDash is a comprehensive data analytics platform being developed for the HoneyCom e-commerce platform. It delivers detailed insights on sales, products, couriers, and customers for business owners managing multiple shops. The system integrates AI-driven future predictions with interactive data visualizations, empowering businesses to make smarter, data-backed decisions. Key features include dynamic charts, predictive analytics, and user-friendly dashboards that transform raw data into actionable insights.',
+      technologies: ['Angular', '.NET', 'MongoDB', 'Chart.js', 'AG Grid', 'REST APIs'],
       repoUrl: 'https://github.com/ally-bees/ab.uom.project',
       image: 'assets/1.jpg'
     },
     {
       title: 'MommyCare+ (Ongoing)',
       description: 'An AI-integrated pregnancy and baby care platform for mothers, midwives, and healthcare providers in Sri Lanka.',
-      fullDescription: 'full-featured healthcare platform designed for Sri Lankan mothers, midwives, and doctors. It offers pregnancy tracking, AI-based predictions for baby weight and gestational diabetes, appointment scheduling, and real-time vaccination monitoring. Users can view growth charts, chat with healthcare providers, access meal plans, follow exercise tips, and manage daily medical records. The platform also includes an educational hub with articles and baby care guides—providing a complete digital companion from pregnancy to early motherhood.',
-      technologies: [
-        'React', 'Vite', 'TypeScript', 'Tailwind CSS',
-        'Node.js', 'Express', 'FastAPI', 'Python',
-        'MongoDB', 'Mongoose', 'Socket.IO', 'Chart.js'
-      ],
+      fullDescription: 'MommyCare is a comprehensive pregnancy and baby care platform designed for moms, doctors, midwives, service providers, and admins. It enables secure role-based access and supports features like mom profile management, clinic visit and vaccination tracking, appointment scheduling, product management, and real-time messaging. The platform also integrates AI-powered predictions for baby weight and diabetes risk using real datasets, making healthcare more personalized and accessible.',
+      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Firebase', 'Tailwind CSS', 'AI/ML Models'],
       repoUrl: 'https://github.com/Pramudi02/MommyCare.git',
       image: 'assets/maternitycareplus.png'
     },
     {
-      title: 'Secura',
+      title: 'Secura - Cyber Incident Management',
       description: '🛡️ Secura - AI-Powered Cyber Incident Management System Next.js FastAPI Firebase Python TypeScript Production Ready',
-      fullDescription: 'Secura is a comprehensive, AI-powered cybersecurity incident management platform designed to streamline incident reporting, enhance threat analysis, and facilitate real-time collaboration between employees, security teams, and administrators. Key Features include AI-Powered Security Analysis with Smart Incident Categorization (85%+ accuracy with confidence scoring), Severity Assessment with multi-factor analysis, Mitigation Strategies with context-aware recommendations, Threat Intelligence with industry pattern analysis, and Predictive Analytics for future incident forecasting. Role-Based Access Control supports Employee incident reporting, Security Team advanced analysis and collaboration, and Admin user management with executive insights. Comprehensive Analytics include real-time dashboards, performance metrics, compliance reports, and system health monitoring. Real-time Communication features WebSocket integration, incident threading, file sharing, and status updates.',
-      technologies: ['Next.js', 'FastAPI', 'Firebase', 'Python', 'TypeScript'],
+      fullDescription: 'Secura is a production-ready, AI-driven cybersecurity incident management platform that simplifies incident reporting, enhances threat analysis, and enables real-time collaboration between employees, security teams, and administrators.It leverages AI-powered security analysis with smart incident categorization, severity assessment, context-aware mitigation strategies, and predictive analytics. The platform also provides real-time dashboards, compliance reporting, and secure communication channels, ensuring faster response times and improved organizational resilience.',
+      technologies: ['Next.js', 'FastAPI', 'Firebase', 'Python', 'TypeScript', 'WebSockets', 'ImageKit'],
       repoUrl: 'https://github.com/AdithaBuwaneka/Secura.git',
       image: 'assets/cyber.jpg'
     },
     {
       title: 'Micro-Controller Based Hardware Project',
       description: 'A wearable jacket for the kids that tracks movement, heart rate, and temperature, syncing motion with 3D models and rhythm.',
-      fullDescription: 'The Interactive Rhyme Jacket is an innovative wearable technology project that combines motion sensors and health monitoring. It tracks movement to control 3D models in a browser and includes rhythmic synchronization, heart rate monitoring, and temperature tracking.',
-      technologies: ['Motion Sensors', 'Web Interface', '3D Modeling'],
+      fullDescription: 'Rhyme FIT is an innovative wearable project designed to promote physical activity and mental engagement in children through interactive play. The smart jacket integrates motion and health sensors to track real-time body movements, synchronizing them with a 3D model on a web interface. Children progress through levels by syncing their exercises with rhyme songs, fostering both physical agility and cognitive focus in a fun, gamified experience. The system also monitors heart rate and body temperature, ensuring safe participation while combining exercise, rhythm, and learning.',
+      technologies: ['MPU6050', 'Flex Sensors', 'MAX30102', 'DS18B20', 'WS2812B LED', 'TCA9548A', 'PCB Design', 'Embedded C', 'Web Interface', '3D Modeling'],
       repoUrl: 'https://github.com/hhadithya/rhyme-jacket',
       image: 'assets/rhymejacket.png'
     },
     {
       title: 'Project Management System',
       description: 'A CRUD-enabled web app for showcasing and managing project portfolios while improving project organization.',
-      fullDescription: 'Developed as an individual project, this full-stack web application enables users to manage their portfolio content with full CRUD functionalities. It improves project organization and professional visibility.',
-      technologies: ['Angular', '.NET', 'MongoDB'],
+      fullDescription: 'Developed as an individual project, this full-stack web application enables users to manage their portfolio content with full CRUD functionalities. It improves project organization and professional visibility. responsive layouts, and a sleek glassmorphism design system. Features include dark theme and smooth animations.',
+      technologies: ['Angular', '.NET', 'MongoDB', 'SCSS'],
       repoUrl: 'https://github.com/Pramudi02/projects',
       image: 'assets/portfolioManager.png'
     },
@@ -85,20 +81,28 @@ export class ProjectService {
       image: 'assets/proj3.png'
     },
     {
-      title: 'Client Website Development',
+      title: 'Personal Portfolio Website',
+      description: 'An interactive portfolio website to display personal projects, skills and contact through email and social media.',
+      fullDescription: 'This is my personal portfolio website, fully developed and deployed to showcase my skills, projects, and creative work as an IT undergraduate, web UI designer, and digital artist. The platform focuses on clean UI/UX, interactive elements, and professional presentation, allowing visitors to explore my projects, skills, and contact me directly.',
+      technologies: ['Angular', 'Node.js/Express', 'Nodemailer', 'RESTful APIs', 'CSS'],
+      repoUrl: 'https://github.com/Pramudi02/MyPortfolio',
+      image: 'assets/portfolioWebsite.png'
+    },
+    {
+      title: 'CEYLITE - Celebrity Connect Platform',
+      description: 'A comprehensive platform that connects users with celebrities, offering features like chat, events, galleries, and role-based access for users, celebrities, and admins.',
+      fullDescription: 'BalletByte is a comprehensive web platform that connects users with celebrities, enabling seamless interactions through chat, events, galleries, and personalized profiles. The platform includes a powerful admin panel to manage users, celebrities, events, and generate reports.With role-based access control, users can explore, chat, and follow celebrities; celebrities can manage profiles, events, and galleries; while admins oversee the entire system with reporting and analytics.',
+      technologies: ['React', 'Vite', 'Tailwind CSS', 'ESLint', 'PostCSS', 'Autoprefixer', 'Ballerina'],
+      repoUrl: 'https://github.com/Pramudi02/balletByte',
+      image: 'assets/portfolioWebsite.png'
+    },
+    {
+      title: 'Client Website Development - PMS',
       description: 'Pearl Matrix Solutions - Client-facing responsive websites developed for Pearl Matrix Solutions company.',
       fullDescription: 'As a Frontend Developer under senior guidance, I developed multiple responsive and interactive websites using HTML, CSS, JavaScript, and Bootstrap. These sites were tailored for different clients served by Pearl Matrix Solutions.',
       technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
       repoUrl: '',
       image: 'assets/pms.png'
-    },
-    {
-      title: 'Personal Portfolio Website',
-      description: 'An interactive portfolio website to display personal projects, skills and contact through email and social media.',
-      fullDescription: 'A personal portfolio web app designed to feature individual projects, technologies, and background. Built using Angular for the frontend, it is being integrated with a .NET backend and MongoDB for dynamic content management.',
-      technologies: ['Angular', '.NET', 'MongoDB'],
-      repoUrl: 'https://github.com/Pramudi02/MyPortfolio',
-      image: 'assets/portfolioWebsite.png'
     },
     {
       title: 'Book Store App (Ongoing)',
