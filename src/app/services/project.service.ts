@@ -21,6 +21,7 @@ export class ProjectService {
       fullDescription: 'instaDash is a comprehensive data analytics platform being developed for the HoneyCom e-commerce platform. It delivers detailed insights on sales, products, couriers, and customers for business owners managing multiple shops. The system integrates AI-driven future predictions with interactive data visualizations, empowering businesses to make smarter, data-backed decisions. Key features include dynamic charts, predictive analytics, and user-friendly dashboards that transform raw data into actionable insights.',
       technologies: ['Angular', '.NET', 'MongoDB', 'Chart.js', 'AG Grid', 'REST APIs'],
       repoUrl: 'https://github.com/ally-bees/ab.uom.project',
+      liveUrl:'https://instadash-pi.vercel.app/',
       image: 'assets/1.jpg'
     },
     {
@@ -29,6 +30,7 @@ export class ProjectService {
       fullDescription: 'MommyCare is a comprehensive pregnancy and baby care platform designed for moms, doctors, midwives, service providers, and admins. It enables secure role-based access and supports features like mom profile management, clinic visit and vaccination tracking, appointment scheduling, product management, and real-time messaging. The platform also integrates AI-powered predictions for baby weight and diabetes risk using real datasets, making healthcare more personalized and accessible.',
       technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Firebase', 'Tailwind CSS', 'AI/ML Models'],
       repoUrl: 'https://github.com/Pramudi02/MommyCare.git',
+      liveUrl: 'https://mommy-care.vercel.app/',
       image: 'assets/maternitycareplus.png'
     },
     {
@@ -86,6 +88,7 @@ export class ProjectService {
       fullDescription: 'This is my personal portfolio website, fully developed and deployed to showcase my skills, projects, and creative work as an IT undergraduate, web UI designer, and digital artist. The platform focuses on clean UI/UX, interactive elements, and professional presentation, allowing visitors to explore my projects, skills, and contact me directly.',
       technologies: ['Angular', 'Node.js/Express', 'Nodemailer', 'RESTful APIs', 'CSS'],
       repoUrl: 'https://github.com/Pramudi02/MyPortfolio',
+      liveUrl: 'https://portfolio990.web.app/home',
       image: 'assets/portfolioWebsite.png'
     },
     {
