@@ -32,7 +32,15 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/modernizr.custom.js",
+              "src/assets/js/imagesloaded.pkgd.min.js",
+              "src/assets/js/masonry.pkgd.min.js",
+              "src/assets/js/dynamics.min.js",
+              "src/assets/js/classie.js",
+              "src/assets/js/animOnScroll.js",
+              "src/assets/js/main.js"
+            ]
           },
           "configurations": {
             "production": {
