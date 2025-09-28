@@ -8,6 +8,7 @@ import { ContactComponent } from '../contact/contact.component';
 import { EducationComponent } from '../education/education.component';
 import { ArtSectionComponent } from '../art-section/art-section.component';
 import { ProjectService, Project } from '../../services/project.service';
+import { HighlightsComponent } from '../highlights/highlights.component';
 
 @Component({
     selector: 'app-homepage',
@@ -19,7 +20,8 @@ import { ProjectService, Project } from '../../services/project.service';
         ProjectsComponent,
         ContactComponent,
         EducationComponent,
-        ArtSectionComponent
+        ArtSectionComponent,
+        HighlightsComponent
     ],
     templateUrl: './homepage.component.html',
     styleUrl: './homepage.component.css'
