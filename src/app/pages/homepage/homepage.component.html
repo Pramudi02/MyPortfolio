@@ -5,6 +5,7 @@
     <a (click)="scrollToSection('about'); closeMenu()">About</a>
     <a (click)="scrollToSection('skills'); closeMenu()">Skills</a>
     <a (click)="scrollToSection('projects'); closeMenu()">Projects</a>
+    <a (click)="scrollToSection('highlights'); closeMenu()">Highlights</a>
     <a (click)="scrollToSection('education'); closeMenu()">Education</a>
     <a (click)="scrollToSection('art'); closeMenu()">Art Gallery</a>
     <button (click)="scrollToSection('contact'); closeMenu()">Contact Us</button>
@@ -16,6 +17,7 @@
   <a (click)="scrollToSection('about'); setActiveSection('about')" [class.active]="activeSection === 'about'"></a>
   <a (click)="scrollToSection('skills'); setActiveSection('skills')" [class.active]="activeSection === 'skills'"></a>
   <a (click)="scrollToSection('projects'); setActiveSection('projects')" [class.active]="activeSection === 'projects'"></a>
+  <a (click)="scrollToSection('highlights'); setActiveSection('highlights')" [class.active]="activeSection === 'highlights'"></a>
   <a (click)="scrollToSection('education'); setActiveSection('education')" [class.active]="activeSection === 'education'"></a>
   <a (click)="scrollToSection('art'); setActiveSection('art')" [class.active]="activeSection === 'art'"></a>
   <button (click)="scrollToSection('contact'); setActiveSection('contact')" [class.active]="activeSection === 'contact'"></button>

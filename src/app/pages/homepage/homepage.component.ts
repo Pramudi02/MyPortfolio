@@ -61,7 +61,7 @@ export class HomepageComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onScroll() {
-    const sections = ['home', 'about', 'skills', 'projects', 'education', 'art', 'contact'];
+    const sections = ['home', 'about', 'skills', 'projects', 'highlights', 'education', 'art', 'contact'];
     for (let section of sections) {
       const element = document.getElementById(section);
       if (element) {
