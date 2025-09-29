@@ -137,7 +137,43 @@ The backend API will be available at `http://localhost:3000`
 - The frontend will communicate with the backend for form submissions
 - Keep your `.env` file secure and never commit it to version control
 
-## 🔧 Troubleshooting
+## � Deployment
+
+This project supports multiple deployment platforms:
+
+### **Vercel (Primary)**
+```bash
+# Install Vercel CLI globally
+npm i -g vercel
+
+# Deploy to Vercel
+npm run deploy:vercel
+
+# Or link and deploy
+vercel --prod
+```
+
+### **Firebase (Alternative)**
+```bash
+# Install Firebase CLI
+npm install -g firebase-tools
+
+# Login to Firebase
+firebase login
+
+# Deploy to Firebase
+npm run deploy:firebase
+```
+
+### **Manual Build**
+```bash
+# Build for production
+npm run build
+
+# Files will be in dist/portfolio/browser/
+```
+
+## �🔧 Troubleshooting
 
 - If `ng serve` fails, try:
   1. Clearing npm cache: `npm cache clean --force`
@@ -150,6 +186,10 @@ The backend API will be available at `http://localhost:3000`
 - For port conflicts:
   1. Change frontend port: `ng serve --port 4201`
   2. Change backend port in `.env` file
+- For deployment issues:
+  1. Ensure build completes successfully: `npm run build`
+  2. Check Vercel/Firebase CLI is installed and authenticated
+  3. Verify environment variables are set correctly
 
 ---
 
