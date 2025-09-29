@@ -3,7 +3,7 @@
 Welcome to the repository for my personal portfolio website!  
 This project showcases my skills, experience, and creative work as an **IT undergraduate, Web UI Designer, and Artist**.
 
-Live site: https://portfolio990.web.app
+Live site: https://pramudi02.vercel.app/home
 
 > 🚧 **Status:** Fully developed and deployed
 
