@@ -92,35 +92,57 @@ export class ArtSectionComponent implements OnInit {
   }
 
   populateArtworkList(): void {
-    // Charcoal Portraits (1-5)
-    for (let i = 1; i <= 5; i++) {
-      const extension = (i === 4) ? 'png' : 'jpg';
+    // Charcoal Portraits (1-5) - Sample portrait URLs
+    const charcoalPortraits = [
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/1-2.jpg?updatedAt=1759210284283',
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/2-2.jpg?updatedAt=1759210284905',
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/3-2.jpg?updatedAt=1759210285275',
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/4-2.jpg?updatedAt=1759210284549',
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/5-2.jpg?updatedAt=1759210284401'
+    ];
+    
+    charcoalPortraits.forEach((url, index) => {
       this.artworkList.push({
-        image: `assets/art/${i}.${extension}`,
-        id: i,
+        image: url,
+        id: index + 1,
         category: 'Charcoal Portraits'
       });
-    }
+    });
     
-    // Paintings (6-10)
-    for (let i = 6; i <= 10; i++) {
-      const extension = (i === 13) ? 'png' : 'jpg';
+    // Paintings (6-10) - Sample painting URLs
+    const paintings = [
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/6.jpg?updatedAt=1759136374642',
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/7.jpg?updatedAt=1759136374160',
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/8-2.jpg?updatedAt=1759210662773',
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/9.jpg?updatedAt=1759136373712',
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/10.jpg?updatedAt=1759136376075'
+    ];
+    
+    paintings.forEach((url, index) => {
       this.artworkList.push({
-        image: `assets/art/${i}.${extension}`,
-        id: i,
+        image: url,
+        id: index + 6,
         category: 'Paintings'
       });
-    }
+    });
     
-    // Digital Creations (11-14)
-    for (let i = 11; i <= 14; i++) {
-      const extension = (i === 13) ? 'png' : 'jpg';
+    // Digital Creations (11-16) - Sample digital art URLs
+    const digitalCreations = [
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/11-2.jpg?updatedAt=1759210662633',
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/12.jpg?updatedAt=1759136374250',
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/13.png?updatedAt=1759136375967',
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/14--2.jpg?updatedAt=1759210662475',
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/15.jpg?updatedAt=1759136375945',
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/16.jpg?updatedAt=1759136375631'
+    ];
+    
+    digitalCreations.forEach((url, index) => {
       this.artworkList.push({
-        image: `assets/art/${i}.${extension}`,
-        id: i,
+        image: url,
+        id: index + 11,
         category: 'Digital Creations'
       });
-    }
+    });
     
     console.log('Artwork list:', this.artworkList); // Debug log
   }

@@ -28,21 +28,21 @@ export class EducationComponent implements OnInit {
       title: 'B.Sc. (Hons) Degree in Information Technology',
       institution: 'University of Moratuwa',
       period: '2022 - 2027 (Expected)',
-      image: 'assets/university.jpg',
+      image: 'https://ik.imagekit.io/pr2222/Portfolio-assets/university.jpg?updatedAt=1759135600577',
       eduDescription: 'Faculty of Information Technology',
       type: 'university'
     },
     {
       title: 'Yasodara Devi Balika Vidyalaya - Gampaha',
       period: '2018 - 2021',
-      image: 'assets/school.png',
+      image: 'https://ik.imagekit.io/pr2222/Portfolio-assets/school.png?updatedAt=1759135601042',
       eduDescription: 'Successfully completed both GCE Advanced Level (2021) and Ordinary Level (2018) examinations',
       type: 'school'
     },
     {
       title: 'Technical Careerist Association - Sri Lanka',
       period: '2021 - 2022',
-      image: 'https://sltca20.wordpress.com/wp-content/uploads/2020/12/44.jpg',
+      image: 'https://res.cloudinary.com/dfbvnb3vx/image/upload/v1759184014/sltca_ituync.jpg',
       eduDescription: 'Certificate Course in Computer Science, HR Management (FL), Graphic Design',
       type: 'school'
     }
