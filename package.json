@@ -5,9 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:vercel": "ng build --configuration production",
+    "build:vercel": "ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy:firebase": "ng build --configuration=production && firebase deploy",
+    "deploy:vercel": "vercel --prod"
   },
   "private": true,
   "dependencies": {
@@ -60,6 +62,9 @@
     "node": "22.x"
   },
   "vercel": {
+    "buildCommand": "npm run build:vercel",
+    "outputDirectory": "dist/portfolio/browser",
+    "installCommand": "npm install",
     "functions": {
       "backend/api/*.js": {
         "runtime": "nodejs22.x"
