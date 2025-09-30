@@ -94,11 +94,11 @@ export class ArtSectionComponent implements OnInit {
   populateArtworkList(): void {
     // Charcoal Portraits (1-5) - Sample portrait URLs
     const charcoalPortraits = [
-      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/1.jpg?updatedAt=1759136376215',
-      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/2.jpg?updatedAt=1759136376290',
-      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/3.jpg?updatedAt=1759136376941',
-      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/4.png?updatedAt=1759136399104',
-      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/5.jpg?updatedAt=1759136398712'
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/1-2.jpg?updatedAt=1759210284283',
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/2-2.jpg?updatedAt=1759210284905',
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/3-2.jpg?updatedAt=1759210285275',
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/4-2.jpg?updatedAt=1759210284549',
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/5-2.jpg?updatedAt=1759210284401'
     ];
     
     charcoalPortraits.forEach((url, index) => {
@@ -113,7 +113,7 @@ export class ArtSectionComponent implements OnInit {
     const paintings = [
       'https://ik.imagekit.io/pr2222/Portfolio-assets/art/6.jpg?updatedAt=1759136374642',
       'https://ik.imagekit.io/pr2222/Portfolio-assets/art/7.jpg?updatedAt=1759136374160',
-      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/8.jpg?updatedAt=1759136376143',
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/8-2.jpg?updatedAt=1759210662773',
       'https://ik.imagekit.io/pr2222/Portfolio-assets/art/9.jpg?updatedAt=1759136373712',
       'https://ik.imagekit.io/pr2222/Portfolio-assets/art/10.jpg?updatedAt=1759136376075'
     ];
@@ -128,10 +128,10 @@ export class ArtSectionComponent implements OnInit {
     
     // Digital Creations (11-16) - Sample digital art URLs
     const digitalCreations = [
-      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/11.jpg?updatedAt=1759136376032',
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/11-2.jpg?updatedAt=1759210662633',
       'https://ik.imagekit.io/pr2222/Portfolio-assets/art/12.jpg?updatedAt=1759136374250',
       'https://ik.imagekit.io/pr2222/Portfolio-assets/art/13.png?updatedAt=1759136375967',
-      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/14.jpg?updatedAt=1759136376126',
+      'https://ik.imagekit.io/pr2222/Portfolio-assets/art/14--2.jpg?updatedAt=1759210662475',
       'https://ik.imagekit.io/pr2222/Portfolio-assets/art/15.jpg?updatedAt=1759136375945',
       'https://ik.imagekit.io/pr2222/Portfolio-assets/art/16.jpg?updatedAt=1759136375631'
     ];
