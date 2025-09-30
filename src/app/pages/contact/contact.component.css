@@ -2,7 +2,7 @@
 .contact-section {
   overflow: hidden;
 	height: 100vh;
-	background-image: url('https://res.cloudinary.com/dfbvnb3vx/image/upload/v1748353997/Untitled_design_5_znsii3.jpg');
+	background-image: url('https://ik.imagekit.io/pr2222/Portfolio-assets/Untitled_design_5_znsii3-2.jpg?updatedAt=1759211441083');
 	background-size: cover;
     background-color: #25e0d7; 
     z-index: 1;
@@ -117,6 +117,20 @@ textarea.form-control {
   margin-top: 1rem;
   border-radius: 4px;
   font-size: 15px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  animation: slideInUp 0.3s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .success-message {
