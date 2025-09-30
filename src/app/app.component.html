@@ -1,4 +1,8 @@
-<div class="body">
+<!-- Loading Screen -->
+<app-loading-screen *ngIf="isLoading"></app-loading-screen>
+
+<!-- Main Content -->
+<div class="body" [class.loaded]="!isLoading">
     <app-homepage></app-homepage>
     <app-footer></app-footer>
 </div>
