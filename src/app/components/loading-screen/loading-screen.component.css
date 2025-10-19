@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #25e0d7, #1bb6ae);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.8s ease-out;
+}
+
+.loading-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.circle {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background: rgba(37, 224, 215, 0.02);
+}
+
+.circle:nth-of-type(1) {
+  width: 200px;
+  height: 180px;
+  animation: rt 6s infinite linear;
+  box-shadow: 0 0 1px 0 #bafcf8,
+              inset 0 0 10px 0 #d1fdfb;
+}
+
+.circle:nth-of-type(2) {
+  width: 180px;
+  height: 200px;
+  animation: rt 10s infinite linear;
+  box-shadow: 0 0 1px 0 #defdfb,
+              inset 0 0 10px 0 #effefd;
+}
+
+.circle:nth-of-type(3) {
+  width: 210px;
+  height: 190px;
+  animation: rt 5s infinite linear;
+  box-shadow: 0 0 1px 0 #a5faf6,
+              inset 0 0 10px 0 #cbfcf9;
+}
+
+.circle:nth-of-type(4) {
+  width: 190px;
+  height: 210px;
+  animation: rt 15s infinite linear;
+  box-shadow: 0 0 1px 0 #f2fffe,
+              inset 0 0 10px 0 #aeebe7;
+}
+
+@keyframes rt {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .circle:nth-of-type(1) {
+    width: 150px;
+    height: 135px;
+  }
+  
+  .circle:nth-of-type(2) {
+    width: 135px;
+    height: 150px;
+  }
+  
+  .circle:nth-of-type(3) {
+    width: 157px;
+    height: 142px;
+  }
+  
+  .circle:nth-of-type(4) {
+    width: 142px;
+    height: 157px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .circle:nth-of-type(1) {
+    width: 125px;
+    height: 112px;
+  }
+  
+  .circle:nth-of-type(2) {
+    width: 112px;
+    height: 125px;
+  }
+  
+  .circle:nth-of-type(3) {
+    width: 131px;
+    height: 118px;
+  }
+  
+  .circle:nth-of-type(4) {
+    width: 118px;
+    height: 131px;
+  }
+}
