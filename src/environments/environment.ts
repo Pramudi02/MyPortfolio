@@ -1,5 +1,7 @@
 export const environment = {
   production: false,
-  // Base API URL for backend (used by email service)
-  apiUrl: 'https://backend-new-portfolio.vercel.app/api/send-email'
+  // Web3Forms API endpoint for contact form submissions
+  apiUrl: 'https://api.web3forms.com/submit',
+  // Free access key from https://web3forms.com (emails are sent directly to your inbox)
+  web3FormsAccessKey: 'YOUR_WEB3FORMS_ACCESS_KEY'
 };

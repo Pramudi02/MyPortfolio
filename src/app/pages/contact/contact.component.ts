@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
     templateUrl: './contact.component.html',
     styleUrls: ['./contact.component.css']
 })
-export class ContactComponent {
+export class ContactComponent implements OnDestroy {
   contactForm: FormGroup;
   submitted = false;
   success = false;
@@ -54,23 +54,27 @@ export class ContactComponent {
         this.contactForm.reset();
         this.submitted = false;
         
-        // Hide success message after 3 seconds
+        // Hide success message after 5 seconds
         this.successTimeout = window.setTimeout(() => {
           this.success = false;
-        }, 3000);
+        }, 5000);
       },
       error: (error) => {
         this.error = true;
         this.loading = false;
-        this.errorMessage = error.message || 'An error occurred while sending your message.';
+        this.errorMessage = error.message || error.error?.message || 'An error occurred while sending your message.';
         
-        // Hide error message after 3 seconds
+        // Hide error message after 5 seconds
         this.errorTimeout = window.setTimeout(() => {
           this.error = false;
           this.errorMessage = '';
-        }, 3000);
+        }, 5000);
       }
     });
+  }
+
+  ngOnDestroy(): void {
+    this.clearTimeouts();
   }
 
   private clearTimeouts() {

@@ -101,41 +101,28 @@ ng serve
 http://localhost:4200
 ```
 
-### Step 3: Setup and Run the Backend
+### Step 3: Setup Contact Form (Web3Forms)
 
-1. Navigate to the backend folder:
-```bash
-cd backend
+The contact form uses [Web3Forms](https://web3forms.com) to deliver messages directly to your email without needing a custom backend server:
+
+1. Visit [web3forms.com](https://web3forms.com) and enter your email address (`pramupiyumika@gmail.com`).
+2. Copy the free access key sent to your email.
+3. Paste your access key into `src/environments/environment.ts` and `src/environments/environment.prod.ts`:
+```ts
+export const environment = {
+  production: false,
+  apiUrl: 'https://api.web3forms.com/submit',
+  web3FormsAccessKey: 'YOUR_ACCESS_KEY_HERE'
+};
 ```
 
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Create a `.env` file in the backend directory:
-```
-EMAIL_USER=your-email@gmail.com
-EMAIL_PASS=your-email-password-or-app-password
-PORT=3000
-```
-
-4. Start the backend server:
-```bash
-npm start
-```
-
-The backend API will be available at `http://localhost:3000`
+---
 
 ## 📝 Notes
 
-- For Gmail integration, you'll need to:
-  1. Enable 2-Factor Authentication
-  2. Generate an App Password
-  3. Use the App Password in your `.env` file
 - Ensure Node.js and npm are installed on your system
-- The frontend will communicate with the backend for form submissions
-- Keep your `.env` file secure and never commit it to version control
+- Form submissions are sent directly from the client to Web3Forms and delivered straight to your inbox
+- For backend development, legacy server files are located in `/backend`
 
 ## 🔧 Troubleshooting
 
