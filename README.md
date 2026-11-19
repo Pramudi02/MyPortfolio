@@ -101,27 +101,16 @@ ng serve
 http://localhost:4200
 ```
 
-### Step 3: Setup Contact Form (Web3Forms)
+### Step 3: Contact Form
 
-The contact form uses [Web3Forms](https://web3forms.com) to deliver messages directly to your email without needing a custom backend server:
-
-1. Visit [web3forms.com](https://web3forms.com) and enter your email address (`pramupiyumika@gmail.com`).
-2. Copy the free access key sent to your email.
-3. Paste your access key into `src/environments/environment.ts` and `src/environments/environment.prod.ts`:
-```ts
-export const environment = {
-  production: false,
-  apiUrl: 'https://api.web3forms.com/submit',
-  web3FormsAccessKey: 'YOUR_ACCESS_KEY_HERE'
-};
-```
+The contact form opens the user's default email client (`mailto:`) pre-filled with the message details (Name, Email, Message) directed to `pramupiyumika@gmail.com`. Users can simply review and click "Send" from their own email app without requiring any backend or third-party service.
 
 ---
 
 ## 📝 Notes
 
 - Ensure Node.js and npm are installed on your system
-- Form submissions are sent directly from the client to Web3Forms and delivered straight to your inbox
+- Form submissions redirect directly via email client to `pramupiyumika@gmail.com`
 - For backend development, legacy server files are located in `/backend`
 
 ## 🔧 Troubleshooting

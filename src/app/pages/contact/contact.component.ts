@@ -47,30 +47,27 @@ export class ContactComponent implements OnDestroy {
     this.success = false;
     this.error = false;
     
-    this.emailService.sendEmail(this.contactForm.value).subscribe({
-      next: (response) => {
-        this.success = true;
-        this.loading = false;
-        this.contactForm.reset();
-        this.submitted = false;
-        
-        // Hide success message after 5 seconds
-        this.successTimeout = window.setTimeout(() => {
-          this.success = false;
-        }, 5000);
-      },
-      error: (error) => {
-        this.error = true;
-        this.loading = false;
-        this.errorMessage = error.message || error.error?.message || 'An error occurred while sending your message.';
-        
-        // Hide error message after 5 seconds
-        this.errorTimeout = window.setTimeout(() => {
-          this.error = false;
-          this.errorMessage = '';
-        }, 5000);
-      }
-    });
+    try {
+      this.emailService.openEmailClient(this.contactForm.value);
+      this.success = true;
+      this.loading = false;
+      this.contactForm.reset();
+      this.submitted = false;
+
+      // Hide success message after 6 seconds
+      this.successTimeout = window.setTimeout(() => {
+        this.success = false;
+      }, 6000);
+    } catch (err: any) {
+      this.loading = false;
+      this.error = true;
+      this.errorMessage = err?.message || 'Could not open your email application.';
+
+      this.errorTimeout = window.setTimeout(() => {
+        this.error = false;
+        this.errorMessage = '';
+      }, 5000);
+    }
   }
 
   ngOnDestroy(): void {
