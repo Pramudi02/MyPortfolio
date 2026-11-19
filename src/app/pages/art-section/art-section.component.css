@@ -64,6 +64,53 @@
     color: rgba(255, 255, 255, 0.9);
 }
 
+.art-cta-container {
+    margin: 16px auto 26px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.art-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 28px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.art-cta-btn i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.art-cta-btn:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    border-color: transparent;
+    color: #ffffff;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(220, 39, 67, 0.4);
+}
+
+.art-cta-btn:hover i {
+    transform: rotate(8deg) scale(1.15);
+}
+
+.art-cta-btn:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
 .artwork-container {
     display: flex;
     position: relative;
@@ -367,6 +414,12 @@
 
     .art-section .section-description {
         font-size: 0.9rem;
+    }
+
+    .art-cta-btn {
+        padding: 9px 20px;
+        font-size: 13px;
+        gap: 8px;
     }
 
     .artwork-card .artwork-title {
